@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Friday, May 25, 2007 3:26:31 PM CEST -->
+<ModelClass xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.ModelClass:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1180099591892" name="Response_Execute" package="com.quilmes.baja_envases" masterLanguage="en">
+	<ModelClass.Parent>
+		<Core.Reference package="com.quilmes.baja_envases" name="Envases" type="Model"/>
+	</ModelClass.Parent>
+	<ModelClass.Settings>
+		<ModelClassSetting name="qualifiedName_Namespace" value="http://sap.com/tc/webdynpro/model/webservice">
+			<ModelClassSetting.SettingDefinition>
+				<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassSettingDefinition:qualifiedName_Namespace"/>
+			</ModelClassSetting.SettingDefinition>
+		</ModelClassSetting>
+		<ModelClassSetting name="isExecutable" value="false">
+			<ModelClassSetting.SettingDefinition>
+				<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassSettingDefinition:isExecutable"/>
+			</ModelClassSetting.SettingDefinition>
+		</ModelClassSetting>
+		<ModelClassSetting name="qualifiedName_LocalPart" value="Response_Execute">
+			<ModelClassSetting.SettingDefinition>
+				<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassSettingDefinition:qualifiedName_LocalPart"/>
+			</ModelClassSetting.SettingDefinition>
+		</ModelClassSetting>
+	</ModelClass.Settings>
+</ModelClass>

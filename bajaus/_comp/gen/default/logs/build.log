@@ -1,0 +1,751 @@
+Development Component Build (2015-09-10 11:58:12)
+  Component name: bajaus
+  Component vendor: ar.com.quilmes.bue
+  SC compartment: MyComponents
+  Configuration: LocalDevelopment
+  Location: local
+  Source code location: crocchio@LSTKBA49236
+  DC root folder: C:\Users\crocchio\.dtc\LocalDevelopment\DCs\ar.com.quilmes.bue\bajaus\_comp\
+  DC type: Web Dynpro
+  Host: LSTKBA49236
+
+DC Model check:
+   All used DCs are available locally
+   validating dependency to build plugin "sap.com/tc/bi/bp/webDynpro"
+   validating dependency to  public part "default" of DC "sap.com/tc/cmi"
+   validating dependency to  public part "default" of DC "sap.com/tc/ddic/ddicruntime"
+   validating dependency to  public part "default" of DC "sap.com/tc/ddic/metamodel/content"
+   validating dependency to  public part "default" of DC "sap.com/tc/wd/webdynpro"
+   validating dependency to  public part "default" of DC "sap.com/tc/logging"
+   validating dependency to  public part "default" of DC "sap.com/tc/wdp/metamodel/content"
+   validating dependency to  public part "default" of DC "sap.com/com.sap.aii.proxy.framework"
+   validating dependency to  public part "default" of DC "sap.com/com.sap.aii.util.misc"
+   validating dependency to  public part "default" of DC "sap.com/com.sap.exception"
+   validating dependency to  public part "default" of DC "sap.com/com.sap.mw.jco"
+   validating dependency to  public part "clasesAssembly" of DC "ar.com.quilmes.bue/mdm_clientes_ejb"
+   validating dependency to  public part "clasesComplilation" of DC "ar.com.quilmes.bue/mdm_clientes_ejb"
+   validating dependency to  public part "client" of DC "ar.com.quilmes.bue/mdm_clientes_ejb"
+   validating dependency to  public part "ejbjar" of DC "ar.com.quilmes.bue/mdm_clientes_ejb"
+   validating dependency to used DC "sap.com/ejb20"
+   validating dependency to used DC "sap.com/IAIKSecurity"
+   DC model check OK
+
+Start build plugin:
+   using build plugin: sap.com/tc/bi/bp/webDynpro
+   starting build plugin from : C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP_BUILDT\DCs\sap.com\tc\bi\bp\webDynpro\_comp\gen\default\public\webDynpro\
+
+
+
+Build Plugin 'WebdynproPlugin', Version 7.00 SP 20p2 (NW04S_20_REL, built on 2012-07-16 20:25:44 CEST, CL63092)
+   development component:  bajaus (ar.com.quilmes.bue)
+      software component:  MyComponents (demo.sap.com)
+                location:  local
+                    type:  Web Dynpro
+           build variant:  default
+         output location:  C:\Users\crocchio\.dtc\LocalDevelopment\DCs\ar.com.quilmes.bue\bajaus\_comp\gen\default
+       generation folder:  C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B
+       plugin start time:  2015-09-10 11:58:12 GMT-04:00 (AMT)
+                 Java VM:  Java HotSpot(TM) Client VM, 1.4.2_19-b04 (Sun Microsystems Inc.)
+General options:
+  convert *.xlf to *.properties: yes
+  include sources for debugging: yes
+
+Warning: Source folder "META-INF" exists but is empty and will be ignored.
+Checking path lengths for sources
+Path length checks finished in 0.021 seconds
+
+Preparing data context..
+No public part descriptor found for component "tc/cmi" (vendor "sap.com"), public part "default", using legacy mode.
+No public part descriptor found for component "tc/ddic/ddicruntime" (vendor "sap.com"), public part "default", using legacy mode.
+No public part descriptor found for component "tc/ddic/metamodel/content" (vendor "sap.com"), public part "default", using legacy mode.
+No public part descriptor found for component "tc/wd/webdynpro" (vendor "sap.com"), public part "default", using legacy mode.
+No public part descriptor found for component "tc/logging" (vendor "sap.com"), public part "default", using legacy mode.
+No public part descriptor found for component "tc/wdp/metamodel/content" (vendor "sap.com"), public part "default", using legacy mode.
+No public part descriptor found for component "com.sap.aii.proxy.framework" (vendor "sap.com"), public part "default", using legacy mode.
+No public part descriptor found for component "com.sap.aii.util.misc" (vendor "sap.com"), public part "default", using legacy mode.
+No public part descriptor found for component "com.sap.exception" (vendor "sap.com"), public part "default", using legacy mode.
+No public part descriptor found for component "com.sap.mw.jco" (vendor "sap.com"), public part "default", using legacy mode.
+No public part descriptor found for component "ejb20" (vendor "sap.com"), public part "default", using legacy mode.
+No public part descriptor found for component "IAIKSecurity" (vendor "sap.com"), public part "default", using legacy mode.
+No 'default' JDK defined, will use running VM.
+Data context preparation finished in 0.145 seconds
+
+Creating Ant build file..
+  Creating output file: C:\Users\crocchio\.dtc\LocalDevelopment\DCs\ar.com.quilmes.bue\bajaus\_comp\gen\default\logs\build.xml
+  Using macro file:     C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP_BUILDT\DCs\sap.com\tc\bi\bp\webDynpro\_comp\gen\default\public\webDynpro\macros\build.vm
+Build file creation finished in 0.136 seconds
+
+Starting Ant..
+  Using build file:     C:\Users\crocchio\.dtc\LocalDevelopment\DCs\ar.com.quilmes.bue\bajaus\_comp\gen\default\logs\build.xml
+  Using build target:   build
+  Using Ant version:    1.6.2
+
+compile:
+      [echo] Starting dictionary generator
+     [ddgen] 
+     [ddgen] [Info]    Property deployment is true: Deployment information is provided!
+     [ddgen] [Info]    Property sourcepath: C:\Users\crocchio\.dtc\LocalDevelopment\DCs\ar.com.quilmes.bue\bajaus\_comp\src\packages
+     [ddgen] [Info]    Property targetpath: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_ddic
+     [ddgen] [Info]    Property archivename: ar.com.quilmes.bue~bajaus
+     [ddgen] [Info]    Property vendor: ar.com.quilmes.bue
+     [ddgen] [Info]    Property dcname: bajaus
+     [ddgen] [Info]    Property projectlanguage: en
+     [ddgen] [Info]    Property language: Available languages are automatically determined!
+     [ddgen] [Info]    Property addpaths ...
+     [ddgen] [Info]       SapMetamodelWebdynproContent.zip - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_BUILDT/DCs/sap.com/tc/bi/extwd/_comp/gen/default/public/def/lib/model
+     [ddgen] [Info]       SapMetamodelDictionaryContent.zip - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_BUILDT/DCs/sap.com/tc/bi/extddic/_comp/gen/default/public/def/lib/model
+     [ddgen] [Info]       aii_util_misc.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/com.sap.aii.util.misc/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       exception.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/com.sap.exception/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       _cmi_api.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/tc/cmi/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       SapDictionaryTypeServices.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/tc/ddic/ddicruntime/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       SapDictionaryTypesRuntime.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/tc/ddic/ddicruntime/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       SapMetamodelDictionaryContent.zip - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/tc/ddic/metamodel/content/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       logging.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/logging/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       logging.perf.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/logging/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       SapMetamodelWebdynproContent.zip - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/tc/wdp/metamodel/content/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       aii_proxy_rt.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/com.sap.aii.proxy.framework/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       _webdynpro_admin.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       _webdynpro_basesrvc.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       _webdynpro_runtime_repository.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       _webdynpro_runtime_repository_pmr.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       _webdynpro_services.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       _webdynpro_clientserver.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       _webdynpro_model_dynamicrfc.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       _webdynpro_modelimpl.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       _webdynpro_pdfobject.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       _webdynpro_portal.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       _webdynpro_progmodel.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       _webdynpro_runtime_designtime_coupling.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       _webdynpro_runtime_designtime_coupling_api.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       jdsr.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/com.sap.mw.jco/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       jrfc.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/com.sap.mw.jco/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       ar.com.quilmes.bue~mdm_clientes_ejb_client.jar - C:/Users/crocchio/.dtc/LocalDevelopment/DCs/ar.com.quilmes.bue/mdm_clientes_ejb/_comp/gen/default/public/client/lib/java
+     [ddgen] [Info]       ar.com.quilmes.bue~mdm_clientes_ejb~clasesComplilation.jar - C:/Users/crocchio/.dtc/LocalDevelopment/DCs/ar.com.quilmes.bue/mdm_clientes_ejb/_comp/gen/default/public/clasesComplilation/lib/java
+     [ddgen] [Info]       ejb20.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/ejb20/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       iaik_jce_export.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/IAIKSecurity/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       iaik_jsse.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/IAIKSecurity/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       iaik_smime.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/IAIKSecurity/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       iaik_ssl.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/IAIKSecurity/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       w3c_http.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/IAIKSecurity/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]    Initialize generation templates from configuration jar:file:/C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_BUILDT/DCs/sap.com/tc/bi/extddic/_comp/gen/default/public/def/lib/java/SapDictionaryGenerationCore.jar!/DictionaryGenerationConfigurationCompiled.xml
+     [ddgen] [Info]    Generating dbtables/sdmDeployDd.xml
+     [ddgen] [Info]    Generation finished (0 seconds)
+     [ddgen] 
+     [timer] Dictionary generator finished in 0.494 seconds
+
+     [mkdir] Created dir: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_ddic\datatypes
+      [echo] Starting WebDynpro generator
+     [wdgen] 
+     [wdgen] [Info]    Property deployment is true: Deployment information is provided!
+     [wdgen] [Info]    Property sourcepath: C:\Users\crocchio\.dtc\LocalDevelopment\DCs\ar.com.quilmes.bue\bajaus\_comp\src\packages
+     [wdgen] [Info]    Property targetpath: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp
+     [wdgen] [Info]    Property archivename: ar.com.quilmes.bue~bajaus
+     [wdgen] [Info]    Property vendor: ar.com.quilmes.bue
+     [wdgen] [Info]    Property dcname: bajaus
+     [wdgen] [Info]    Property projectlanguage: en
+     [wdgen] [Info]    Property language: Available languages are automatically determined!
+     [wdgen] [Info]    Property addpaths ...
+     [wdgen] [Info]       SapMetamodelWebdynproContent.zip - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_BUILDT/DCs/sap.com/tc/bi/extwd/_comp/gen/default/public/def/lib/model
+     [wdgen] [Info]       SapMetamodelDictionaryContent.zip - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_BUILDT/DCs/sap.com/tc/bi/extddic/_comp/gen/default/public/def/lib/model
+     [wdgen] [Info]       aii_util_misc.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/com.sap.aii.util.misc/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       exception.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/com.sap.exception/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       _cmi_api.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/tc/cmi/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       SapDictionaryTypeServices.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/tc/ddic/ddicruntime/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       SapDictionaryTypesRuntime.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/tc/ddic/ddicruntime/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       SapMetamodelDictionaryContent.zip - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/tc/ddic/metamodel/content/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       logging.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/logging/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       logging.perf.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/logging/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       SapMetamodelWebdynproContent.zip - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/tc/wdp/metamodel/content/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       aii_proxy_rt.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/com.sap.aii.proxy.framework/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       _webdynpro_admin.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       _webdynpro_basesrvc.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       _webdynpro_runtime_repository.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       _webdynpro_runtime_repository_pmr.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       _webdynpro_services.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       _webdynpro_clientserver.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       _webdynpro_model_dynamicrfc.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       _webdynpro_modelimpl.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       _webdynpro_pdfobject.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       _webdynpro_portal.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       _webdynpro_progmodel.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       _webdynpro_runtime_designtime_coupling.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       _webdynpro_runtime_designtime_coupling_api.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       jdsr.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/com.sap.mw.jco/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       jrfc.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/com.sap.mw.jco/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       ar.com.quilmes.bue~mdm_clientes_ejb_client.jar - C:/Users/crocchio/.dtc/LocalDevelopment/DCs/ar.com.quilmes.bue/mdm_clientes_ejb/_comp/gen/default/public/client/lib/java
+     [wdgen] [Info]       ar.com.quilmes.bue~mdm_clientes_ejb~clasesComplilation.jar - C:/Users/crocchio/.dtc/LocalDevelopment/DCs/ar.com.quilmes.bue/mdm_clientes_ejb/_comp/gen/default/public/clasesComplilation/lib/java
+     [wdgen] [Info]       ejb20.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/ejb20/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       iaik_jce_export.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/IAIKSecurity/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       iaik_jsse.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/IAIKSecurity/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       iaik_smime.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/IAIKSecurity/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       iaik_ssl.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/IAIKSecurity/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       w3c_http.jar - C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/IAIKSecurity/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]    Initialize generation templates from configuration jar:file:/C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_BUILDT/DCs/sap.com/tc/bi/extwd/_comp/gen/default/public/def/lib/java/SapWebDynproGenerationCore.jar!/WebDynproGenerationConfigurationCompiled.xml
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/consultaclientes/ConsultaClientes.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/consultaclientes/GetDatosCliente_ExecuteResponse.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/consultaclientes/Frecuencia.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/consultaclientes/Response_Execute.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/consultaclientes/DatosCliente.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/consultaclientes/MensajesMensajesItem.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/consultaclientes/ArrayOfFrecuencia.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/consultaclientes/TerriClien.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/consultaclientes/Request_Execute.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/consultaclientes/GetDatosCliente_Execute.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/consultaclientes/ArrayOfTerriClien.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/consultaclientes/Mensajes.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja_cc/CuentaCorriente.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja_cc/RequestCC_Execute.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja_cc/Mensajes.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja_cc/MensajesMensajesItem.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja_cc/GetCtaCteCliente_ExecuteResponse.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja_cc/Response_Execute.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja_cc/GetCtaCteCliente_Execute.java
+     [wdgen] [Info]    Model ConsultaExterna2 of type JavaBean does not require code generation
+     [wdgen] [Info]    Model ConsultaExterna of type JavaBean does not require code generation
+     [wdgen] [Info]    Model ConsultaInterna of type JavaBean does not require code generation
+     [wdgen] [Info]    Generating packages/com/quilmes/baja_cliente/BajaCliente.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja_cliente/MensajesMensajesItem.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja_cliente/Mensajes.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja_cliente/BajaCliente_ExecuteResponse.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja_cliente/Response_Execute.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja_cliente/BajaCliente_Execute.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja_cliente/RequestB_Execute.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja_envases/Envases.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja_envases/GetSaldoEnvases_ExecuteResponse.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja_envases/GetSaldoEnvases_Execute.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja_envases/SalEnvasesItem.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja_envases/Response_Execute.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja_envases/RequestE_Execute.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja_envases/SaldoEnvases.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja_envases/SalEnvasesItemSalEnvasesItemItem.java
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label cliente [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label razon_soc [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label calle [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label email [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label motivo [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label tipo_d [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label numero [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label cp [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label bot [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label documen [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label localidad [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label posee [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label transfiere [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label subcanal [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label provincia [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label altabaja [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label tip_vta [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label telefono [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label puerta [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label historico [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label saldo_e [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label saldo_c [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label saldo_p [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label saldo_d [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label saldo_ven [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label saldo_rec [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label cliente_t [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label razon_t [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label doc_t [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label calle_t [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label localidad_t [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label observac [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label observ_md [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label territorio [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> Label frecuencia [labelFor]: labelFor is not set
+     [wdgen] [Info]    com.quilmes.baja.Baja_View --> Caption Caption: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> InputField razon_cli: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> InputField calle_cli: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> InputField email_cli: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> DropDownByIndex mot_baja: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> DropDownByIndex mot_baja_md: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> InputField mot_baja_otro: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> DropDownByIndex tipo_doc: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> InputField numero_cli: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> InputField cp_cli: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> InputField documento_cli: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> InputField localidad_cli: UIElement does not have a label
+     [wdgen] [Info]    com.quilmes.baja.Baja_View --> CheckBox posee_d: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> InputField transfiere_deuda: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> DropDownByIndex subcanales: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> DropDownByIndex provincias: UIElement does not have a label
+     [wdgen] [Info]    com.quilmes.baja.Baja_View --> CheckBox alta_baja: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> InputField tipo_vta: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> InputField telefono_cli: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> InputField puerta_cli: UIElement does not have a label
+     [wdgen] [Info]    com.quilmes.baja.Baja_View --> CheckBox historico_cli: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> InputField saldo_env: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> InputField saldo_cc: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> InputField saldo_pp: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> InputField saldo_doc: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> InputField saldo_venc: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> InputField saldo_rech: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> InputField nro_cliente_t: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> InputField razon_soc_t: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> InputField doc_cli_t: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> InputField calle_cli_t: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> InputField localidad_cli_t: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> InputField observac_us: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Baja_View --> InputField observac_md: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Adjuntos_View --> Caption Caption4 [text]: The text consists only of special characters and/or numbers.
+     [wdgen] [Warning] com.quilmes.baja.Adjuntos_View --> UIElement FileUpload1 [data]: Property not bound
+     [wdgen] [Warning] com.quilmes.baja.Adjuntos_View --> Label Label0 [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Adjuntos_View --> Label Label [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Adjuntos_View --> Label Label1 [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Adjuntos_View --> Label Label2 [labelFor]: labelFor is not set
+     [wdgen] [Warning] com.quilmes.baja.Adjuntos_View --> UIElement FileUpload1: UIElement does not have a label
+     [wdgen] [Info]    com.quilmes.baja.Adjuntos_View --> TextView TextView: UIElement does not have a label
+     [wdgen] [Info]    com.quilmes.baja.Adjuntos_View --> Caption Caption1: UIElement does not have a label
+     [wdgen] [Info]    com.quilmes.baja.Adjuntos_View --> Caption Caption2: UIElement does not have a label
+     [wdgen] [Info]    com.quilmes.baja.Adjuntos_View --> Caption Caption3: UIElement does not have a label
+     [wdgen] [Info]    com.quilmes.baja.Adjuntos_View --> Caption Caption4: UIElement does not have a label
+     [wdgen] [Info]    com.quilmes.baja.Popup --> TextView TextView: UIElement does not have a label
+     [wdgen] [Warning] com.quilmes.baja.Popup --> TextEdit TextEdit: UIElement does not have a label
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/wdp/IPrivateBaja_View.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/Baja_View.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/wdp/InternalBaja_View.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/wdp/IPublicBajaUS.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/wdp/IPrivateBajaUS.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/BajaUS.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/wdp/InternalBajaUS.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/wdp/IPrivateAdjuntos_View.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/Adjuntos_View.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/wdp/InternalAdjuntos_View.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/wdp/IPrivatePopup.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/Popup.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/wdp/InternalPopup.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/wdp/IPublicWebDynproCOInterfaceView.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/wdp/IPrivateWebDynproCOInterfaceView.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/WebDynproCOInterfaceView.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/wdp/InternalWebDynproCOInterfaceView.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/wdp/IPublicBajaUSInterfaceCfg.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/wdp/IExternalBajaUSInterfaceCfg.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/wdp/IPrivateBajaUSInterfaceCfg.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/BajaUSInterfaceCfg.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/wdp/InternalBajaUSInterfaceCfg.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/BajaUSInterfaceCfg.wdcontroller
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/wdp/IPublicBajaUSInterface.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/wdp/IExternalBajaUSInterface.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/wdp/IPrivateBajaUSInterface.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/BajaUSInterface.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/wdp/InternalBajaUSInterface.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/BajaUSInterface.wdcontroller
+[System.out] [Invoked from  com.sap.ide.webdynpro.generation.runtime.ControllerPublisher.info(ControllerPublisher.java:83)]
+[System.out] [Info] removing usage of controller //WebDynpro/Controller:com.quilmes.baja.BajaUS     [wdgen] [Info]    Generating packages/com/quilmes/baja/wdp/IPublicBajaUSInterfaceView.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/wdp/IPrivateBajaUSInterfaceView.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/BajaUSInterfaceView.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/wdp/InternalBajaUSInterfaceView.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/wdp/IPublicPopWinInterfaceView.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/wdp/IPrivatePopWinInterfaceView.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/PopWinInterfaceView.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/wdp/InternalPopWinInterfaceView.java
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/wdp/IMessageBajaUS.java
+     [wdgen] [Info]    Generating configuration/Components/com.quilmes.baja.BajaUS/BajaUS.xml
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/wdp/ResourceBajaUS.properties
+     [wdgen] [Info]    Generating packages/com/quilmes/baja/wdp/ResourceBajaUS_en.properties
+     [wdgen] [Info]    Generating configuration/Applications/com.quilmes.baja.BajaUS/BajaUS.xml
+     [wdgen] [Info]    Generating portalapp.xml
+     [wdgen] [Info]    Generating wd.xml
+     [wdgen] [Info]    Generating application.xml
+     [wdgen] [Info]    Generating application-j2ee-engine.xml
+     [wdgen] [Info]    Generating PublicPartFileList.properties
+     [wdgen] [Info]    Generating PublicPartFileList.xml
+     [wdgen] [Info]    Generation finished (2 seconds)
+     [wdgen] 
+     [timer] WebDynpro generator finished in 2.633 seconds
+
+      [echo] Starting Java compiler
+      [echo] Settings:
+      [echo]         debug: on
+      [echo]      optimize: off
+      [echo]   deprecation: default
+      [echo]       verbose: default
+      [echo]      encoding: UTF8
+      [echo]        source: default
+      [echo]        target: default
+      [echo]  source paths: 
+      [echo]       C:\Users\crocchio\.dtc\LocalDevelopment\DCs\ar.com.quilmes.bue\bajaus\_comp\src\packages
+      [echo]       C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_ddic\datatypes
+      [echo]       C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages
+      [echo]    class path:
+      [echo]       C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP_JTECHS\DCs\sap.com\com.sap.aii.util.misc\_comp\gen\default\public\default\lib\java\aii_util_misc.jar
+      [echo]       C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\com.sap.exception\_comp\gen\default\public\default\lib\java\exception.jar
+      [echo]       C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP_JTECHS\DCs\sap.com\tc\cmi\_comp\gen\default\public\default\lib\java\_cmi_api.jar
+      [echo]       C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP_JTECHS\DCs\sap.com\tc\ddic\ddicruntime\_comp\gen\default\public\default\lib\java\SapDictionaryTypeServices.jar
+      [echo]       C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP_JTECHS\DCs\sap.com\tc\ddic\ddicruntime\_comp\gen\default\public\default\lib\java\SapDictionaryTypesRuntime.jar
+      [echo]       C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP_JTECHS\DCs\sap.com\tc\ddic\metamodel\content\_comp\gen\default\public\default\lib\java\SapMetamodelDictionaryContent.zip
+      [echo]       C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\logging\_comp\gen\default\public\default\lib\java\logging.jar
+      [echo]       C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\logging\_comp\gen\default\public\default\lib\java\logging.perf.jar
+      [echo]       C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP_JTECHS\DCs\sap.com\tc\wdp\metamodel\content\_comp\gen\default\public\default\lib\java\SapMetamodelWebdynproContent.zip
+      [echo]       C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP_JTECHS\DCs\sap.com\com.sap.aii.proxy.framework\_comp\gen\default\public\default\lib\java\aii_proxy_rt.jar
+      [echo]       C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_admin.jar
+      [echo]       C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_basesrvc.jar
+      [echo]       C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_runtime_repository.jar
+      [echo]       C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_runtime_repository_pmr.jar
+      [echo]       C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_services.jar
+      [echo]       C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_clientserver.jar
+      [echo]       C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_model_dynamicrfc.jar
+      [echo]       C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_modelimpl.jar
+      [echo]       C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_pdfobject.jar
+      [echo]       C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_portal.jar
+      [echo]       C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_progmodel.jar
+      [echo]       C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_runtime_designtime_coupling.jar
+      [echo]       C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_runtime_designtime_coupling_api.jar
+      [echo]       C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\com.sap.mw.jco\_comp\gen\default\public\default\lib\java\jdsr.jar
+      [echo]       C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\com.sap.mw.jco\_comp\gen\default\public\default\lib\java\jrfc.jar
+      [echo]       C:\Users\crocchio\.dtc\LocalDevelopment\DCs\ar.com.quilmes.bue\mdm_clientes_ejb\_comp\gen\default\public\client\lib\java\ar.com.quilmes.bue~mdm_clientes_ejb_client.jar
+      [echo]       C:\Users\crocchio\.dtc\LocalDevelopment\DCs\ar.com.quilmes.bue\mdm_clientes_ejb\_comp\gen\default\public\clasesComplilation\lib\java\ar.com.quilmes.bue~mdm_clientes_ejb~clasesComplilation.jar
+      [echo]       C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\ejb20\_comp\gen\default\public\default\lib\java\ejb20.jar
+      [echo]       C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\IAIKSecurity\_comp\gen\default\public\default\lib\java\iaik_jce_export.jar
+      [echo]       C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\IAIKSecurity\_comp\gen\default\public\default\lib\java\iaik_jsse.jar
+      [echo]       C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\IAIKSecurity\_comp\gen\default\public\default\lib\java\iaik_smime.jar
+      [echo]       C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\IAIKSecurity\_comp\gen\default\public\default\lib\java\iaik_ssl.jar
+      [echo]       C:\Program Files (x86)\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\IAIKSecurity\_comp\gen\default\public\default\lib\java\w3c_http.jar
+      [echo]    output dir: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\classes
+     [javac] Compiling 70 source files to C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\classes
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\Adjuntos_View.java:29: package com.sap.security.api does not exist
+     [javac] ERROR: import com.sap.security.api.IUser;
+     [javac] ERROR:                             ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\Adjuntos_View.java:35: package com.sapportals.portal.security.usermanagement does not exist
+     [javac] ERROR: import com.sapportals.portal.security.usermanagement.UserManagementException;
+     [javac] ERROR:                                                      ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\Adjuntos_View.java:36: package com.sapportals.wcm.repository does not exist
+     [javac] ERROR: import com.sapportals.wcm.repository.AccessDeniedException;
+     [javac] ERROR:                                      ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\Adjuntos_View.java:37: package com.sapportals.wcm.repository does not exist
+     [javac] ERROR: import com.sapportals.wcm.repository.Content;
+     [javac] ERROR:                                      ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\Adjuntos_View.java:38: package com.sapportals.wcm.repository does not exist
+     [javac] ERROR: import com.sapportals.wcm.repository.ICollection;
+     [javac] ERROR:                                      ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\Adjuntos_View.java:39: package com.sapportals.wcm.repository does not exist
+     [javac] ERROR: import com.sapportals.wcm.repository.IResource;
+     [javac] ERROR:                                      ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\Adjuntos_View.java:40: package com.sapportals.wcm.repository does not exist
+     [javac] ERROR: import com.sapportals.wcm.repository.IResourceContext;
+     [javac] ERROR:                                      ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\Adjuntos_View.java:41: package com.sapportals.wcm.repository does not exist
+     [javac] ERROR: import com.sapportals.wcm.repository.IResourceFactory;
+     [javac] ERROR:                                      ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\Adjuntos_View.java:42: package com.sapportals.wcm.repository does not exist
+     [javac] ERROR: import com.sapportals.wcm.repository.NotSupportedException;
+     [javac] ERROR:                                      ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\Adjuntos_View.java:43: package com.sapportals.wcm.repository does not exist
+     [javac] ERROR: import com.sapportals.wcm.repository.ResourceContext;
+     [javac] ERROR:                                      ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\Adjuntos_View.java:44: package com.sapportals.wcm.repository does not exist
+     [javac] ERROR: import com.sapportals.wcm.repository.ResourceException;
+     [javac] ERROR:                                      ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\Adjuntos_View.java:45: package com.sapportals.wcm.repository does not exist
+     [javac] ERROR: import com.sapportals.wcm.repository.ResourceFactory;
+     [javac] ERROR:                                      ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\Adjuntos_View.java:46: package com.sapportals.wcm.util.content does not exist
+     [javac] ERROR: import com.sapportals.wcm.util.content.IContent;
+     [javac] ERROR:                                        ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\Adjuntos_View.java:47: package com.sapportals.wcm.util.uri does not exist
+     [javac] ERROR: import com.sapportals.wcm.util.uri.RID;
+     [javac] ERROR:                                    ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\Adjuntos_View.java:48: package com.sapportals.wcm.util.usermanagement does not exist
+     [javac] ERROR: import com.sapportals.wcm.util.usermanagement.WPUMFactory;
+     [javac] ERROR:                                               ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\Adjuntos_View.java:407: package com.sapportals.wcm.repository does not exist
+     [javac] ERROR:   public com.sapportals.wcm.repository.IResource traerResource( java.lang.String path, boolean modificable ) {
+     [javac] ERROR:                                       ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\BajaUSInterface.java:19: package com.sap.caf.eu.gp.co.api does not exist
+     [javac] ERROR: import com.sap.caf.eu.gp.co.api.GPCallableObjectFactory;
+     [javac] ERROR:                                 ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\BajaUSInterface.java:20: package com.sap.caf.eu.gp.co.api does not exist
+     [javac] ERROR: import com.sap.caf.eu.gp.co.api.GPWebDynproResourceAccessor;
+     [javac] ERROR:                                 ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\BajaUSInterface.java:21: package com.sap.caf.eu.gp.co.api does not exist
+     [javac] ERROR: import com.sap.caf.eu.gp.co.api.IGPCOResultStateInfo;
+     [javac] ERROR:                                 ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\BajaUSInterface.java:22: package com.sap.caf.eu.gp.co.api does not exist
+     [javac] ERROR: import com.sap.caf.eu.gp.co.api.IGPExecutionContext;
+     [javac] ERROR:                                 ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\BajaUSInterface.java:23: package com.sap.caf.eu.gp.co.api does not exist
+     [javac] ERROR: import com.sap.caf.eu.gp.co.api.IGPTechnicalDescription;
+     [javac] ERROR:                                 ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\BajaUSInterface.java:24: package com.sap.caf.eu.gp.exception.api does not exist
+     [javac] ERROR: import com.sap.caf.eu.gp.exception.api.GPEngineException;
+     [javac] ERROR:                                        ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\BajaUSInterface.java:25: package com.sap.caf.eu.gp.exception.api does not exist
+     [javac] ERROR: import com.sap.caf.eu.gp.exception.api.GPInvocationException;
+     [javac] ERROR:                                        ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\BajaUSInterface.java:26: package com.sap.caf.eu.gp.exception.api does not exist
+     [javac] ERROR: import com.sap.caf.eu.gp.exception.api.GPTechnicalCallableObjectException;
+     [javac] ERROR:                                        ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\BajaUSInterface.java:27: package com.sap.caf.eu.gp.structure.api does not exist
+     [javac] ERROR: import com.sap.caf.eu.gp.structure.api.IGPAttributeInfo;
+     [javac] ERROR:                                        ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\BajaUSInterface.java:28: package com.sap.caf.eu.gp.structure.api does not exist
+     [javac] ERROR: import com.sap.caf.eu.gp.structure.api.IGPStructure;
+     [javac] ERROR:                                        ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\BajaUSInterface.java:29: package com.sap.caf.eu.gp.structure.api does not exist
+     [javac] ERROR: import com.sap.caf.eu.gp.structure.api.IGPStructureInfo;
+     [javac] ERROR:                                        ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\wdp\IPublicBajaUSInterface.java:293: package com.sap.caf.eu.gp.exception.api does not exist
+     [javac] ERROR:   void wdFireEventTechnicalException( com.sap.caf.eu.gp.exception.api.GPTechnicalCallableObjectException technicalException );
+     [javac] ERROR:                                                                      ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\wdp\IExternalBajaUSInterface.java:27: package com.sap.caf.eu.gp.co.api does not exist
+     [javac] ERROR:   com.sap.caf.eu.gp.co.api.IGPTechnicalDescription getDescription( java.util.Locale locale );
+     [javac] ERROR:                           ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\wdp\IExternalBajaUSInterface.java:30: package com.sap.caf.eu.gp.co.api does not exist
+     [javac] ERROR:   void execute( com.sap.caf.eu.gp.co.api.IGPExecutionContext executionContext );
+     [javac] ERROR:                                         ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\wdp\InternalBajaUSInterface.java:127: package com.sap.caf.eu.gp.co.api does not exist
+     [javac] ERROR:   public com.sap.caf.eu.gp.co.api.IGPTechnicalDescription getDescription( java.util.Locale _locale ) {
+     [javac] ERROR:                                  ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\wdp\InternalBajaUSInterface.java:131: package com.sap.caf.eu.gp.co.api does not exist
+     [javac] ERROR:   public void execute( com.sap.caf.eu.gp.co.api.IGPExecutionContext _executionContext ) {
+     [javac] ERROR:                                                ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\wdp\InternalBajaUSInterface.java:160: package com.sap.caf.eu.gp.exception.api does not exist
+     [javac] ERROR:   public void wdFireEventTechnicalException( com.sap.caf.eu.gp.exception.api.GPTechnicalCallableObjectException _technicalException ) {
+     [javac] ERROR:                                                                             ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\wdp\InternalBajaUSInterface.java:186: package com.sap.caf.eu.gp.co.api does not exist
+     [javac] ERROR:     public com.sap.caf.eu.gp.co.api.IGPTechnicalDescription getDescription( java.util.Locale _locale ) {
+     [javac] ERROR:                                    ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\wdp\InternalBajaUSInterface.java:190: package com.sap.caf.eu.gp.co.api does not exist
+     [javac] ERROR:     public void execute( com.sap.caf.eu.gp.co.api.IGPExecutionContext _executionContext ) {
+     [javac] ERROR:                                                  ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\BajaUSInterface.java:126: package com.sap.caf.eu.gp.co.api does not exist
+     [javac] ERROR:   public com.sap.caf.eu.gp.co.api.IGPTechnicalDescription getDescription( java.util.Locale locale )
+     [javac] ERROR:                                  ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\BajaUSInterface.java:167: package com.sap.caf.eu.gp.co.api does not exist
+     [javac] ERROR:   public void execute( com.sap.caf.eu.gp.co.api.IGPExecutionContext executionContext )
+     [javac] ERROR:                                                ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\BajaUSInterface.java:240: cannot resolve symbol
+     [javac] ERROR: symbol  : class IGPExecutionContext 
+     [javac] ERROR: location: class com.quilmes.baja.BajaUSInterface
+     [javac] ERROR:   private IGPExecutionContext executionContext;  
+     [javac] ERROR:           ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\Baja_View.java:43: package com.sap.security.api does not exist
+     [javac] ERROR: import com.sap.security.api.IUser;
+     [javac] ERROR:                             ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\Baja_View.java:44: package com.sap.security.api does not exist
+     [javac] ERROR: import com.sap.security.api.IUserAccount;
+     [javac] ERROR:                             ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\Baja_View.java:45: package com.sap.security.api does not exist
+     [javac] ERROR: import com.sap.security.api.UMException;
+     [javac] ERROR:                             ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\Baja_View.java:46: package com.sap.tc.webdynpro.model.webservice.api does not exist
+     [javac] ERROR: import com.sap.tc.webdynpro.model.webservice.api.WDWSModelExecuteException;
+     [javac] ERROR:                                                  ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\Baja_View.java:53: package com.sapportals.portal.security.usermanagement does not exist
+     [javac] ERROR: import com.sapportals.portal.security.usermanagement.UserManagementException;
+     [javac] ERROR:                                                      ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\Baja_View.java:54: package com.sapportals.wcm.repository does not exist
+     [javac] ERROR: import com.sapportals.wcm.repository.AccessDeniedException;
+     [javac] ERROR:                                      ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\Baja_View.java:55: package com.sapportals.wcm.repository does not exist
+     [javac] ERROR: import com.sapportals.wcm.repository.IResource;
+     [javac] ERROR:                                      ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\Baja_View.java:56: package com.sapportals.wcm.repository does not exist
+     [javac] ERROR: import com.sapportals.wcm.repository.IResourceContext;
+     [javac] ERROR:                                      ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\Baja_View.java:57: package com.sapportals.wcm.repository does not exist
+     [javac] ERROR: import com.sapportals.wcm.repository.IResourceFactory;
+     [javac] ERROR:                                      ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\Baja_View.java:58: package com.sapportals.wcm.repository does not exist
+     [javac] ERROR: import com.sapportals.wcm.repository.NotSupportedException;
+     [javac] ERROR:                                      ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\Baja_View.java:59: package com.sapportals.wcm.repository does not exist
+     [javac] ERROR: import com.sapportals.wcm.repository.ResourceContext;
+     [javac] ERROR:                                      ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\Baja_View.java:60: package com.sapportals.wcm.repository does not exist
+     [javac] ERROR: import com.sapportals.wcm.repository.ResourceException;
+     [javac] ERROR:                                      ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\Baja_View.java:61: package com.sapportals.wcm.repository does not exist
+     [javac] ERROR: import com.sapportals.wcm.repository.ResourceFactory;
+     [javac] ERROR:                                      ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\Baja_View.java:62: package com.sapportals.wcm.util.uri does not exist
+     [javac] ERROR: import com.sapportals.wcm.util.uri.RID;
+     [javac] ERROR:                                    ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja\Baja_View.java:63: package com.sapportals.wcm.util.usermanagement does not exist
+     [javac] ERROR: import com.sapportals.wcm.util.usermanagement.WPUMFactory;
+     [javac] ERROR:                                               ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_cliente\RequestB_Execute.java:14: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR: public final class RequestB_Execute extends com.sap.tc.webdynpro.model.webservice.gci.WSTypedModelClassExecutable
+     [javac] ERROR:                                                                                      ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_cliente\BajaCliente.java:14: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR: public final class BajaCliente extends com.sap.tc.webdynpro.model.webservice.gci.WSTypedModel
+     [javac] ERROR:                                                                                 ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_cliente\BajaCliente.java:23: package javax.xml.namespace does not exist
+     [javac] ERROR:   private static final javax.xml.namespace.QName interfaceQName = 
+     [javac] ERROR:                                           ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_cliente\BajaCliente.java:30: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR:   private static final com.sap.tc.webdynpro.model.webservice.gci.IWSTypedModelInfo TYPED_MODEL_INFO = createTypedModelInfo();
+     [javac] ERROR:                                                                 ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_cliente\RequestB_Execute.java:31: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR:   static com.sap.tc.webdynpro.model.webservice.gci.IWSTypedModelClassFactory createModelClassFactory() {
+     [javac] ERROR:                                                   ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_cliente\BajaCliente_Execute.java:14: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR: public final class BajaCliente_Execute extends com.sap.tc.webdynpro.model.webservice.gci.WSTypedModelClass
+     [javac] ERROR:                                                                                         ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_cliente\BajaCliente_Execute.java:31: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR:   static com.sap.tc.webdynpro.model.webservice.gci.IWSTypedModelClassFactory createModelClassFactory() {
+     [javac] ERROR:                                                   ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_cliente\Response_Execute.java:14: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR: public final class Response_Execute extends com.sap.tc.webdynpro.model.webservice.gci.WSTypedModelClass
+     [javac] ERROR:                                                                                      ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_cliente\Response_Execute.java:31: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR:   static com.sap.tc.webdynpro.model.webservice.gci.IWSTypedModelClassFactory createModelClassFactory() {
+     [javac] ERROR:                                                   ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_cliente\BajaCliente_ExecuteResponse.java:14: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR: public final class BajaCliente_ExecuteResponse extends com.sap.tc.webdynpro.model.webservice.gci.WSTypedModelClass
+     [javac] ERROR:                                                                                                 ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_cliente\BajaCliente_ExecuteResponse.java:31: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR:   static com.sap.tc.webdynpro.model.webservice.gci.IWSTypedModelClassFactory createModelClassFactory() {
+     [javac] ERROR:                                                   ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_cliente\Mensajes.java:14: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR: public final class Mensajes extends com.sap.tc.webdynpro.model.webservice.gci.WSTypedModelClass
+     [javac] ERROR:                                                                              ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_cliente\Mensajes.java:31: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR:   static com.sap.tc.webdynpro.model.webservice.gci.IWSTypedModelClassFactory createModelClassFactory() {
+     [javac] ERROR:                                                   ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_cliente\MensajesMensajesItem.java:14: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR: public final class MensajesMensajesItem extends com.sap.tc.webdynpro.model.webservice.gci.WSTypedModelClass
+     [javac] ERROR:                                                                                          ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_cliente\MensajesMensajesItem.java:31: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR:   static com.sap.tc.webdynpro.model.webservice.gci.IWSTypedModelClassFactory createModelClassFactory() {
+     [javac] ERROR:                                                   ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_cc\RequestCC_Execute.java:14: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR: public final class RequestCC_Execute extends com.sap.tc.webdynpro.model.webservice.gci.WSTypedModelClassExecutable
+     [javac] ERROR:                                                                                       ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_cc\CuentaCorriente.java:14: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR: public final class CuentaCorriente extends com.sap.tc.webdynpro.model.webservice.gci.WSTypedModel
+     [javac] ERROR:                                                                                     ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_cc\CuentaCorriente.java:23: package javax.xml.namespace does not exist
+     [javac] ERROR:   private static final javax.xml.namespace.QName interfaceQName = 
+     [javac] ERROR:                                           ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_cc\CuentaCorriente.java:30: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR:   private static final com.sap.tc.webdynpro.model.webservice.gci.IWSTypedModelInfo TYPED_MODEL_INFO = createTypedModelInfo();
+     [javac] ERROR:                                                                 ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_cc\RequestCC_Execute.java:31: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR:   static com.sap.tc.webdynpro.model.webservice.gci.IWSTypedModelClassFactory createModelClassFactory() {
+     [javac] ERROR:                                                   ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_cc\GetCtaCteCliente_Execute.java:14: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR: public final class GetCtaCteCliente_Execute extends com.sap.tc.webdynpro.model.webservice.gci.WSTypedModelClass
+     [javac] ERROR:                                                                                              ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_cc\GetCtaCteCliente_Execute.java:31: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR:   static com.sap.tc.webdynpro.model.webservice.gci.IWSTypedModelClassFactory createModelClassFactory() {
+     [javac] ERROR:                                                   ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_cc\Response_Execute.java:14: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR: public final class Response_Execute extends com.sap.tc.webdynpro.model.webservice.gci.WSTypedModelClass
+     [javac] ERROR:                                                                                      ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_cc\Response_Execute.java:31: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR:   static com.sap.tc.webdynpro.model.webservice.gci.IWSTypedModelClassFactory createModelClassFactory() {
+     [javac] ERROR:                                                   ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_cc\GetCtaCteCliente_ExecuteResponse.java:14: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR: public final class GetCtaCteCliente_ExecuteResponse extends com.sap.tc.webdynpro.model.webservice.gci.WSTypedModelClass
+     [javac] ERROR:                                                                                                      ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_cc\GetCtaCteCliente_ExecuteResponse.java:31: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR:   static com.sap.tc.webdynpro.model.webservice.gci.IWSTypedModelClassFactory createModelClassFactory() {
+     [javac] ERROR:                                                   ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_cc\Mensajes.java:14: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR: public final class Mensajes extends com.sap.tc.webdynpro.model.webservice.gci.WSTypedModelClass
+     [javac] ERROR:                                                                              ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_cc\Mensajes.java:31: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR:   static com.sap.tc.webdynpro.model.webservice.gci.IWSTypedModelClassFactory createModelClassFactory() {
+     [javac] ERROR:                                                   ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_cc\MensajesMensajesItem.java:14: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR: public final class MensajesMensajesItem extends com.sap.tc.webdynpro.model.webservice.gci.WSTypedModelClass
+     [javac] ERROR:                                                                                          ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_cc\MensajesMensajesItem.java:31: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR:   static com.sap.tc.webdynpro.model.webservice.gci.IWSTypedModelClassFactory createModelClassFactory() {
+     [javac] ERROR:                                                   ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_envases\RequestE_Execute.java:14: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR: public final class RequestE_Execute extends com.sap.tc.webdynpro.model.webservice.gci.WSTypedModelClassExecutable
+     [javac] ERROR:                                                                                      ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_envases\Envases.java:14: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR: public final class Envases extends com.sap.tc.webdynpro.model.webservice.gci.WSTypedModel
+     [javac] ERROR:                                                                             ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_envases\Envases.java:23: package javax.xml.namespace does not exist
+     [javac] ERROR:   private static final javax.xml.namespace.QName interfaceQName = 
+     [javac] ERROR:                                           ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_envases\Envases.java:30: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR:   private static final com.sap.tc.webdynpro.model.webservice.gci.IWSTypedModelInfo TYPED_MODEL_INFO = createTypedModelInfo();
+     [javac] ERROR:                                                                 ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_envases\RequestE_Execute.java:31: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR:   static com.sap.tc.webdynpro.model.webservice.gci.IWSTypedModelClassFactory createModelClassFactory() {
+     [javac] ERROR:                                                   ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_envases\GetSaldoEnvases_Execute.java:14: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR: public final class GetSaldoEnvases_Execute extends com.sap.tc.webdynpro.model.webservice.gci.WSTypedModelClass
+     [javac] ERROR:                                                                                             ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_envases\GetSaldoEnvases_Execute.java:31: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR:   static com.sap.tc.webdynpro.model.webservice.gci.IWSTypedModelClassFactory createModelClassFactory() {
+     [javac] ERROR:                                                   ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_envases\Response_Execute.java:14: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR: public final class Response_Execute extends com.sap.tc.webdynpro.model.webservice.gci.WSTypedModelClass
+     [javac] ERROR:                                                                                      ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_envases\Response_Execute.java:31: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR:   static com.sap.tc.webdynpro.model.webservice.gci.IWSTypedModelClassFactory createModelClassFactory() {
+     [javac] ERROR:                                                   ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_envases\GetSaldoEnvases_ExecuteResponse.java:14: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR: public final class GetSaldoEnvases_ExecuteResponse extends com.sap.tc.webdynpro.model.webservice.gci.WSTypedModelClass
+     [javac] ERROR:                                                                                                     ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_envases\GetSaldoEnvases_ExecuteResponse.java:31: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR:   static com.sap.tc.webdynpro.model.webservice.gci.IWSTypedModelClassFactory createModelClassFactory() {
+     [javac] ERROR:                                                   ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_envases\SaldoEnvases.java:14: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR: public final class SaldoEnvases extends com.sap.tc.webdynpro.model.webservice.gci.WSTypedModelClass
+     [javac] ERROR:                                                                                  ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_envases\SaldoEnvases.java:31: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR:   static com.sap.tc.webdynpro.model.webservice.gci.IWSTypedModelClassFactory createModelClassFactory() {
+     [javac] ERROR:                                                   ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_envases\SalEnvasesItem.java:14: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR: public final class SalEnvasesItem extends com.sap.tc.webdynpro.model.webservice.gci.WSTypedModelClass
+     [javac] ERROR:                                                                                    ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_envases\SalEnvasesItem.java:31: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR:   static com.sap.tc.webdynpro.model.webservice.gci.IWSTypedModelClassFactory createModelClassFactory() {
+     [javac] ERROR:                                                   ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_envases\SalEnvasesItemSalEnvasesItemItem.java:14: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR: public final class SalEnvasesItemSalEnvasesItemItem extends com.sap.tc.webdynpro.model.webservice.gci.WSTypedModelClass
+     [javac] ERROR:                                                                                                      ^
+     [javac] ERROR: C:\Users\crocchio\.dtc\LocalDevelopment\t\89BE00E1CD7275C410BA42A89FF5E42B\gen_wdp\packages\com\quilmes\baja_envases\SalEnvasesItemSalEnvasesItemItem.java:31: package com.sap.tc.webdynpro.model.webservice.gci does not exist
+     [javac] ERROR:   static com.sap.tc.webdynpro.model.webservice.gci.IWSTypedModelClassFactory createModelClassFactory() {
+     [javac] ERROR:                                                   ^
+     [javac] WARNING: Note: Some input files use or override a deprecated API.
+     [javac] WARNING: Note: Recompile with -deprecation for details.
+     [javac] 100 errors
+Error: C:\Users\crocchio\.dtc\LocalDevelopment\DCs\ar.com.quilmes.bue\bajaus\_comp\gen\default\logs\build.xml:159: Compile failed; see the compiler error output for details.
+	at org.apache.tools.ant.taskdefs.Javac.compile(Javac.java:938)
+	at org.apache.tools.ant.taskdefs.Javac.execute(Javac.java:758)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:275)
+	at org.apache.tools.ant.Task.perform(Task.java:364)
+	at org.apache.tools.ant.Target.execute(Target.java:341)
+	at org.apache.tools.ant.Target.performTasks(Target.java:369)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1214)
+	at com.sap.tc.buildplugin.techdev.ant.util.AntRunner.run(AntRunner.java:116)
+	at com.sap.tc.buildplugin.DefaultAntBuildAction.execute(DefaultAntBuildAction.java:58)
+	at com.sap.tc.buildplugin.DefaultPlugin.handleBuildStepSequence(DefaultPlugin.java:196)
+	at com.sap.tc.buildplugin.DefaultPlugin.performBuild(DefaultPlugin.java:168)
+	at com.sap.tc.buildplugin.DefaultPluginV3Delegate$BuildRequestHandler.handle(DefaultPluginV3Delegate.java:66)
+	at com.sap.tc.buildplugin.DefaultPluginV3Delegate.requestV3(DefaultPluginV3Delegate.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:324)
+	at com.sap.tc.buildtool.v2.impl.PluginHandler2.maybeInvoke(PluginHandler2.java:350)
+	at com.sap.tc.buildtool.v2.impl.PluginHandler2.request(PluginHandler2.java:99)
+	at com.sap.tc.buildtool.v2.impl.PluginHandler2.build(PluginHandler2.java:73)
+	at com.sap.tc.buildtool.PluginHandler2Wrapper.execute(PluginHandler2Wrapper.java:59)
+	at com.sap.tc.devconf.impl.DCProxy.make(DCProxy.java:1750)
+	at com.sap.tc.devconf.impl.DCProxy.make(DCProxy.java:6004)
+	at com.sap.ide.eclipse.component.provider.actions.dcproject.BuildAction.buildDCsForDevConfig(BuildAction.java:307)
+	at com.sap.ide.eclipse.component.provider.actions.dcproject.BuildAction.access$200(BuildAction.java:58)
+	at com.sap.ide.eclipse.component.provider.actions.dcproject.BuildAction$1.run(BuildAction.java:212)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:101)
+
+Ant runtime 4.094 seconds
+
+Ant build finished with ERRORS
+
+Compile failed; see the compiler error output for details.
+
+Error: Build stopped due to an error: Compile failed; see the compiler error output for details.
+
+Build plugin finished at 2015-09-10 11:58:17 GMT-04:00 (AMT)
+Total build plugin runtime: 4.701 seconds
+
+Build finished with ERROR

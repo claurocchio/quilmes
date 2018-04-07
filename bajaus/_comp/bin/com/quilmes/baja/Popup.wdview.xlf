@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xliff version="1.1">
+<file source-language="en" product-name="@@ac826bf30f894c71266496414bb68fafView:Popup[com.quilmes.baja] of Component:BajaUS[com.quilmes.baja]" datatype="s2x">
+<header>
+<skl>
+</skl>
+<phase-group>
+</phase-group>
+<s2x xmlns="http://www.sap.com">
+<dtr>
+<sc></sc>
+</dtr>
+<giltDirectives>
+<develContact>Consulting AG</develContact><domain></domain>
+<originalLocale xml:lang="en"/>
+<maxLength>255</maxLength>
+</giltDirectives>
+</s2x>
+</header>
+<body>
+<group restype="button">
+<trans-unit id="97a843abb08943a83f97c70eb0b573fb" resname="RootUIElementContainer/Child:RootUIElementContainer1/Child:Button1@text" maxwidth="255" translate="yes"><source>Cancelar</source></trans-unit>
+<trans-unit id="94701e2108bd40851ff38f186da5b193" resname="RootUIElementContainer/Child:RootUIElementContainer1/Child:Button@text" maxwidth="255" translate="yes"><source>Aceptar</source></trans-unit>
+</group>
+<group restype="quickInfo">
+<trans-unit id="2b6533433bb34ad62dc6acb7b9b9d352" resname="RootUIElementContainer/Child:TextEdit@tooltip" maxwidth="255" translate="yes"><source>Maximo permitido 50 caracteres</source></trans-unit>
+</group>
+<group restype="informationMessage">
+<trans-unit id="e6e2b875cc924f6634baabb23269a9f9" resname="RootUIElementContainer/Child:TextView@text" maxwidth="16384" translate="yes"><source>Observaciones</source></trans-unit>
+</group>
+</body>
+</file>
+</xliff>

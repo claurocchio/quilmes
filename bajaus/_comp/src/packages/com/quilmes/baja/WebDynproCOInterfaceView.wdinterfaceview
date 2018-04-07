@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Friday, May 25, 2007 3:26:31 PM CEST -->
+<InterfaceView xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.InterfaceView:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1180099591892" name="WebDynproCOInterfaceView" package="com.quilmes.baja" masterLanguage="en">
+	<AbstractView.InboundPlugs>
+		<InboundPlug name="Default">
+			<IncomingEvent.EventHandler>
+				<Core.Reference package="com.quilmes.baja" name="WebDynproCOInterfaceView" type="Controller" path="EventHandler:onPlugDefault"/>
+			</IncomingEvent.EventHandler>
+		</InboundPlug>
+	</AbstractView.InboundPlugs>
+	<AbstractView.ViewController>
+		<Core.Reference package="com.quilmes.baja" name="WebDynproCOInterfaceView" type="Controller"/>
+	</AbstractView.ViewController>
+	<InterfaceView.Parent>
+		<Core.Reference package="com.quilmes.baja" name="BajaUSInterface" type="ComponentInterfaceImplementation"/>
+	</InterfaceView.Parent>
+	<InterfaceView.Window>
+		<Core.Reference package="com.quilmes.baja" name="WebDynproCO" type="Window"/>
+	</InterfaceView.Window>
+</InterfaceView>

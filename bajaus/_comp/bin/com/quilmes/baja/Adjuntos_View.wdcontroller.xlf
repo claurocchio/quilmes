@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xliff version="1.1">
+<file source-language="en" product-name="@@c80035131e984d273f92b6077506a61eController:Adjuntos_View[com.quilmes.baja] of Component:BajaUS[com.quilmes.baja]" datatype="s2x">
+<header>
+<skl>
+</skl>
+<phase-group>
+</phase-group>
+<s2x xmlns="http://www.sap.com">
+<dtr>
+<sc></sc>
+</dtr>
+<giltDirectives>
+<develContact>Consulting AG</develContact><domain></domain>
+<originalLocale xml:lang="en"/>
+<maxLength>255</maxLength>
+</giltDirectives>
+</s2x>
+</header>
+<body>
+<group restype="label">
+<trans-unit id="f55d9cc26f7f4dee1f44b92ae9ea6bd6" resname="Action:adjuntar@text" maxwidth="255" translate="yes"><source>Adjuntar</source></trans-unit>
+<trans-unit id="1b223d52b241499e32768663f4861825" resname="Action:volver@text" maxwidth="255" translate="yes"><source>Volver</source></trans-unit>
+<trans-unit id="a99fd7d26dab4560311b9f575e68b1dd" resname="Action:borrar@text" maxwidth="255" translate="yes"><source>Borrar</source></trans-unit>
+</group>
+</body>
+</file>
+</xliff>

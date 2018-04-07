@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xliff version="1.1">
+<file source-language="en" product-name="@@ee08a5801df64ca40b49ea0c8cf4b6a1Controller:Popup[com.quilmes.baja] of Component:BajaUS[com.quilmes.baja]" datatype="s2x">
+<header>
+<skl>
+</skl>
+<phase-group>
+</phase-group>
+<s2x xmlns="http://www.sap.com">
+<dtr>
+<sc></sc>
+</dtr>
+<giltDirectives>
+<develContact>Consulting AG</develContact><domain></domain>
+<originalLocale xml:lang="en"/>
+<maxLength>255</maxLength>
+</giltDirectives>
+</s2x>
+</header>
+<body>
+<group restype="label">
+<trans-unit id="7ea24bd4b54c4e541f89a8cd0aba111e" resname="Action:aceptar@text" maxwidth="255" translate="yes"><source>aceptar</source></trans-unit>
+<trans-unit id="47fa260a127f45cf025ace2bac8179c3" resname="Action:cancelar@text" maxwidth="255" translate="yes"><source>cancelar</source></trans-unit>
+</group>
+</body>
+</file>
+</xliff>

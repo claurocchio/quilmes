@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Friday, May 25, 2007 3:26:31 PM CEST -->
+<ModelClass xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.ModelClass:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1180099591892" name="Parametro" package="ar.com.quilmes.bue.mdm_clientes.model.internas" masterLanguage="en">
+	<ModelClass.Parent>
+		<Core.Reference package="com.quilmes.baja.consultainterna" name="ConsultaInterna" type="Model"/>
+	</ModelClass.Parent>
+	<ModelClass.Properties>
+		<ModelClassProperty name="campo">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+		</ModelClassProperty>
+		<ModelClassProperty name="descripcion">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+		</ModelClassProperty>
+		<ModelClassProperty name="tipo">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+		</ModelClassProperty>
+		<ModelClassProperty name="valor">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+		</ModelClassProperty>
+	</ModelClass.Properties>
+</ModelClass>

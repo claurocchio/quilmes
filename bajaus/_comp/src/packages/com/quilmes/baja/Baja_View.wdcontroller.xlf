@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xliff version="1.1">
+<file source-language="en" product-name="@@1d990725b41d486309f0a135c4fd34ccController:Baja_View[com.quilmes.baja] of Component:BajaUS[com.quilmes.baja]" datatype="s2x">
+<header>
+<skl>
+</skl>
+<phase-group>
+</phase-group>
+<s2x xmlns="http://www.sap.com">
+<dtr>
+<sc></sc>
+</dtr>
+<giltDirectives>
+<develContact>Consulting AG</develContact><domain></domain>
+<originalLocale xml:lang="en"/>
+<maxLength>255</maxLength>
+</giltDirectives>
+</s2x>
+</header>
+<body>
+<group restype="label">
+<trans-unit id="3e5baa0a2c0e42111e78afd6a5616a7e" resname="Action:rechazar@text" maxwidth="255" translate="yes"><source>Rechazar</source></trans-unit>
+<trans-unit id="336881b418c0466d141fd33b63e65d2f" resname="Action:verificar@text" maxwidth="255" translate="yes"><source>Verificar Cliente</source></trans-unit>
+<trans-unit id="342d4b3aba6e4ec20a46e747786ae65e" resname="Action:motivo_otro@text" maxwidth="255" translate="yes"><source>Motivo baja otro</source></trans-unit>
+<trans-unit id="78c158f504a5487836c1a6171a5f66bd" resname="Action:adjuntar@text" maxwidth="255" translate="yes"><source>Adjuntar</source></trans-unit>
+<trans-unit id="05862112aa314f7f15e4b986a01e8f84" resname="Action:eliminar@text" maxwidth="255" translate="yes"><source>Eliminar cliente</source></trans-unit>
+</group>
+</body>
+</file>
+</xliff>

@@ -1,0 +1,1966 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Friday, May 25, 2007 3:26:31 PM CEST -->
+<Controller xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.Controller:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1180099591892" name="Adjuntos_View" type="view" package="com.quilmes.baja" masterLanguage="en">
+	<AppClass.CodeBody>
+		<Core.Text><![CDATA[// ---------------------------------------------------------------------------
+// This file has been generated partially by the Web Dynpro Code Generator.
+// MODIFY CODE ONLY IN SECTIONS ENCLOSED BY @@begin AND @@end.
+// ALL OTHER CHANGES WILL BE LOST IF THE FILE IS REGENERATED.
+// ---------------------------------------------------------------------------
+package com.quilmes.baja;
+
+// 
+// IMPORTANT NOTE: 
+// _ALL_ IMPORT STATEMENTS MUST BE PLACED IN THE FOLLOWING SECTION ENCLOSED
+// BY @@begin imports AND @@end. FURTHERMORE, THIS SECTION MUST ALWAYS CONTAIN
+// AT LEAST ONE IMPORT STATEMENT (E.G. THAT FOR IPrivateAdjuntos_View).
+// OTHERWISE, USING THE ECLIPSE FUNCTION "Organize Imports" FOLLOWED BY
+// A WEB DYNPRO CODE GENERATION (E.G. PROJECT BUILD) WILL RESULT IN THE LOSS
+// OF IMPORT STATEMENTS.
+//
+//@@begin imports
+import java.io.IOException;
+import java.io.InputStream;
+import java.rmi.RemoteException;
+import java.util.Calendar;
+import java.util.Collection;
+import java.util.Iterator;
+
+import ar.com.quilmes.bue.mdm_clientes.model.internas.Parametro;
+
+import com.quilmes.baja.wdp.IPrivateAdjuntos_View;
+import com.quilmes.baja.wdp.IPrivateAdjuntos_View.IAdjuntoElement;
+import com.sap.security.api.IUser;
+import com.sap.tc.webdynpro.progmodel.api.WDVisibility;
+import com.sap.tc.webdynpro.services.sal.datatransport.api.IWDResource;
+import com.sap.tc.webdynpro.services.sal.um.api.IWDClientUser;
+import com.sap.tc.webdynpro.services.sal.um.api.WDClientUser;
+import com.sap.tc.webdynpro.services.sal.um.api.WDUMException;
+import com.sapportals.portal.security.usermanagement.UserManagementException;
+import com.sapportals.wcm.repository.AccessDeniedException;
+import com.sapportals.wcm.repository.Content;
+import com.sapportals.wcm.repository.ICollection;
+import com.sapportals.wcm.repository.IResource;
+import com.sapportals.wcm.repository.IResourceContext;
+import com.sapportals.wcm.repository.IResourceFactory;
+import com.sapportals.wcm.repository.NotSupportedException;
+import com.sapportals.wcm.repository.ResourceContext;
+import com.sapportals.wcm.repository.ResourceException;
+import com.sapportals.wcm.repository.ResourceFactory;
+import com.sapportals.wcm.util.content.IContent;
+import com.sapportals.wcm.util.uri.RID;
+import com.sapportals.wcm.util.usermanagement.WPUMFactory;
+//@@end
+
+//@@begin documentation
+//@@end
+
+public class Adjuntos_View
+{
+  /**
+   * Logging location.
+   */
+  private static final com.sap.tc.logging.Location logger = 
+    com.sap.tc.logging.Location.getLocation(Adjuntos_View.class);
+
+  static 
+  {
+    //@@begin id
+    String id = "$Id$";
+    //@@end
+    com.sap.tc.logging.Location.getLocation("ID.com.sap.tc.webdynpro").infoT(id);
+  }
+
+  /**
+   * Private access to the generated Web Dynpro counterpart 
+   * for this controller class.  </p>
+   *
+   * Use <code>wdThis</code> to gain typed access to the context,
+   * to trigger navigation via outbound plugs, to get and enable/disable
+   * actions, fire declared events, and access used controllers and/or 
+   * component usages.
+   *
+   * @see com.quilmes.baja.wdp.IPrivateAdjuntos_View for more details
+   */
+  private final IPrivateAdjuntos_View wdThis;
+
+  /**
+   * Root node of this controller's context. </p>
+   *
+   * Provides typed access not only to the elements of the root node 
+   * but also to all nodes in the context (methods node<i>XYZ</i>()) 
+   * and their currently selected element (methods current<i>XYZ</i>Element()). 
+   * It also facilitates the creation of new elements for all nodes 
+   * (methods create<i>XYZ</i>Element()). </p>
+   *
+   * @see com.quilmes.baja.wdp.IPrivateAdjuntos_View.IContextNode for more details.
+   */
+  private final IPrivateAdjuntos_View.IContextNode wdContext;
+
+  /**
+   * A shortcut for <code>wdThis.wdGetAPI()</code>. </p>
+   * 
+   * Represents the generic API of the generic Web Dynpro counterpart 
+   * for this controller. </p>
+   */
+  private final com.sap.tc.webdynpro.progmodel.api.IWDViewController wdControllerAPI;
+  
+  /**
+   * A shortcut for <code>wdThis.wdGetAPI().getComponent()</code>. </p>
+   * 
+   * Represents the generic API of the Web Dynpro component this controller 
+   * belongs to. Can be used to access the message manager, the window manager,
+   * to add/remove event handlers and so on. </p>
+   */
+  private final com.sap.tc.webdynpro.progmodel.api.IWDComponent wdComponentAPI;
+  
+  public Adjuntos_View(IPrivateAdjuntos_View wdThis)
+  {
+    this.wdThis = wdThis;
+    this.wdContext = wdThis.wdGetContext();
+    this.wdControllerAPI = wdThis.wdGetAPI();
+    this.wdComponentAPI = wdThis.wdGetAPI().getComponent();
+  }
+
+  //@@begin javadoc:wdDoInit()
+  /** Hook method called to initialize controller. */
+  //@@end
+  public void wdDoInit()
+  {
+    //@@begin wdDoInit()
+    
+	//Nombre carpeta (con fecha del dia)
+	String carpeta = null;
+	String repositorio = null;
+	int tamano  = 0;
+	int cant    = 0;
+	int cant_us = 0;
+	//Fecha
+	Calendar cal = Calendar.getInstance();
+	java.sql.Date fecha = new java.sql.Date(cal.getTime().getTime());
+	
+    
+    //Obtengo tamaño max de archivo
+	try { tamano = wdThis.wdGetBajaUSController().getConsultasInternasBean().getTamanoMaximoAdjuntos();
+	} catch (RemoteException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+		wdComponentAPI.getMessageManager().reportException("Error BI: " + e.getMessage(),false);
+	}	    
+    
+    //Obtengo cant max de archivos
+	try { cant = wdThis.wdGetBajaUSController().getConsultasInternasBean().getMaxAdjuntos();
+	} catch (RemoteException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+		wdComponentAPI.getMessageManager().reportException("Error BI: " + e.getMessage(),false);
+	}		    
+    
+      
+    //Verifico si es master data en Controller
+	String master = wdContext.currentContextElement().getMaster();
+	String esquema = wdContext.currentContextElement().getEsquema();
+	String segmento = Integer.toString(wdContext.currentContextElement().getSegmento()); 
+	String url = null;
+	String nombre = null;
+	
+	if (master != null || wdContext.currentContextElement().getNro_solicitud()!=0) {
+		//Para master data
+		if (master!=null)
+			{ wdContext.currentContextElement().setMD(WDVisibility.VISIBLE);
+			wdContext.currentContextElement().setUS(WDVisibility.NONE);  
+			}
+		else //Usuario Rechazo
+			{ wdContext.currentContextElement().setMD(WDVisibility.NONE);	
+			wdContext.currentContextElement().setUS(WDVisibility.VISIBLE); 	
+			}
+			
+		if (wdContext.currentTicketElement().getCarpeta()==null && master==null)
+		{	//Carpeta nueva
+			carpeta = "TMP_" + fecha.getTime();
+			carpeta.trim();		
+			//Repositorio nuevo
+			try { repositorio = wdThis.wdGetBajaUSController().getConsultasInternasBean().getRepositorio();  }
+			catch (RemoteException e) {
+					e.printStackTrace();
+					wdComponentAPI.getMessageManager().reportException("Error BI: " + e.getMessage(),false);
+					return; }			
+			//URL Nueva
+			url = "/" + repositorio + "/" + esquema.trim() + "/" + segmento.trim() + "/" + carpeta + "/";			
+		}
+		else
+		{ 	//Carpeta
+			carpeta = wdContext.currentTicketElement().getNroTicketCrm();
+			//Obtengo repositorio
+			repositorio = wdContext.currentTicketElement().getRepositorio();
+			//Url
+			url = "/" + repositorio + "/" + esquema.trim() + "/" + segmento.trim() + "/" + carpeta + "/";
+		}
+		
+		//Cargo cant de archivos cargados
+		cant_us = wdContext.nodeAdjuntos().size();
+		//Cargo tabla de salida
+		for (int i = 0; i < wdContext.nodeAdjuntos().size(); i++) {
+			IAdjuntoElement adjunto = wdContext.nodeAdjunto().createAdjuntoElement();
+			nombre = wdContext.nodeAdjuntos().getAdjuntosElementAt(i).getArchivo();
+			adjunto.setNombre(nombre);
+			nombre = nombre.replaceAll(" ","%20");
+			adjunto.setUrl("/irj/go/km/docs"+url+nombre);
+			nombre = nombre.replaceAll("%20"," ");
+			wdContext.nodeAdjunto().addElement(adjunto); 	
+			}	  									
+		}
+	else {
+		//Carpeta nueva
+		carpeta = "TMP_" + fecha.getTime();
+		carpeta.trim();		
+
+		//Repositorio nuevo
+		try { repositorio = wdThis.wdGetBajaUSController().getConsultasInternasBean().getRepositorio();  }
+		catch (RemoteException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				wdComponentAPI.getMessageManager().reportException("Error BI: " + e.getMessage(),false);
+				return; }			
+		//URL Nueva
+		url = null;
+		url = "/" + repositorio + "/" + esquema.trim() + "/" + segmento.trim() + "/" + carpeta + "/";
+		
+		wdContext.currentContextElement().setMD(WDVisibility.NONE);	
+		wdContext.currentContextElement().setUS(WDVisibility.VISIBLE);
+	}
+
+
+	//Seteo las variables de contexto
+	wdContext.currentContextElement().setCarpeta(carpeta);
+	wdContext.currentContextElement().setRepositorio(repositorio);
+	wdContext.currentContextElement().setTamano(tamano);
+	wdContext.currentContextElement().setCantidad(cant);
+	wdContext.currentContextElement().setCant_us(cant_us);
+	wdContext.currentContextElement().setUrl(url);
+	wdContext.currentContextElement().setFlag_adjunto("X");
+		
+    //@@end
+  }
+
+  //@@begin javadoc:wdDoExit()
+  /** Hook method called to clean up controller. */
+  //@@end
+  public void wdDoExit()
+  {
+    //@@begin wdDoExit()
+    //@@end
+  }
+
+  //@@begin javadoc:wdDoModifyView
+  /**
+   * Hook method called to modify a view just before rendering.
+   * This method conceptually belongs to the view itself, not to the
+   * controller (cf. MVC pattern).
+   * It is made static to discourage a way of programming that
+   * routinely stores references to UI elements in instance fields
+   * for access by the view controller's event handlers, and so on.
+   * The Web Dynpro programming model recommends that UI elements can
+   * only be accessed by code executed within the call to this hook method.
+   *
+   * @param wdThis Generated private interface of the view's controller, as
+   *        provided by Web Dynpro. Provides access to the view controller's
+   *        outgoing controller usages, etc.
+   * @param wdContext Generated interface of the view's context, as provided
+   *        by Web Dynpro. Provides access to the view's data.
+   * @param view The view's generic API, as provided by Web Dynpro.
+   *        Provides access to UI elements.
+   * @param firstTime Indicates whether the hook is called for the first time
+   *        during the lifetime of the view.
+   */
+  //@@end
+  public static void wdDoModifyView(IPrivateAdjuntos_View wdThis, IPrivateAdjuntos_View.IContextNode wdContext, com.sap.tc.webdynpro.progmodel.api.IWDView view, boolean firstTime)
+  {
+    //@@begin wdDoModifyView
+    //@@end
+  }
+
+  //@@begin javadoc:onPlugentradaadjuntos(ServerEvent)
+  /** Declared validating event handler. */
+  //@@end
+  public void onPlugentradaadjuntos(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onPlugentradaadjuntos(ServerEvent)
+
+    //@@end
+  }
+
+  //@@begin javadoc:onActionvolver(ServerEvent)
+  /** Declared validating event handler. */
+  //@@end
+  public void onActionvolver(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionvolver(ServerEvent)
+	//Si no cargo archivos NO cargo carpeta ni repositorio
+	if (wdContext.nodeAdjunto().size() < 1)
+	{	wdContext.currentContextElement().setCarpeta(null); }
+	
+    wdThis.wdFirePlugSalidaadjuntos_v();
+    
+    //@@end
+  }
+
+  //@@begin javadoc:onActionadjuntar(ServerEvent)
+  /** Declared validating event handler. */
+  //@@end
+  public void onActionadjuntar(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionadjuntar(ServerEvent)
+    
+	IWDResource resourceFirma = wdContext.currentContextElement().getAdjunto1();
+	boolean cargo = false;		
+	int cant_us = wdContext.currentContextElement().getCant_us();
+	int cant    = wdContext.currentContextElement().getCantidad();
+	
+	//Verifico si ya cargo cant max de archivos
+	if (cant_us >= cant)
+	{ wdComponentAPI.getMessageManager().reportWarning("Ya cargo la cantidad maxima de archivos permitidos: " + cant);
+	  return;
+	}
+	
+			
+	if (resourceFirma == null) {
+		wdComponentAPI.getMessageManager().reportWarning("No cargo archivo en path.");
+		//return;
+	}
+	else {
+		if (!validarTipoDeArchivo(resourceFirma.getResourceType().getFileExtension())){
+			wdComponentAPI.getMessageManager().reportWarning("La extension " + resourceFirma.getResourceType().getFileExtension() + " ingresada, no es valida.");
+			}
+		else {
+			if (!subirArchivo(resourceFirma, false)){
+				wdComponentAPI.getMessageManager().reportWarning("No se pudo adjuntar el archivo.");
+			} 
+			else { wdComponentAPI.getMessageManager().reportSuccess("Se adjunto el archivo."); 
+				   resourceFirma = null;
+				   wdContext.currentContextElement().setAdjunto1(resourceFirma); 
+				   //Actualizo la cant max a cargar
+				   cant_us = cant_us + 1;
+				   wdContext.currentContextElement().setCant_us(cant_us); }
+		}
+	}  
+
+    //@@end
+  }
+
+  //@@begin javadoc:onActionborrar(ServerEvent)
+  /** Declared validating event handler. */
+  //@@end
+  public void onActionborrar(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionborrar(ServerEvent)
+	String url = null;
+	String esquema = wdContext.currentContextElement().getEsquema();
+	String segmento = Integer.toString(wdContext.currentContextElement().getSegmento());
+	String repositorio = wdContext.currentContextElement().getRepositorio();
+	String carpeta = wdContext.currentContextElement().getCarpeta();
+	int cant_us = wdContext.currentContextElement().getCant_us();
+	
+	//Verifico si hay archivos a borrar
+	if (cant_us < 1)
+	{ wdComponentAPI.getMessageManager().reportWarning("No hay archivos para Eliminar.");
+	  return;
+	}
+
+	//Cargo URL
+	url = "/" + repositorio + "/" + esquema.trim() + "/" + segmento.trim() + "/" + carpeta + "/";
+    
+	try {
+		IResource existente = traerResource(url + wdContext.currentAdjuntoElement().getNombre(), false);
+		existente.delete();
+		wdContext.nodeAdjunto().removeElement(wdContext.currentAdjuntoElement());
+		if (wdContext.nodeAdjunto().size()==0) {
+		existente = traerResource(url, false);
+		existente.delete();
+		}
+	} catch (NotSupportedException e) {
+		e.printStackTrace();
+		wdComponentAPI.getMessageManager().reportWarning("Error al borrar el archivo por favor contactese con master data");
+	} catch (AccessDeniedException e) {
+		e.printStackTrace();
+		wdComponentAPI.getMessageManager().reportWarning("Error al borrar el archivo por favor contactese con master data");
+	} catch (ResourceException e) {
+		e.printStackTrace();
+		wdComponentAPI.getMessageManager().reportWarning("Error al borrar el archivo por favor contactese con master data");
+	}
+    
+    //Actualizo la cant cargada
+	cant_us = cant_us - 1;
+	wdContext.currentContextElement().setCant_us(cant_us);
+	
+    //@@end
+  }
+
+  /*
+   * The following code section can be used for any Java code that is 
+   * not to be visible to other controllers/views or that contains constructs
+   * currently not supported directly by Web Dynpro (such as inner classes or
+   * member variables etc.). </p>
+   *
+   * Note: The content of this section is in no way managed/controlled
+   * by the Web Dynpro Designtime or the Web Dynpro Runtime. 
+   */
+  //@@begin others
+
+///////////////////////////////////
+  public com.sapportals.wcm.repository.IResource traerResource( java.lang.String path, boolean modificable ) {
+//	@@begin traerResource()
+  	IResource recurso = null;
+  	
+  	try {
+  		IWDClientUser wdClientUser = WDClientUser.getCurrentUser();
+  		IUser sapUser = wdClientUser.getSAPUser();
+  		com.sapportals.portal.security.usermanagement.IUser ep5User = WPUMFactory.getUserFactory().getEP5User(sapUser);
+  		IResourceFactory resourseFactory = ResourceFactory.getInstance();
+  		IResourceContext resourseContext = new ResourceContext(ep5User);
+  		RID rid = RID.getRID(path);
+  		recurso = resourseFactory.getResource(rid, resourseContext, modificable);
+  	} catch (WDUMException e) {
+  		wdComponentAPI.getMessageManager().reportException("WDUMException " + e.getMessage(), true);
+ 	 } catch (UserManagementException e) {
+  		wdComponentAPI.getMessageManager().reportException("UserManagementException " + e.getMessage(), true);
+  	} catch (ResourceException e) {
+  		throw new RuntimeException(e);
+ 	}
+ 	
+  return recurso;
+  }  
+  
+ ///////////////////////////////////////////////
+ public boolean subirArchivo(IWDResource resourceFirma, boolean esMapa) {
+		
+ String nombre = null;
+ IContent contenido = null;
+ ICollection folder = null;
+ String url = wdContext.currentContextElement().getUrl();
+ int tamanoMaximo = wdContext.currentContextElement().getTamano(); 
+ 
+ try {
+	 IResource existente = traerResource(url + resourceFirma.getResourceName(), false);
+	 if (!esMapa){
+		 if (existente != null) {
+		 wdComponentAPI.getMessageManager().reportWarning("El archivo que quiere subir ya existe");
+		 wdContext.currentContextElement().setAdjunto1(null);
+		 return false;
+		 }
+	 }
+
+	 InputStream is = resourceFirma.read(true);
+	 if (!esMapa){
+		 if (!validarTamanoArchivo(is.available())) {
+			 wdComponentAPI.getMessageManager().reportWarning("El archivo supera el tamaño maximo permitido (" + tamanoMaximo + " Kb)");
+			 wdContext.currentContextElement().setAdjunto1(null);
+			 return false;
+		 }
+	 }
+
+	 if (wdContext.nodeAdjunto().size() == 0) {
+		 existente = traerResource(url, true);
+	 }
+
+	 contenido = new Content(is, "", -1);
+	 folder = (ICollection) traerResource(url, false);
+	 
+
+	 if (esMapa){
+		 nombre = "Mapa.JPG"; 		} 
+	 else {
+		 nombre = resourceFirma.getResourceName(); 		
+		 }
+
+	 if (nombre.length() > 30)
+	 { wdComponentAPI.getMessageManager().reportWarning("Nombre de archivo Invalido: supera los 30 caracteres.");
+		wdContext.currentContextElement().setAdjunto1(null);
+		return false;	 	
+	 }
+
+	 folder.createResource(nombre, null, contenido);
+
+ } catch (ResourceException e) {
+	 wdComponentAPI.getMessageManager().reportWarning("ResourceException " + e.getMessage());
+	 return false;
+ } catch (IOException e) {
+	 wdComponentAPI.getMessageManager().reportWarning("IOException " + e.getMessage());
+	 return false;
+ }
+
+	//Cargo tabla
+	IAdjuntoElement adjunto = wdContext.nodeAdjunto().createAdjuntoElement();
+	adjunto.setNombre(nombre);
+	nombre = nombre.replaceAll(" ","%20");
+	adjunto.setUrl("/irj/go/km/docs"+url+nombre);
+	nombre = nombre.replaceAll("%20"," ");	
+	wdContext.nodeAdjunto().addElement(adjunto);
+	
+ return true;
+ }   
+ 
+ //////////////////////////////////////
+ public boolean validarTamanoArchivo(int size){
+ 	int aux = size / 1024;
+ 	int tamanoMaximo = wdContext.currentContextElement().getTamano();	
+		
+ 	if (aux < tamanoMaximo) {
+ 		return true;
+ 	} else {
+ 		return false;
+ 	}
+ }  
+ 
+ //////////////////////////////////////////////
+ public boolean validarTipoDeArchivo(String tipo){
+ 	
+	Collection tiposDeArchivo=null;
+
+	try { 
+		tiposDeArchivo = wdThis.wdGetBajaUSController().getConsultasInternasBean().getExtensionesDeAdjuntosValidas();
+ 	
+ 	} catch (RemoteException e) {
+		 // TODO Auto-generated catch block
+	 	e.printStackTrace();
+	 	wdComponentAPI.getMessageManager().reportException("Error BI: " + e.getMessage(),false);
+ 	}	
+
+ 	Iterator it = tiposDeArchivo.iterator();
+ 	
+ 	while (it.hasNext()) {
+ 		Parametro parametro = (Parametro) it.next();
+ 		if (tipo.toUpperCase().trim().equals(parametro.getValor().toUpperCase().trim())){
+ 			return true;
+ 		}
+ 	}
+
+ 	return false;
+ }
+ 
+  //@@end
+}
+]]></Core.Text>
+	</AppClass.CodeBody>
+	<Controller.Parent>
+		<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Component"/>
+	</Controller.Parent>
+	<Controller.Actions>
+		<Action name="volver">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionvolver"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+		<Action name="adjuntar">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionadjuntar"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+		<Action name="borrar">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionborrar"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+	</Controller.Actions>
+	<Controller.Context>
+		<ContextValueNode cardinality="_1_1" name="Context" selection="_1_1">
+			<ContextNode.Attributes>
+				<ContextValueAttribute name="adjunto1">
+					<ContextValueAttribute.Type>
+						<Core.ForeignReference modelName="DtDictionary" package="com.sap.ide.webdynpro.uielementdefinitions" name="Resource" type="DtSimpleType"/>
+					</ContextValueAttribute.Type>
+				</ContextValueAttribute>
+				<ContextValueAttribute name="MD">
+					<ContextValueAttribute.Type>
+						<Core.ForeignReference modelName="DtDictionary" package="com.sap.ide.webdynpro.uielementdefinitions" name="Visibility" type="DtSimpleType"/>
+					</ContextValueAttribute.Type>
+				</ContextValueAttribute>
+				<ContextValueAttribute name="US">
+					<ContextValueAttribute.Type>
+						<Core.ForeignReference modelName="DtDictionary" package="com.sap.ide.webdynpro.uielementdefinitions" name="Visibility" type="DtSimpleType"/>
+					</ContextValueAttribute.Type>
+				</ContextValueAttribute>
+				<ContextValueAttribute name="carpeta">
+				</ContextValueAttribute>
+				<ContextValueAttribute name="repositorio">
+				</ContextValueAttribute>
+				<ContextValueAttribute name="cantidad">
+					<ContextValueAttribute.Type>
+						<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="integer" type="DtSimpleType"/>
+					</ContextValueAttribute.Type>
+				</ContextValueAttribute>
+				<ContextValueAttribute name="tamano">
+					<ContextValueAttribute.Type>
+						<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="integer" type="DtSimpleType"/>
+					</ContextValueAttribute.Type>
+				</ContextValueAttribute>
+				<ContextValueAttribute name="esquema">
+				</ContextValueAttribute>
+				<ContextValueAttribute name="master">
+				</ContextValueAttribute>
+				<ContextValueAttribute name="segmento">
+				</ContextValueAttribute>
+				<ContextValueAttribute name="url">
+					<ContextValueAttribute.Type>
+						<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+					</ContextValueAttribute.Type>
+				</ContextValueAttribute>
+				<ContextValueAttribute name="nro_solicitud">
+				</ContextValueAttribute>
+				<ContextValueAttribute name="flag_adjunto">
+				</ContextValueAttribute>
+				<ContextValueAttribute name="cant_us">
+					<ContextValueAttribute.Type>
+						<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="integer" type="DtSimpleType"/>
+					</ContextValueAttribute.Type>
+				</ContextValueAttribute>
+			</ContextNode.Attributes>
+			<ContextNode.ChildNodes>
+				<ContextValueNode name="Adjunto">
+					<ContextNode.Attributes>
+						<ContextValueAttribute name="nombre">
+						</ContextValueAttribute>
+						<ContextValueAttribute name="url">
+						</ContextValueAttribute>
+					</ContextNode.Attributes>
+				</ContextValueNode>
+				<ContextModelNode name="Ticket">
+					<ContextNode.Attributes>
+						<ContextModelAttribute name="motivoBaja">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="perfilCliente">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="listaPrecioMaximo">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tienePromocion">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoClienteCom">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="codFormaAtencion">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="excIvaFechaDesde">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="provinciaDesc">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="codClienteAdy">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="fechaAniversario">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="nroSolicitud">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoVtaFsMercaderia">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="formaPago">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="identificacionJuridica">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="carpeta">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="moneda">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="localidadDesc">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="idMensajeFactura">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="nombreFantasia">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="codLocalidad">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="numero">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="localidadTrDeuda">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="numeroDocumento">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="codClienteTransfiereDeuda">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoCobranza">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="aceptaDesdUnifPedido">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="nroIIBB">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="porcExcIIBB">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="esExcluivo">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="razonSocial">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="transfiereHistoricoVentas">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="excIIBBFechaHasta">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="sociedad">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoIvaDesc">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="esquema">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="calle">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="puerta">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="observacionesMd">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoMaqVend">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="codCategCliente">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="observacionesUs">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="cp">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="razonSocialAbreviada">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="usuarioAprobador">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="formaEntregaCtaCte">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="agrupacionComercial">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="cantGeocodificacion">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="polVtaCal3">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="repositorio">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="ramo">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoIVA">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="fechaVencimientoLicencia">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="direccionTrDeuda">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="subCanalMkt">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="categoriaClienteDesc">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="fechaUltVerif">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="usuarioSolicitante">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoDocumentoDesc">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="transfDeudaEnv">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="pagaSeguro">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoVtaFsEnvases">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="imprimeRemito">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="codTipoDocumento">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="nroImpuestoInterno">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="cuitTrDeuda">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="polVtaCal2">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="nroTicketCrm">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="esAltaBaja">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="excIvaFechaHasta">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="codNuevoClienteCCQ">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="autVentaAlochol">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="excIIBBFechaDesde">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="mesajeFactura">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="coordenadaX">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="nroTicketAsociado">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="banco">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="ctaCteExterna">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="fechaCierre">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoEmpresa">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoIIBB">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="porcExcIva">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="codCuentaMadre">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="nroLicVentaAlochol">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="cobrador">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="codCliente">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="subCanalMktDesc">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="personeriaJuridica">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoClienteCondVta">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="coordenadaY">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="telefono">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoClienteContab">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="razonSocialClTrDeuda">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="segmentoVta">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="listaPrecioBasico">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="fechaCreacion">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="observacionesGeo">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="interseccion">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="asigStock">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoSolicitud">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="comprador">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="fueCensado">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="email">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="polVtaCal1">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="estadoTicket">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="codProvincia">
+						</ContextModelAttribute>
+					</ContextNode.Attributes>
+					<ContextNode.ChildNodes>
+						<ContextModelNode name="Logs">
+							<ContextNode.Attributes>
+								<ContextModelAttribute name="fecha">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="nuevoDato">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="campo">
+								</ContextModelAttribute>
+							</ContextNode.Attributes>
+						</ContextModelNode>
+						<ContextModelNode name="Adjuntos">
+							<ContextNode.Attributes>
+								<ContextModelAttribute name="archivo">
+								</ContextModelAttribute>
+							</ContextNode.Attributes>
+						</ContextModelNode>
+						<ContextModelNode name="Territorios">
+							<ContextNode.Attributes>
+								<ContextModelAttribute name="codTerritorio">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="centroDespacho">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="canalVenta">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="codTerritorioGeo">
+								</ContextModelAttribute>
+							</ContextNode.Attributes>
+							<ContextNode.ChildNodes>
+								<ContextModelNode name="Frecuencias">
+									<ContextNode.Attributes>
+										<ContextModelAttribute name="codDiaSemana">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="tipoFrecuencia">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="codCliVisitAntes">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="diaSemanaDesc">
+										</ContextModelAttribute>
+									</ContextNode.Attributes>
+								</ContextModelNode>
+							</ContextNode.ChildNodes>
+						</ContextModelNode>
+					</ContextNode.ChildNodes>
+				</ContextModelNode>
+			</ContextNode.ChildNodes>
+		</ContextValueNode>
+	</Controller.Context>
+	<Controller.EventHandlers>
+		<ControllerEventHandler name="onPlugentradaadjuntos">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onActionvolver">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onActionadjuntar">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onActionborrar">
+		</ControllerEventHandler>
+	</Controller.EventHandlers>
+	<Controller.OutgoingControllerUsages>
+		<ControllerUsage name="com.quilmes.baja.BajaUSUsage">
+			<ControllerUsage.ContextMappings>
+				<ContextElementMapping mappingType="collection_and_selection" name="1">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Adjunto"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Adjunto"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="2">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Adjunto/Attribute:nombre"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Adjunto/Attribute:nombre"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="3">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Adjunto/Attribute:url"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Adjunto/Attribute:url"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="4">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/Attribute:esquema"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/Attribute:esquema"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="5">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/Attribute:segmento"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/Attribute:segmento"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="6">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/Attribute:master"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/Attribute:master"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="7">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="8">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:motivoBaja"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:motivoBaja"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="9">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:perfilCliente"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:perfilCliente"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="10">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:listaPrecioMaximo"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:listaPrecioMaximo"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="11">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:tienePromocion"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:tienePromocion"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="12">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:tipoClienteCom"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:tipoClienteCom"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="13">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:codFormaAtencion"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:codFormaAtencion"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="14">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:excIvaFechaDesde"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:excIvaFechaDesde"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="15">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:provinciaDesc"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:provinciaDesc"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="16">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:codClienteAdy"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:codClienteAdy"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="17">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:fechaAniversario"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:fechaAniversario"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="18">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:nroSolicitud"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:nroSolicitud"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="19">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:tipoVtaFsMercaderia"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:tipoVtaFsMercaderia"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="20">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:formaPago"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:formaPago"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="21">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:identificacionJuridica"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:identificacionJuridica"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="22">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:carpeta"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:carpeta"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="23">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:moneda"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:moneda"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="24">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:localidadDesc"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:localidadDesc"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="25">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:idMensajeFactura"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:idMensajeFactura"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="26">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:nombreFantasia"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:nombreFantasia"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="27">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:codLocalidad"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:codLocalidad"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="28">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:numero"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:numero"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="29">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:localidadTrDeuda"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:localidadTrDeuda"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="30">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:numeroDocumento"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:numeroDocumento"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="31">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:codClienteTransfiereDeuda"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:codClienteTransfiereDeuda"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="32">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:tipoCobranza"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:tipoCobranza"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="33">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:aceptaDesdUnifPedido"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:aceptaDesdUnifPedido"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="34">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:nroIIBB"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:nroIIBB"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="35">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:porcExcIIBB"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:porcExcIIBB"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="36">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:esExcluivo"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:esExcluivo"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="37">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:razonSocial"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:razonSocial"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="38">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:transfiereHistoricoVentas"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:transfiereHistoricoVentas"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="39">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:excIIBBFechaHasta"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:excIIBBFechaHasta"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="40">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:sociedad"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:sociedad"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="41">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:tipoIvaDesc"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:tipoIvaDesc"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="42">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:esquema"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:esquema"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="43">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:calle"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:calle"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="44">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:puerta"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:puerta"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="45">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:observacionesMd"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:observacionesMd"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="46">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:tipoMaqVend"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:tipoMaqVend"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="47">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:codCategCliente"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:codCategCliente"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="48">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:observacionesUs"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:observacionesUs"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="49">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:cp"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:cp"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="50">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:razonSocialAbreviada"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:razonSocialAbreviada"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="51">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:usuarioAprobador"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:usuarioAprobador"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="52">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:formaEntregaCtaCte"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:formaEntregaCtaCte"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="53">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:agrupacionComercial"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:agrupacionComercial"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="54">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:cantGeocodificacion"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:cantGeocodificacion"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="55">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:polVtaCal3"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:polVtaCal3"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="56">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:repositorio"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:repositorio"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="57">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:ramo"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:ramo"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="58">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:tipoIVA"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:tipoIVA"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="59">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:fechaVencimientoLicencia"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:fechaVencimientoLicencia"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="60">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:direccionTrDeuda"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:direccionTrDeuda"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="61">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:subCanalMkt"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:subCanalMkt"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="62">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:categoriaClienteDesc"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:categoriaClienteDesc"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="63">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:fechaUltVerif"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:fechaUltVerif"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="64">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:usuarioSolicitante"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:usuarioSolicitante"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="65">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:tipoDocumentoDesc"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:tipoDocumentoDesc"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="66">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:transfDeudaEnv"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:transfDeudaEnv"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="67">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:pagaSeguro"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:pagaSeguro"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="68">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:tipoVtaFsEnvases"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:tipoVtaFsEnvases"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="69">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:imprimeRemito"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:imprimeRemito"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="70">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:codTipoDocumento"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:codTipoDocumento"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="71">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:nroImpuestoInterno"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:nroImpuestoInterno"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="72">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:cuitTrDeuda"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:cuitTrDeuda"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="73">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:polVtaCal2"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:polVtaCal2"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="74">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:nroTicketCrm"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:nroTicketCrm"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="75">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:esAltaBaja"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:esAltaBaja"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="76">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:excIvaFechaHasta"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:excIvaFechaHasta"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="77">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:codNuevoClienteCCQ"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:codNuevoClienteCCQ"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="78">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:autVentaAlochol"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:autVentaAlochol"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="79">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:excIIBBFechaDesde"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:excIIBBFechaDesde"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="80">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:mesajeFactura"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:mesajeFactura"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="81">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:coordenadaX"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:coordenadaX"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="82">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:nroTicketAsociado"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:nroTicketAsociado"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="83">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:banco"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:banco"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="84">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:ctaCteExterna"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:ctaCteExterna"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="85">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:fechaCierre"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:fechaCierre"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="86">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:tipoEmpresa"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:tipoEmpresa"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="87">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:tipoIIBB"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:tipoIIBB"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="88">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:porcExcIva"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:porcExcIva"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="89">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:codCuentaMadre"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:codCuentaMadre"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="90">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:nroLicVentaAlochol"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:nroLicVentaAlochol"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="91">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:cobrador"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:cobrador"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="92">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:codCliente"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:codCliente"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="93">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:subCanalMktDesc"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:subCanalMktDesc"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="94">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:personeriaJuridica"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:personeriaJuridica"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="95">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:tipoClienteCondVta"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:tipoClienteCondVta"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="96">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:coordenadaY"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:coordenadaY"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="97">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:telefono"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:telefono"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="98">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:tipoClienteContab"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:tipoClienteContab"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="99">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:razonSocialClTrDeuda"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:razonSocialClTrDeuda"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="100">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:segmentoVta"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:segmentoVta"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="101">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:listaPrecioBasico"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:listaPrecioBasico"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="102">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:fechaCreacion"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:fechaCreacion"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="103">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:observacionesGeo"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:observacionesGeo"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="104">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:interseccion"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:interseccion"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="105">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:asigStock"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:asigStock"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="106">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:tipoSolicitud"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:tipoSolicitud"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="107">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:comprador"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:comprador"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="108">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:fueCensado"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:fueCensado"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="109">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:email"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:email"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="110">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:polVtaCal1"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:polVtaCal1"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="111">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:estadoTicket"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:estadoTicket"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="112">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/Attribute:codProvincia"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/Attribute:codProvincia"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="113">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/ChildNode:Logs"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/ChildNode:Logs"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="114">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/ChildNode:Logs/Attribute:fecha"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/ChildNode:Logs/Attribute:fecha"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="115">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/ChildNode:Logs/Attribute:nuevoDato"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/ChildNode:Logs/Attribute:nuevoDato"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="116">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/ChildNode:Logs/Attribute:campo"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/ChildNode:Logs/Attribute:campo"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="117">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/ChildNode:Adjuntos"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/ChildNode:Adjuntos"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="118">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/ChildNode:Adjuntos/Attribute:archivo"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/ChildNode:Adjuntos/Attribute:archivo"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="119">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/ChildNode:Territorios"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/ChildNode:Territorios"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="120">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/ChildNode:Territorios/Attribute:codTerritorio"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/ChildNode:Territorios/Attribute:codTerritorio"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="121">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/ChildNode:Territorios/Attribute:centroDespacho"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/ChildNode:Territorios/Attribute:centroDespacho"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="122">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/ChildNode:Territorios/Attribute:canalVenta"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/ChildNode:Territorios/Attribute:canalVenta"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="123">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/ChildNode:Territorios/Attribute:codTerritorioGeo"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/ChildNode:Territorios/Attribute:codTerritorioGeo"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="124">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/ChildNode:Territorios/ChildNode:Frecuencias"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/ChildNode:Territorios/ChildNode:Frecuencias"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="125">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/ChildNode:Territorios/ChildNode:Frecuencias/Attribute:codDiaSemana"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/ChildNode:Territorios/ChildNode:Frecuencias/Attribute:codDiaSemana"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="126">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/ChildNode:Territorios/ChildNode:Frecuencias/Attribute:tipoFrecuencia"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/ChildNode:Territorios/ChildNode:Frecuencias/Attribute:tipoFrecuencia"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="127">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/ChildNode:Territorios/ChildNode:Frecuencias/Attribute:codCliVisitAntes"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/ChildNode:Territorios/ChildNode:Frecuencias/Attribute:codCliVisitAntes"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="128">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/ChildNode:Ticket/ChildNode:Territorios/ChildNode:Frecuencias/Attribute:diaSemanaDesc"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Ticket/ChildNode:Territorios/ChildNode:Frecuencias/Attribute:diaSemanaDesc"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="129">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/Attribute:carpeta"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/Attribute:carpeta"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="130">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/Attribute:repositorio"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/Attribute:repositorio"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="131">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/Attribute:nro_solicitud"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/Attribute:nro_solicitud"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="132">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller" path="Context/Attribute:flag_adjunto"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/Attribute:flag_adjunto"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+			</ControllerUsage.ContextMappings>
+			<ControllerUsage.UsedController>
+				<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Controller"/>
+			</ControllerUsage.UsedController>
+		</ControllerUsage>
+	</Controller.OutgoingControllerUsages>
+	<Controller.View>
+		<Core.Reference package="com.quilmes.baja" name="Adjuntos_View" type="View"/>
+	</Controller.View>
+</Controller>

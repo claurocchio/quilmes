@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Friday, May 25, 2007 3:26:31 PM CEST -->
+<ModelClass xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.ModelClass:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1180099591892" name="Territorio" package="ar.com.quilmes.bue.mdm_clientes.model.externas" masterLanguage="en">
+	<ModelClass.Parent>
+		<Core.Reference package="com.quilmes.baja.consultaexterna2" name="ConsultaExterna2" type="Model"/>
+	</ModelClass.Parent>
+	<ModelClass.Properties>
+		<ModelClassProperty name="regionDesc">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+		</ModelClassProperty>
+		<ModelClassProperty name="regionId">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="integer" type="DtSimpleType"/>
+			</Property.Type>
+		</ModelClassProperty>
+		<ModelClassProperty name="subRegionDesc">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+		</ModelClassProperty>
+		<ModelClassProperty name="subRegionId">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="integer" type="DtSimpleType"/>
+			</Property.Type>
+		</ModelClassProperty>
+		<ModelClassProperty name="supervisorDesc">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+		</ModelClassProperty>
+		<ModelClassProperty name="supervisorId">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="integer" type="DtSimpleType"/>
+			</Property.Type>
+		</ModelClassProperty>
+		<ModelClassProperty name="territorioDesc">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+		</ModelClassProperty>
+		<ModelClassProperty name="territorioId">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="integer" type="DtSimpleType"/>
+			</Property.Type>
+		</ModelClassProperty>
+		<ModelClassProperty name="tipoVendedorDesc">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+		</ModelClassProperty>
+		<ModelClassProperty name="tipoVendedorId">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="integer" type="DtSimpleType"/>
+			</Property.Type>
+		</ModelClassProperty>
+		<ModelClassProperty name="vendedorDesc">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+		</ModelClassProperty>
+		<ModelClassProperty name="vendedorId">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="integer" type="DtSimpleType"/>
+			</Property.Type>
+		</ModelClassProperty>
+		<ModelClassProperty name="zonaDesc">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+		</ModelClassProperty>
+		<ModelClassProperty name="zonaId">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="integer" type="DtSimpleType"/>
+			</Property.Type>
+		</ModelClassProperty>
+	</ModelClass.Properties>
+</ModelClass>

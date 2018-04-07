@@ -1,0 +1,1216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Friday, May 25, 2007 3:26:31 PM CEST -->
+<ModelClass xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.ModelClass:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1180099591892" name="DatosCliente" package="com.quilmes.baja.consultaclientes" masterLanguage="en">
+	<ModelClass.Parent>
+		<Core.Reference package="com.quilmes.baja.consultaclientes" name="ConsultaClientes" type="Model"/>
+	</ModelClass.Parent>
+	<ModelClass.Properties>
+		<ModelClassProperty name="Departamento">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="short" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="Departamento">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="FrmEntregaCtaCte">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="FrmEntregaCtaCte">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="PolVtaCal2">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="short" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="PolVtaCal2">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="TpoCliComisiones">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="short" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="TpoCliComisiones">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="AgrupaComercial">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="integer" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="AgrupaComercial">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="NombreFant">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="NombreFant">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="Numero">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="Numero">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="FechaUltVerifiCons">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="date" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="FechaUltVerifiCons">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="Domicilio">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="Domicilio">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="NroTicket">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="NroTicket">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="TpoVtaFSxMerc">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="short" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="TpoVtaFSxMerc">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="ImprimeRemito">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="ImprimeRemito">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="FueCensado">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="FueCensado">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="PolVtaCal1">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="short" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="PolVtaCal1">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="NroDocumento">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="NroDocumento">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="PerfilImpositivo">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="short" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="PerfilImpositivo">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="FormaAtencion">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="integer" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="FormaAtencion">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="RazonABV">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="RazonABV">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="CuentaMadre">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="integer" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="CuentaMadre">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="TpoEmpresa">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="TpoEmpresa">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="PolVtaCal3">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="short" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="PolVtaCal3">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="AutVtaAlcohol">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="AutVtaAlcohol">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="CoordenadaX">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="CoordenadaX">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="Categoria">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="Categoria">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="Comprador">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="Comprador">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="IdMensajeFact">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="short" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="IdMensajeFact">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="TipoIIBB">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="TipoIIBB">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="EsExclusivo">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="EsExclusivo">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="TpoCliCondicionVta">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="integer" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="TpoCliCondicionVta">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="Cobrador">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="Cobrador">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="FormaPago">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="short" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="FormaPago">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="RazonSocial">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="RazonSocial">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="ListaPrcMaxima">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="short" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="ListaPrcMaxima">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="Ramo">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="short" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="Ramo">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="TpoClienteContable">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="short" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="TpoClienteContable">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="Banco">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="short" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="Banco">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="AsignacionSTK">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="short" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="AsignacionSTK">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="SubCanalMkt">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="short" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="SubCanalMkt">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="IIBBFchHasta">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="date" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="IIBBFchHasta">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="Telefono">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="Telefono">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="TipoDocumento">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="short" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="TipoDocumento">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="MensajeFactura">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="MensajeFactura">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="CoordenadaY">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="CoordenadaY">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="FechaVencLicencia">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="date" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="FechaVencLicencia">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="CodCliente">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="integer" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="CodCliente">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="CuentaCorrExterna">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="CuentaCorrExterna">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="NroLicVtaAlcohol">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="NroLicVtaAlcohol">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="AceptaDesUniPed">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="AceptaDesUniPed">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="TpoMaquinaVend">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="TpoMaquinaVend">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="PersoneriaJuridica">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="PersoneriaJuridica">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="PrjExcepcionIIBB">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="float" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="PrjExcepcionIIBB">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="TipoDeCobranza">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="short" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="TipoDeCobranza">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="IdentificacionJuridica">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="IdentificacionJuridica">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="CP">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="CP">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="NroImpInternos">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="NroImpInternos">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="ListaPrcBasico">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="short" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="ListaPrcBasico">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="PagaSeguro">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="PagaSeguro">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="PerfilCliente">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="PerfilCliente">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="IvaFchHasta">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="date" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="IvaFchHasta">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="Moneda">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="Moneda">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="FechaAniversario">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="date" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="FechaAniversario">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="Email">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="Email">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="TpoVtaFSxEnv">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="short" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="TpoVtaFSxEnv">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="Localidad">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="Localidad">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="IvaFchDesde">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="date" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="IvaFchDesde">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="TienePromocion">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="TienePromocion">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="PrjPersepcionIva">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="float" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="PrjPersepcionIva">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="NroIIBB">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="NroIIBB">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="ClienteExportacion">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="ClienteExportacion">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="IIBBFchDesde">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="date" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="IIBBFchDesde">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+	</ModelClass.Properties>
+	<ModelClass.Settings>
+		<ModelClassSetting name="qualifiedName_Namespace" value="quilmes">
+			<ModelClassSetting.SettingDefinition>
+				<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassSettingDefinition:qualifiedName_Namespace"/>
+			</ModelClassSetting.SettingDefinition>
+		</ModelClassSetting>
+		<ModelClassSetting name="isExecutable" value="false">
+			<ModelClassSetting.SettingDefinition>
+				<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassSettingDefinition:isExecutable"/>
+			</ModelClassSetting.SettingDefinition>
+		</ModelClassSetting>
+		<ModelClassSetting name="qualifiedName_LocalPart" value="DatosCliente">
+			<ModelClassSetting.SettingDefinition>
+				<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassSettingDefinition:qualifiedName_LocalPart"/>
+			</ModelClassSetting.SettingDefinition>
+		</ModelClassSetting>
+	</ModelClass.Settings>
+</ModelClass>

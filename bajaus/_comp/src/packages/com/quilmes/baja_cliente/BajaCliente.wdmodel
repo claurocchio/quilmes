@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Friday, May 25, 2007 3:26:31 PM CEST -->
+<Model xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.Model:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1180099591892" name="BajaCliente" package="com.quilmes.baja_cliente" masterLanguage="en">
+	<Model.ModelClasses>
+		<Core.Reference package="com.quilmes.baja_cliente" name="MensajesMensajesItem" type="ModelClass"/>
+		<Core.Reference package="com.quilmes.baja_cliente" name="Mensajes" type="ModelClass"/>
+		<Core.Reference package="com.quilmes.baja_cliente" name="BajaCliente_ExecuteResponse" type="ModelClass"/>
+		<Core.Reference package="com.quilmes.baja_cliente" name="Response_Execute" type="ModelClass"/>
+		<Core.Reference package="com.quilmes.baja_cliente" name="BajaCliente_Execute" type="ModelClass"/>
+		<Core.Reference package="com.quilmes.baja_cliente" name="RequestB_Execute" type="ModelClass"/>
+	</Model.ModelClasses>
+	<Model.ModelRelations>
+		<ModelRelation name="Response_Execute:BajaClienteExecuteResponse">
+			<ModelRelation.ModelRelationRoles>
+				<ModelRelationRole name="BajaClienteExecuteResponse">
+					<ModelRelationRole.Settings>
+						<ModelRelationRoleSetting name="qualifiedName_Namespace" value="">
+							<ModelRelationRoleSetting.SettingDefinition>
+								<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelRelationRoleSettingDefinition:qualifiedName_Namespace"/>
+							</ModelRelationRoleSetting.SettingDefinition>
+						</ModelRelationRoleSetting>
+						<ModelRelationRoleSetting name="qualifiedName_LocalPart" value="BajaCliente.ExecuteResponse">
+							<ModelRelationRoleSetting.SettingDefinition>
+								<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelRelationRoleSettingDefinition:qualifiedName_LocalPart"/>
+							</ModelRelationRoleSetting.SettingDefinition>
+						</ModelRelationRoleSetting>
+					</ModelRelationRole.Settings>
+					<ModelRelationRole.ModelClass>
+						<Core.Reference package="com.quilmes.baja_cliente" name="BajaCliente_ExecuteResponse" type="ModelClass"/>
+					</ModelRelationRole.ModelClass>
+				</ModelRelationRole>
+				<ModelRelationRole cardinality="_1_1" name="Source" navigable="false">
+					<ModelRelationRole.ModelClass>
+						<Core.Reference package="com.quilmes.baja_cliente" name="Response_Execute" type="ModelClass"/>
+					</ModelRelationRole.ModelClass>
+				</ModelRelationRole>
+			</ModelRelation.ModelRelationRoles>
+		</ModelRelation>
+		<ModelRelation name="RequestB_Execute:Response">
+			<ModelRelation.ModelRelationRoles>
+				<ModelRelationRole name="Response">
+					<ModelRelationRole.Settings>
+						<ModelRelationRoleSetting name="qualifiedName_Namespace" value="">
+							<ModelRelationRoleSetting.SettingDefinition>
+								<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelRelationRoleSettingDefinition:qualifiedName_Namespace"/>
+							</ModelRelationRoleSetting.SettingDefinition>
+						</ModelRelationRoleSetting>
+						<ModelRelationRoleSetting name="qualifiedName_LocalPart" value="Response">
+							<ModelRelationRoleSetting.SettingDefinition>
+								<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelRelationRoleSettingDefinition:qualifiedName_LocalPart"/>
+							</ModelRelationRoleSetting.SettingDefinition>
+						</ModelRelationRoleSetting>
+					</ModelRelationRole.Settings>
+					<ModelRelationRole.ModelClass>
+						<Core.Reference package="com.quilmes.baja_cliente" name="Response_Execute" type="ModelClass"/>
+					</ModelRelationRole.ModelClass>
+				</ModelRelationRole>
+				<ModelRelationRole cardinality="_1_1" name="Source" navigable="false">
+					<ModelRelationRole.ModelClass>
+						<Core.Reference package="com.quilmes.baja_cliente" name="RequestB_Execute" type="ModelClass"/>
+					</ModelRelationRole.ModelClass>
+				</ModelRelationRole>
+			</ModelRelation.ModelRelationRoles>
+		</ModelRelation>
+		<ModelRelation name="Mensajes:MensajesMensajesItem">
+			<ModelRelation.ModelRelationRoles>
+				<ModelRelationRole cardinality="_0_n" name="MensajesMensajesItem">
+					<ModelRelationRole.Settings>
+						<ModelRelationRoleSetting name="qualifiedName_Namespace" value="quilmes">
+							<ModelRelationRoleSetting.SettingDefinition>
+								<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelRelationRoleSettingDefinition:qualifiedName_Namespace"/>
+							</ModelRelationRoleSetting.SettingDefinition>
+						</ModelRelationRoleSetting>
+						<ModelRelationRoleSetting name="qualifiedName_LocalPart" value="Mensajes.MensajesItem">
+							<ModelRelationRoleSetting.SettingDefinition>
+								<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelRelationRoleSettingDefinition:qualifiedName_LocalPart"/>
+							</ModelRelationRoleSetting.SettingDefinition>
+						</ModelRelationRoleSetting>
+					</ModelRelationRole.Settings>
+					<ModelRelationRole.ModelClass>
+						<Core.Reference package="com.quilmes.baja_cliente" name="MensajesMensajesItem" type="ModelClass"/>
+					</ModelRelationRole.ModelClass>
+				</ModelRelationRole>
+				<ModelRelationRole cardinality="_1_1" name="Source" navigable="false">
+					<ModelRelationRole.ModelClass>
+						<Core.Reference package="com.quilmes.baja_cliente" name="Mensajes" type="ModelClass"/>
+					</ModelRelationRole.ModelClass>
+				</ModelRelationRole>
+			</ModelRelation.ModelRelationRoles>
+		</ModelRelation>
+		<ModelRelation name="RequestB_Execute:BajaClienteExecute">
+			<ModelRelation.ModelRelationRoles>
+				<ModelRelationRole name="BajaClienteExecute">
+					<ModelRelationRole.Settings>
+						<ModelRelationRoleSetting name="qualifiedName_Namespace" value="">
+							<ModelRelationRoleSetting.SettingDefinition>
+								<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelRelationRoleSettingDefinition:qualifiedName_Namespace"/>
+							</ModelRelationRoleSetting.SettingDefinition>
+						</ModelRelationRoleSetting>
+						<ModelRelationRoleSetting name="qualifiedName_LocalPart" value="BajaCliente.Execute">
+							<ModelRelationRoleSetting.SettingDefinition>
+								<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelRelationRoleSettingDefinition:qualifiedName_LocalPart"/>
+							</ModelRelationRoleSetting.SettingDefinition>
+						</ModelRelationRoleSetting>
+					</ModelRelationRole.Settings>
+					<ModelRelationRole.ModelClass>
+						<Core.Reference package="com.quilmes.baja_cliente" name="BajaCliente_Execute" type="ModelClass"/>
+					</ModelRelationRole.ModelClass>
+				</ModelRelationRole>
+				<ModelRelationRole cardinality="_1_1" name="Source" navigable="false">
+					<ModelRelationRole.ModelClass>
+						<Core.Reference package="com.quilmes.baja_cliente" name="RequestB_Execute" type="ModelClass"/>
+					</ModelRelationRole.ModelClass>
+				</ModelRelationRole>
+			</ModelRelation.ModelRelationRoles>
+		</ModelRelation>
+		<ModelRelation name="BajaCliente_ExecuteResponse:Mensajes">
+			<ModelRelation.ModelRelationRoles>
+				<ModelRelationRole cardinality="_1_1" name="Mensajes">
+					<ModelRelationRole.Settings>
+						<ModelRelationRoleSetting name="qualifiedName_Namespace" value="http://tempuri.org/action/">
+							<ModelRelationRoleSetting.SettingDefinition>
+								<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelRelationRoleSettingDefinition:qualifiedName_Namespace"/>
+							</ModelRelationRoleSetting.SettingDefinition>
+						</ModelRelationRoleSetting>
+						<ModelRelationRoleSetting name="qualifiedName_LocalPart" value="Mensajes">
+							<ModelRelationRoleSetting.SettingDefinition>
+								<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelRelationRoleSettingDefinition:qualifiedName_LocalPart"/>
+							</ModelRelationRoleSetting.SettingDefinition>
+						</ModelRelationRoleSetting>
+					</ModelRelationRole.Settings>
+					<ModelRelationRole.ModelClass>
+						<Core.Reference package="com.quilmes.baja_cliente" name="Mensajes" type="ModelClass"/>
+					</ModelRelationRole.ModelClass>
+				</ModelRelationRole>
+				<ModelRelationRole cardinality="_1_1" name="Source" navigable="false">
+					<ModelRelationRole.ModelClass>
+						<Core.Reference package="com.quilmes.baja_cliente" name="BajaCliente_ExecuteResponse" type="ModelClass"/>
+					</ModelRelationRole.ModelClass>
+				</ModelRelationRole>
+			</ModelRelation.ModelRelationRoles>
+		</ModelRelation>
+	</Model.ModelRelations>
+	<Model.Settings>
+		<ModelSetting name="portTypeQualifiedName_Namespace" value="http://tempuri.org/action/">
+			<ModelSetting.SettingDefinition>
+				<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelSettingDefinition:portTypeQualifiedName_Namespace"/>
+			</ModelSetting.SettingDefinition>
+		</ModelSetting>
+		<ModelSetting name="defaultMetadataDestination" value="">
+			<ModelSetting.SettingDefinition>
+				<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelSettingDefinition:defaultMetadataDestination"/>
+			</ModelSetting.SettingDefinition>
+		</ModelSetting>
+		<ModelSetting name="defaultExecutionDestination" value="">
+			<ModelSetting.SettingDefinition>
+				<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelSettingDefinition:defaultExecutionDestination"/>
+			</ModelSetting.SettingDefinition>
+		</ModelSetting>
+		<ModelSetting name="designtimeWsdlUrl" value="http://desagvqg.bue.quilmes.com.ar/wsd/wsmdm/servlet/abajacliente?wsdl">
+			<ModelSetting.SettingDefinition>
+				<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelSettingDefinition:designtimeWsdlUrl"/>
+			</ModelSetting.SettingDefinition>
+		</ModelSetting>
+		<ModelSetting name="namespaceMapping" value="http%3A%2F%2Fsap.com%2Ftc%2Fwebdynpro%2Fmodel%2Fwebservice,,http%3A%2F%2Ftempuri.org%2Faction%2F,,quilmes,">
+			<ModelSetting.SettingDefinition>
+				<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelSettingDefinition:namespaceMapping"/>
+			</ModelSetting.SettingDefinition>
+		</ModelSetting>
+		<ModelSetting name="portTypeQualifiedName_LocalPart" value="BajaClienteSoapPort">
+			<ModelSetting.SettingDefinition>
+				<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelSettingDefinition:portTypeQualifiedName_LocalPart"/>
+			</ModelSetting.SettingDefinition>
+		</ModelSetting>
+	</Model.Settings>
+	<Model.ModelType>
+		<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType"/>
+	</Model.ModelType>
+</Model>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xliff version="1.1">
+<file source-language="en" product-name="@@9a3bed3403f64c811a19fc88dd32beb8View:Adjuntos_View[com.quilmes.baja] of Component:BajaUS[com.quilmes.baja]" datatype="s2x">
+<header>
+<skl>
+</skl>
+<phase-group>
+</phase-group>
+<s2x xmlns="http://www.sap.com">
+<dtr>
+<sc></sc>
+</dtr>
+<giltDirectives>
+<develContact>Consulting AG</develContact><domain></domain>
+<originalLocale xml:lang="en"/>
+<maxLength>255</maxLength>
+</giltDirectives>
+</s2x>
+</header>
+<body>
+<group restype="button">
+<trans-unit id="13896c39af1949191284f2913c813ecb" resname="RootUIElementContainer/Child:RootUIElementContainer5/Child:volver@text" maxwidth="255" translate="yes"><source>Volver</source></trans-unit>
+<trans-unit id="4db3ce0e2ae04788087ea919dab2ec8f" resname="RootUIElementContainer/Child:RootUIElementContainer2/Child:adjuntar@text" maxwidth="255" translate="yes"><source>Adjuntar</source></trans-unit>
+<trans-unit id="f1bdff4830a74de92e3ab92614d0b211" resname="RootUIElementContainer/Child:RootUIElementContainer5/Child:borrar@text" maxwidth="255" translate="yes"><source>Borrar</source></trans-unit>
+</group>
+<group restype="informationMessage">
+<trans-unit id="36f9ab038ddc4ddc03f48dd57f20fe5f" resname="RootUIElementContainer/Child:RootUIElementContainer6/Child:TextView@text" maxwidth="16384" translate="yes"><source>Restricciones de los Adjuntos</source></trans-unit>
+</group>
+<group restype="label">
+<trans-unit id="4464f4554fb34e231d79bf82b1c5baf5" resname="RootUIElementContainer/Child:RootUIElementContainer9/Child:RootUIElementContainer7/Child:Label0@text" maxwidth="255" translate="yes"><source>Cantidad Maxima Permitida</source></trans-unit>
+<trans-unit id="0a30b9f88b9140891673f10494b1e532" resname="RootUIElementContainer/Child:RootUIElementContainer9/Child:RootUIElementContainer7/Child:Label1@text" maxwidth="255" translate="yes"><source>Tamaño Maximo de los Archivos (en Kb)</source></trans-unit>
+<trans-unit id="ac8967c22b754b6d1e72aebf709ffac5" resname="RootUIElementContainer/Child:RootUIElementContainer9/Child:RootUIElementContainer7/Child:Label@text" maxwidth="255" translate="yes"><source>Extensiones Permitidas</source></trans-unit>
+<trans-unit id="3b9c18349bed42ea372bfaed48efe558" resname="RootUIElementContainer/Child:RootUIElementContainer9/Child:RootUIElementContainer7/Child:Label2@text" maxwidth="255" translate="yes"><source>Largo del Nombre</source></trans-unit>
+</group>
+<group restype="caption">
+<trans-unit id="951d21d2cbdd4af13bd98c32e3f88e3a" resname="RootUIElementContainer/Child:RootUIElementContainer9/Child:RootUIElementContainer8/Child:Caption4@text" maxwidth="255" translate="yes"><source>30</source></trans-unit>
+<trans-unit id="78dc979a608040e41b49dfb791000e06" resname="RootUIElementContainer/Child:RootUIElementContainer1/Child:PageHeader/Property:title@value" maxwidth="255" translate="yes"><source>Adjunto de Archivos</source></trans-unit>
+<trans-unit id="786f596ba6e24a5b156d844453304e68" resname="RootUIElementContainer/Child:RootUIElementContainer4/Child:Table_md/OutgoingAggregation:GroupedColumns/AggregatedObject:archivo/Header@text" maxwidth="255" translate="yes"><source>archivo</source></trans-unit>
+<trans-unit id="de0075f636124723128dd1cb8bf668cc" resname="RootUIElementContainer/Child:RootUIElementContainer4/Child:Table/OutgoingAggregation:GroupedColumns/AggregatedObject:url/Header@text" maxwidth="255" translate="yes"><source>URL</source></trans-unit>
+<trans-unit id="4618cbe85ee24251224fa5988b9b0022" resname="RootUIElementContainer/Child:RootUIElementContainer9/Child:RootUIElementContainer8/Child:Caption2@text" maxwidth="255" translate="yes"><source>BMP, JPG, GIF, PDF, TIFF</source></trans-unit>
+</group>
+</body>
+</file>
+</xliff>

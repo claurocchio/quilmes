@@ -1,0 +1,1134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Friday, May 25, 2007 3:26:31 PM CEST -->
+<Controller xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.Controller:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1180099591892" name="BajaUS" type="component" package="com.quilmes.baja" masterLanguage="en">
+	<AppClass.CodeBody>
+		<Core.Text><![CDATA[// ---------------------------------------------------------------------------
+// This file has been generated partially by the Web Dynpro Code Generator.
+// MODIFY CODE ONLY IN SECTIONS ENCLOSED BY @@begin AND @@end.
+// ALL OTHER CHANGES WILL BE LOST IF THE FILE IS REGENERATED.
+// ---------------------------------------------------------------------------
+package com.quilmes.baja;
+
+// 
+// IMPORTANT NOTE: 
+// _ALL_ IMPORT STATEMENTS MUST BE PLACED IN THE FOLLOWING SECTION ENCLOSED
+// BY @@begin imports AND @@end. FURTHERMORE, THIS SECTION MUST ALWAYS CONTAIN
+// AT LEAST ONE IMPORT STATEMENT (E.G. THAT FOR IPrivateBajaUS).
+// OTHERWISE, USING THE ECLIPSE FUNCTION "Organize Imports" FOLLOWED BY
+// A WEB DYNPRO CODE GENERATION (E.G. PROJECT BUILD) WILL RESULT IN THE LOSS
+// OF IMPORT STATEMENTS.
+//
+//@@begin imports
+import javax.naming.InitialContext;
+import javax.rmi.PortableRemoteObject;
+
+import ar.com.quilmes.bue.mdm_clientes.ejb.ConsultasExternas;
+import ar.com.quilmes.bue.mdm_clientes.ejb.ConsultasExternasHome;
+import ar.com.quilmes.bue.mdm_clientes.ejb.ConsultasInternas;
+import ar.com.quilmes.bue.mdm_clientes.ejb.ConsultasInternasHome;
+
+import com.quilmes.baja.wdp.IPrivateBajaUS;
+import com.sap.tc.webdynpro.progmodel.repository.IWDWindowInfo;
+import com.sap.tc.webdynpro.services.session.api.IWDWindow;
+//@@end
+
+//@@begin documentation
+//@@end
+
+public class BajaUS
+{
+  /**
+   * Logging location.
+   */
+  private static final com.sap.tc.logging.Location logger = 
+    com.sap.tc.logging.Location.getLocation(BajaUS.class);
+
+  static 
+  {
+    //@@begin id
+    String id = "$Id$";
+    //@@end
+    com.sap.tc.logging.Location.getLocation("ID.com.sap.tc.webdynpro").infoT(id);
+  }
+
+  /**
+   * Private access to the generated Web Dynpro counterpart 
+   * for this controller class.  </p>
+   *
+   * Use <code>wdThis</code> to gain typed access to the context,
+   * to trigger navigation via outbound plugs, to get and enable/disable
+   * actions, fire declared events, and access used controllers and/or 
+   * component usages.
+   *
+   * @see com.quilmes.baja.wdp.IPrivateBajaUS for more details
+   */
+  private final IPrivateBajaUS wdThis;
+
+  /**
+   * Root node of this controller's context. </p>
+   *
+   * Provides typed access not only to the elements of the root node 
+   * but also to all nodes in the context (methods node<i>XYZ</i>()) 
+   * and their currently selected element (methods current<i>XYZ</i>Element()). 
+   * It also facilitates the creation of new elements for all nodes 
+   * (methods create<i>XYZ</i>Element()). </p>
+   *
+   * @see com.quilmes.baja.wdp.IPrivateBajaUS.IContextNode for more details.
+   */
+  private final IPrivateBajaUS.IContextNode wdContext;
+
+  /**
+   * A shortcut for <code>wdThis.wdGetAPI()</code>. </p>
+   * 
+   * Represents the generic API of the generic Web Dynpro counterpart 
+   * for this controller. </p>
+   */
+  private final com.sap.tc.webdynpro.progmodel.api.IWDComponent wdControllerAPI;
+  
+  /**
+   * A shortcut for <code>wdThis.wdGetAPI().getComponent()</code>. </p>
+   * 
+   * Represents the generic API of the Web Dynpro component this controller 
+   * belongs to. Can be used to access the message manager, the window manager,
+   * to add/remove event handlers and so on. </p>
+   */
+  private final com.sap.tc.webdynpro.progmodel.api.IWDComponent wdComponentAPI;
+  
+  public BajaUS(IPrivateBajaUS wdThis)
+  {
+    this.wdThis = wdThis;
+    this.wdContext = wdThis.wdGetContext();
+    this.wdControllerAPI = wdThis.wdGetAPI();
+    this.wdComponentAPI = wdThis.wdGetAPI().getComponent();
+  }
+
+  //@@begin javadoc:wdDoInit()
+  /** Hook method called to initialize controller. */
+  //@@end
+  public void wdDoInit()
+  {
+    //@@begin wdDoInit()
+    //@@end
+  }
+
+  //@@begin javadoc:wdDoExit()
+  /** Hook method called to clean up controller. */
+  //@@end
+  public void wdDoExit()
+  {
+    //@@begin wdDoExit()
+    //@@end
+  }
+
+  //@@begin javadoc:wdDoPostProcessing()
+  /**
+   * Hook called to handle data retrieval errors before rendering.
+   *
+   * After doModifyView(), the Web Dynpro Framework gets all context data needed
+   * for rendering by validating the contexts (which in turn calls the supply
+   * functions and supplying relation roles). In this hook, the application
+   * should handle the errors which occurred during validation of the contexts.
+   * 
+   * Using preorder depth-first traversal, this hook is called for all component
+   * controllers starting with the current root component.
+   *
+   * Permitted operations:
+   * - Flushing model queue
+   * - Creating messages
+   * - Reading context and model data
+   *
+   * Forbidden operations: 
+   * - Invalidating model data
+   * - Manipulating the context
+   * - Firing outbound plugs
+   * - Creating components
+   * - ...   
+   *
+   * @param isCurrentRoot true if this is the root of the current request
+   */
+  //@@end
+  public void wdDoPostProcessing(boolean isCurrentRoot)
+  {
+    //@@begin wdDoPostProcessing()
+    //@@end
+  }
+
+  //@@begin javadoc:wdDoBeforeNavigation()
+  /**
+   * Hook before the navigation phase starts.
+   *
+   * This hook allows you to flush the model queue and handle any
+   * errors that occur. Firing outbound plugs is allowed in this hook.
+   *
+   * Using preorder depth-first traversal, this hook is called for all component
+   * controllers starting with the current root component.
+   *
+   * @param isCurrentRoot true if this is the root of the current request
+   */
+  //@@end
+  public void wdDoBeforeNavigation(boolean isCurrentRoot)
+  {
+    //@@begin wdDoBeforeNavigation()
+    //@@end
+  }
+  
+  //@@begin javadoc:wdDoApplicationStateChange()
+  /**
+   * Hook that informs the application about a state change.
+   * <p>
+   * This hook is called e.g. to tell the application that will be
+   * <ul>
+   *  <li>left via a suspend plug and therefore should go into a suspend/sleep
+   *      mode with minimal need of resources. errors that occur. Firing 
+   *      outbound plugs is allowed in this hook.
+   *  <li>left due to a timeout and could write it's state to a data base if the 
+   *      user comes back later on
+   * </ul>
+   *
+   * The concrete reason is available via IWDApplicationStateChangeInfo
+   * <p>
+   * <b>Important</b>: This hook is called for the top level component only!
+   *
+   * @param stateChangeInfo contains the information about the nature of the state change
+   * @param stateChangeReturn allows the application to ask for a different state change. 
+   *        The framework is allowed to ignore it considering i.e. the current resources situation.
+   */
+  //@@end
+  public void wdDoApplicationStateChange(com.sap.tc.webdynpro.progmodel.api.IWDApplicationStateChangeInfo stateChangeInfo, com.sap.tc.webdynpro.progmodel.api.IWDApplicationStateChangeReturn stateChangeReturn)
+  {
+    //@@begin wdDoApplicationStateChange()
+    //@@end
+  }
+
+  //@@begin javadoc:getConsultasExternasBean()
+  /** Declared method. */
+  //@@end
+  public ar.com.quilmes.bue.mdm_clientes.ejb.ConsultasExternas getConsultasExternasBean( )
+  {
+    //@@begin getConsultasExternasBean()
+	if (ConsultasExternasBean==null){
+	ClassLoader oldClassLoader = Thread.currentThread().getContextClassLoader();
+	Thread.currentThread().setContextClassLoader(this.getClass().getClassLoader());
+
+	try{
+		InitialContext context = new InitialContext();
+		Object ob = context.lookup("ar.com.quilmes.bue/mdm_clientes_ear/ConsultasExternasBean");
+		ConsultasExternasHome beanHome = ((ConsultasExternasHome) PortableRemoteObject.narrow(ob, ConsultasExternasHome.class));
+		ConsultasExternasBean = beanHome.create();
+	} catch (Exception e){
+		e.printStackTrace();
+		wdComponentAPI.getMessageManager().reportException(e.getMessage(), false);
+		return null;
+	}finally{
+		Thread.currentThread().setContextClassLoader(oldClassLoader);
+	}
+	}
+	return ConsultasExternasBean;
+
+    //@@end
+  }
+
+  //@@begin javadoc:getConsultasInternasBean()
+  /** Declared method. */
+  //@@end
+  public ar.com.quilmes.bue.mdm_clientes.ejb.ConsultasInternas getConsultasInternasBean( )
+  {
+    //@@begin getConsultasInternasBean()
+	if (ConsultasInternasBean==null){
+	ClassLoader oldClassLoader = Thread.currentThread().getContextClassLoader();
+	Thread.currentThread().setContextClassLoader(this.getClass().getClassLoader());
+
+	try{
+		InitialContext context = new InitialContext();
+		Object ob = context.lookup("ar.com.quilmes.bue/mdm_clientes_ear/ConsultasInternasBean");
+		ConsultasInternasHome beanHome = ((ConsultasInternasHome) PortableRemoteObject.narrow(ob, ConsultasInternasHome.class));
+		ConsultasInternasBean = beanHome.create();
+	} catch (Exception e){
+		e.printStackTrace();
+		wdComponentAPI.getMessageManager().reportException(e.getMessage(), false);
+		return null;
+	}finally{
+		Thread.currentThread().setContextClassLoader(oldClassLoader);
+	}
+	}
+	return ConsultasInternasBean;
+
+    //@@end
+  }
+
+  //@@begin javadoc:inicializar()
+  /** Declared method. */
+  //@@end
+  public void inicializar( )
+  {
+    //@@begin inicializar()
+    wdThis.fireInicializarEvent();
+    //@@end
+  }
+
+  //@@begin javadoc:fireInicializarEvent()
+  /** Declared method. */
+  //@@end
+  public void fireInicializarEvent( )
+  {
+    //@@begin fireInicializarEvent()
+    wdThis.wdFireEventInicializar();
+    //@@end
+  }
+
+  //@@begin javadoc:BuscarPop()
+  /** Declared method. */
+  //@@end
+  public void BuscarPop( )
+  {
+    //@@begin BuscarPop()
+	IWDWindowInfo windowInfo = (IWDWindowInfo)wdComponentAPI.getComponentInfo().findInWindows("PopWin");
+	IWDWindow window = wdComponentAPI.getWindowManager().createModalWindow(windowInfo);
+	window.setWindowPosition (300,150);
+	window.setWindowSize(80,80);
+	wdContext.currentContextElement().setAtributo(window);
+	window.show();	
+    //@@end
+  }
+
+  //@@begin javadoc:closepop()
+  /** Declared method. */
+  //@@end
+  public void closepop( )
+  {
+    //@@begin closepop()
+	IWDWindow window = wdContext.currentContextElement().getAtributo();
+	window.hide();
+	window.destroyInstance();
+    //@@end
+  }
+
+  //@@begin javadoc:fireFinalizarEvent()
+  /** Declared method. */
+  //@@end
+  public void fireFinalizarEvent( )
+  {
+    //@@begin fireFinalizarEvent()
+	wdThis.wdFireEventFinalizar();
+    //@@end
+  }
+
+  /*
+   * The following code section can be used for any Java code that is 
+   * not to be visible to other controllers/views or that contains constructs
+   * currently not supported directly by Web Dynpro (such as inner classes or
+   * member variables etc.). </p>
+   *
+   * Note: The content of this section is in no way managed/controlled
+   * by the Web Dynpro Designtime or the Web Dynpro Runtime. 
+   */
+  //@@begin others
+  private ConsultasExternas ConsultasExternasBean;
+  private ConsultasInternas ConsultasInternasBean;
+  //@@end
+}
+
+// ---- content of obsolete user coding area(s) ----
+//@@begin obsolete:javadoc:get_Datos_gral()
+//  /** Declared method. */
+//@@end
+//@@begin obsolete:get_Datos_gral()
+//    String dato = null;
+//    
+//    if (campo.trim().equalsIgnoreCase("e"))
+//    { dato = wdContext.currentContextElement().getEsquema().trim(); }
+//        
+//	if (campo.trim().equalsIgnoreCase("s"))
+//	{ dato = Integer.toString(wdContext.currentContextElement().getSegmento()); }
+//	if (campo.trim().equalsIgnoreCase("m"))
+//	{ if (wdContext.currentContextElement().getMaster_adjunto()!=null)
+//		{ dato = wdContext.currentContextElement().getMaster_adjunto().trim(); }
+//	}
+//		 
+//    return dato;
+//@@end
+//@@begin obsolete:javadoc:getDatos_intro()
+//  /** Declared method. */
+//@@end
+//@@begin obsolete:Closepopup()
+//	//IWDWindow window = wdContext.currentContextElement().getAtributo();
+//	//window.hide();
+//	//window.destroyInstance();
+//@@end
+//@@begin obsolete:getDatos_intro()
+//    String dato = null;
+//    
+//    if (campo == "n")
+//    { dato = Integer.toString(wdContext.currentContextElement().getNumero()); }
+//    else
+//    { dato = wdContext.currentContextElement().getMaster(); }
+//    
+//    return dato;
+//@@end
+//@@begin obsolete:javadoc:Closepopup()
+//  /** Declared method. */
+//@@end
+]]></Core.Text>
+	</AppClass.CodeBody>
+	<AppClass.Events>
+		<CustomEvent name="Inicializar">
+		</CustomEvent>
+		<CustomEvent name="Finalizar">
+		</CustomEvent>
+	</AppClass.Events>
+	<Controller.Parent>
+		<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Component"/>
+	</Controller.Parent>
+	<Controller.Context>
+		<ContextValueNode cardinality="_1_1" name="Context" selection="_1_1">
+			<ContextNode.Attributes>
+				<ContextValueAttribute name="esquema">
+					<ContextValueAttribute.Type>
+						<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+					</ContextValueAttribute.Type>
+				</ContextValueAttribute>
+				<ContextValueAttribute name="segmento">
+					<ContextValueAttribute.Type>
+						<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="integer" type="DtSimpleType"/>
+					</ContextValueAttribute.Type>
+				</ContextValueAttribute>
+				<ContextValueAttribute name="numero">
+					<ContextValueAttribute.Type>
+						<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="integer" type="DtSimpleType"/>
+					</ContextValueAttribute.Type>
+				</ContextValueAttribute>
+				<ContextValueAttribute name="master">
+					<ContextValueAttribute.Type>
+						<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+					</ContextValueAttribute.Type>
+				</ContextValueAttribute>
+				<ContextValueAttribute name="carpeta">
+					<ContextValueAttribute.Type>
+						<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+					</ContextValueAttribute.Type>
+				</ContextValueAttribute>
+				<ContextValueAttribute name="nro_solicitud">
+					<ContextValueAttribute.Type>
+						<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="long" type="DtSimpleType"/>
+					</ContextValueAttribute.Type>
+				</ContextValueAttribute>
+				<ContextValueAttribute name="repositorio">
+					<ContextValueAttribute.Type>
+						<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+					</ContextValueAttribute.Type>
+				</ContextValueAttribute>
+				<ContextValueAttribute name="observac">
+					<ContextValueAttribute.Type>
+						<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+					</ContextValueAttribute.Type>
+				</ContextValueAttribute>
+				<ContextValueAttribute name="atributo">
+					<ContextValueAttribute.NativeType>
+						<JavaNativeType javaPackage="com.sap.tc.webdynpro.services.session.api" name="IWDWindow">
+						</JavaNativeType>
+					</ContextValueAttribute.NativeType>
+					<ContextValueAttribute.Type>
+						<Core.Reference path="Context/Attribute:atributo/NativeType"/>
+					</ContextValueAttribute.Type>
+				</ContextValueAttribute>
+				<ContextValueAttribute name="resultado">
+					<ContextValueAttribute.Type>
+						<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+					</ContextValueAttribute.Type>
+				</ContextValueAttribute>
+				<ContextValueAttribute name="eleccion">
+					<ContextValueAttribute.Type>
+						<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+					</ContextValueAttribute.Type>
+				</ContextValueAttribute>
+				<ContextValueAttribute name="flag_adjunto">
+					<ContextValueAttribute.Type>
+						<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+					</ContextValueAttribute.Type>
+				</ContextValueAttribute>
+			</ContextNode.Attributes>
+			<ContextNode.ChildNodes>
+				<ContextValueNode name="Adjunto">
+					<ContextNode.Attributes>
+						<ContextValueAttribute name="nombre">
+							<ContextValueAttribute.Type>
+								<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+							</ContextValueAttribute.Type>
+						</ContextValueAttribute>
+						<ContextValueAttribute name="url">
+							<ContextValueAttribute.Type>
+								<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+							</ContextValueAttribute.Type>
+						</ContextValueAttribute>
+					</ContextNode.Attributes>
+				</ContextValueNode>
+				<ContextModelNode name="Ticket">
+					<ContextNode.Attributes>
+						<ContextModelAttribute name="motivoBaja">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:motivoBaja"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="perfilCliente">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:perfilCliente"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="listaPrecioMaximo">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:listaPrecioMaximo"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tienePromocion">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:tienePromocion"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoClienteCom">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:tipoClienteCom"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="codFormaAtencion">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:codFormaAtencion"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="excIvaFechaDesde">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:excIvaFechaDesde"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="provinciaDesc">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:provinciaDesc"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="codClienteAdy">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:codClienteAdy"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="fechaAniversario">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:fechaAniversario"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="nroSolicitud">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:nroSolicitud"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoVtaFsMercaderia">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:tipoVtaFsMercaderia"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="formaPago">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:formaPago"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="identificacionJuridica">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:identificacionJuridica"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="carpeta">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:carpeta"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="moneda">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:moneda"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="localidadDesc">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:localidadDesc"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="idMensajeFactura">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:idMensajeFactura"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="nombreFantasia">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:nombreFantasia"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="codLocalidad">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:codLocalidad"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="numero">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:numero"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="localidadTrDeuda">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:localidadTrDeuda"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="numeroDocumento">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:numeroDocumento"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="codClienteTransfiereDeuda">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:codClienteTransfiereDeuda"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoCobranza">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:tipoCobranza"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="aceptaDesdUnifPedido">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:aceptaDesdUnifPedido"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="nroIIBB">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:nroIIBB"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="porcExcIIBB">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:porcExcIIBB"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="esExcluivo">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:esExcluivo"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="razonSocial">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:razonSocial"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="transfiereHistoricoVentas">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:transfiereHistoricoVentas"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="excIIBBFechaHasta">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:excIIBBFechaHasta"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="sociedad">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:sociedad"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoIvaDesc">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:tipoIvaDesc"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="esquema">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:esquema"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="calle">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:calle"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="puerta">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:puerta"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="observacionesMd">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:observacionesMd"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoMaqVend">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:tipoMaqVend"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="codCategCliente">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:codCategCliente"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="observacionesUs">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:observacionesUs"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="cp">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:cp"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="razonSocialAbreviada">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:razonSocialAbreviada"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="usuarioAprobador">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:usuarioAprobador"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="formaEntregaCtaCte">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:formaEntregaCtaCte"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="agrupacionComercial">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:agrupacionComercial"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="cantGeocodificacion">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:cantGeocodificacion"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="polVtaCal3">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:polVtaCal3"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="repositorio">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:repositorio"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="ramo">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:ramo"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoIVA">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:tipoIVA"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="fechaVencimientoLicencia">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:fechaVencimientoLicencia"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="direccionTrDeuda">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:direccionTrDeuda"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="subCanalMkt">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:subCanalMkt"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="categoriaClienteDesc">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:categoriaClienteDesc"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="fechaUltVerif">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:fechaUltVerif"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="usuarioSolicitante">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:usuarioSolicitante"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoDocumentoDesc">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:tipoDocumentoDesc"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="transfDeudaEnv">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:transfDeudaEnv"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="pagaSeguro">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:pagaSeguro"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoVtaFsEnvases">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:tipoVtaFsEnvases"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="imprimeRemito">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:imprimeRemito"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="codTipoDocumento">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:codTipoDocumento"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="nroImpuestoInterno">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:nroImpuestoInterno"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="cuitTrDeuda">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:cuitTrDeuda"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="polVtaCal2">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:polVtaCal2"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="nroTicketCrm">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:nroTicketCrm"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="esAltaBaja">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:esAltaBaja"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="excIvaFechaHasta">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:excIvaFechaHasta"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="codNuevoClienteCCQ">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:codNuevoClienteCCQ"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="autVentaAlochol">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:autVentaAlochol"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="excIIBBFechaDesde">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:excIIBBFechaDesde"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="mesajeFactura">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:mesajeFactura"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="coordenadaX">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:coordenadaX"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="nroTicketAsociado">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:nroTicketAsociado"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="banco">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:banco"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="ctaCteExterna">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:ctaCteExterna"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="fechaCierre">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:fechaCierre"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoEmpresa">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:tipoEmpresa"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoIIBB">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:tipoIIBB"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="porcExcIva">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:porcExcIva"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="codCuentaMadre">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:codCuentaMadre"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="nroLicVentaAlochol">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:nroLicVentaAlochol"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="cobrador">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:cobrador"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="codCliente">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:codCliente"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="subCanalMktDesc">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:subCanalMktDesc"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="personeriaJuridica">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:personeriaJuridica"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoClienteCondVta">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:tipoClienteCondVta"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="coordenadaY">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:coordenadaY"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="telefono">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:telefono"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoClienteContab">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:tipoClienteContab"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="razonSocialClTrDeuda">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:razonSocialClTrDeuda"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="segmentoVta">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:segmentoVta"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="listaPrecioBasico">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:listaPrecioBasico"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="fechaCreacion">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:fechaCreacion"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="observacionesGeo">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:observacionesGeo"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="interseccion">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:interseccion"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="asigStock">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:asigStock"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoSolicitud">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:tipoSolicitud"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="comprador">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:comprador"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="fueCensado">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:fueCensado"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="email">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:email"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="polVtaCal1">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:polVtaCal1"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="estadoTicket">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:estadoTicket"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="codProvincia">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass" path="Property:codProvincia"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+					</ContextNode.Attributes>
+					<ContextNode.ChildNodes>
+						<ContextModelNode name="Logs">
+							<ContextNode.Attributes>
+								<ContextModelAttribute name="fecha">
+									<ContextModelAttribute.ReferencedProperty>
+										<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="LogModificacion" type="ModelClass" path="Property:fecha"/>
+									</ContextModelAttribute.ReferencedProperty>
+								</ContextModelAttribute>
+								<ContextModelAttribute name="nuevoDato">
+									<ContextModelAttribute.ReferencedProperty>
+										<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="LogModificacion" type="ModelClass" path="Property:nuevoDato"/>
+									</ContextModelAttribute.ReferencedProperty>
+								</ContextModelAttribute>
+								<ContextModelAttribute name="campo">
+									<ContextModelAttribute.ReferencedProperty>
+										<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="LogModificacion" type="ModelClass" path="Property:campo"/>
+									</ContextModelAttribute.ReferencedProperty>
+								</ContextModelAttribute>
+							</ContextNode.Attributes>
+							<ContextModelNode.ModelClass>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="LogModificacion" type="ModelClass"/>
+							</ContextModelNode.ModelClass>
+							<ContextModelNode.SupplyingRelationRole>
+								<Core.Reference package="com.quilmes.baja.consultainterna" name="ConsultaInterna" type="Model" path="ModelRelation:LogModificacion.Ticket/ModelRelationRole:Logs"/>
+							</ContextModelNode.SupplyingRelationRole>
+						</ContextModelNode>
+						<ContextModelNode name="Adjuntos">
+							<ContextNode.Attributes>
+								<ContextModelAttribute name="archivo">
+									<ContextModelAttribute.ReferencedProperty>
+										<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Adjunto" type="ModelClass" path="Property:archivo"/>
+									</ContextModelAttribute.ReferencedProperty>
+								</ContextModelAttribute>
+							</ContextNode.Attributes>
+							<ContextModelNode.ModelClass>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Adjunto" type="ModelClass"/>
+							</ContextModelNode.ModelClass>
+							<ContextModelNode.SupplyingRelationRole>
+								<Core.Reference package="com.quilmes.baja.consultainterna" name="ConsultaInterna" type="Model" path="ModelRelation:Adjunto.Ticket/ModelRelationRole:Adjuntos"/>
+							</ContextModelNode.SupplyingRelationRole>
+						</ContextModelNode>
+						<ContextModelNode name="Territorios">
+							<ContextNode.Attributes>
+								<ContextModelAttribute name="codTerritorio">
+									<ContextModelAttribute.ReferencedProperty>
+										<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="TerritorioTabla" type="ModelClass" path="Property:codTerritorio"/>
+									</ContextModelAttribute.ReferencedProperty>
+								</ContextModelAttribute>
+								<ContextModelAttribute name="centroDespacho">
+									<ContextModelAttribute.ReferencedProperty>
+										<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="TerritorioTabla" type="ModelClass" path="Property:centroDespacho"/>
+									</ContextModelAttribute.ReferencedProperty>
+								</ContextModelAttribute>
+								<ContextModelAttribute name="canalVenta">
+									<ContextModelAttribute.ReferencedProperty>
+										<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="TerritorioTabla" type="ModelClass" path="Property:canalVenta"/>
+									</ContextModelAttribute.ReferencedProperty>
+								</ContextModelAttribute>
+								<ContextModelAttribute name="codTerritorioGeo">
+									<ContextModelAttribute.ReferencedProperty>
+										<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="TerritorioTabla" type="ModelClass" path="Property:codTerritorioGeo"/>
+									</ContextModelAttribute.ReferencedProperty>
+								</ContextModelAttribute>
+							</ContextNode.Attributes>
+							<ContextNode.ChildNodes>
+								<ContextModelNode name="Frecuencias" singleton="false">
+									<ContextNode.Attributes>
+										<ContextModelAttribute name="codDiaSemana">
+											<ContextModelAttribute.ReferencedProperty>
+												<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Frecuencia" type="ModelClass" path="Property:codDiaSemana"/>
+											</ContextModelAttribute.ReferencedProperty>
+										</ContextModelAttribute>
+										<ContextModelAttribute name="tipoFrecuencia">
+											<ContextModelAttribute.ReferencedProperty>
+												<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Frecuencia" type="ModelClass" path="Property:tipoFrecuencia"/>
+											</ContextModelAttribute.ReferencedProperty>
+										</ContextModelAttribute>
+										<ContextModelAttribute name="codCliVisitAntes">
+											<ContextModelAttribute.ReferencedProperty>
+												<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Frecuencia" type="ModelClass" path="Property:codCliVisitAntes"/>
+											</ContextModelAttribute.ReferencedProperty>
+										</ContextModelAttribute>
+										<ContextModelAttribute name="diaSemanaDesc">
+											<ContextModelAttribute.ReferencedProperty>
+												<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Frecuencia" type="ModelClass" path="Property:diaSemanaDesc"/>
+											</ContextModelAttribute.ReferencedProperty>
+										</ContextModelAttribute>
+									</ContextNode.Attributes>
+									<ContextModelNode.ModelClass>
+										<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Frecuencia" type="ModelClass"/>
+									</ContextModelNode.ModelClass>
+									<ContextModelNode.SupplyingRelationRole>
+										<Core.Reference package="com.quilmes.baja.consultainterna" name="ConsultaInterna" type="Model" path="ModelRelation:Frecuencia.Territorio/ModelRelationRole:Frecuencias"/>
+									</ContextModelNode.SupplyingRelationRole>
+								</ContextModelNode>
+							</ContextNode.ChildNodes>
+							<ContextModelNode.ModelClass>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="TerritorioTabla" type="ModelClass"/>
+							</ContextModelNode.ModelClass>
+							<ContextModelNode.SupplyingRelationRole>
+								<Core.Reference package="com.quilmes.baja.consultainterna" name="ConsultaInterna" type="Model" path="ModelRelation:TerritorioTabla.Ticket/ModelRelationRole:Territorios"/>
+							</ContextModelNode.SupplyingRelationRole>
+						</ContextModelNode>
+					</ContextNode.ChildNodes>
+					<ContextModelNode.ModelClass>
+						<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Ticket" type="ModelClass"/>
+					</ContextModelNode.ModelClass>
+				</ContextModelNode>
+			</ContextNode.ChildNodes>
+		</ContextValueNode>
+	</Controller.Context>
+	<Controller.Methods>
+		<ControllerMethod name="getConsultasExternasBean" visibility="none">
+			<Procedure.NativeType>
+				<JavaNativeType javaPackage="ar.com.quilmes.bue.mdm_clientes.ejb" name="ConsultasExternas">
+				</JavaNativeType>
+			</Procedure.NativeType>
+			<Procedure.ReturnType>
+				<Core.Reference path="Method:getConsultasExternasBean/NativeType"/>
+			</Procedure.ReturnType>
+		</ControllerMethod>
+		<ControllerMethod name="getConsultasInternasBean" visibility="none">
+			<Procedure.NativeType>
+				<JavaNativeType javaPackage="ar.com.quilmes.bue.mdm_clientes.ejb" name="ConsultasInternas">
+				</JavaNativeType>
+			</Procedure.NativeType>
+			<Procedure.ReturnType>
+				<Core.Reference path="Method:getConsultasInternasBean/NativeType"/>
+			</Procedure.ReturnType>
+		</ControllerMethod>
+		<ControllerMethod name="inicializar" visibility="none">
+		</ControllerMethod>
+		<ControllerMethod name="fireInicializarEvent" visibility="none">
+		</ControllerMethod>
+		<ControllerMethod name="BuscarPop" visibility="none">
+		</ControllerMethod>
+		<ControllerMethod name="closepop" visibility="none">
+		</ControllerMethod>
+		<ControllerMethod name="fireFinalizarEvent" visibility="none">
+		</ControllerMethod>
+	</Controller.Methods>
+</Controller>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Friday, May 25, 2007 3:26:31 PM CEST -->
+<View xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.View:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1180099591892" name="Popup" package="com.quilmes.baja" masterLanguage="en">
+	<AbstractView.ViewController>
+		<Core.Reference package="com.quilmes.baja" name="Popup" type="Controller"/>
+	</AbstractView.ViewController>
+	<View.Parent>
+		<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Component"/>
+	</View.Parent>
+	<View.RootUIElementContainer>
+		<TransparentContainer name="RootUIElementContainer" width="400px">
+			<UIElementContainer.Children>
+				<TextView design="header2" layout="native" name="TextView">
+					<ViewElement.Properties>
+						<ViewElementProperty name="semanticColor" value="standard">
+							<ViewElementProperty.Definition>
+								<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition" path="Property:semanticColor"/>
+							</ViewElementProperty.Definition>
+						</ViewElementProperty>
+					</ViewElement.Properties>
+					<ViewElement.Definition>
+						<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition"/>
+					</ViewElement.Definition>
+					<UIElement.LayoutData>
+						<GridData name="LayoutData">
+							<ViewElement.Properties>
+								<ViewElementProperty name="cellBackgroundDesign" value="fill1">
+									<ViewElementProperty.Definition>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="GridLayout" type="LayoutDefinition" path="LayoutDataDefinition:GridData/Property:cellBackgroundDesign"/>
+									</ViewElementProperty.Definition>
+								</ViewElementProperty>
+							</ViewElement.Properties>
+						</GridData>
+					</UIElement.LayoutData>
+				</TextView>
+				<TextEdit cols="55" name="TextEdit" rows="3" tooltip_isDependent="false">
+					<ViewElement.ContextBindings>
+						<UIElementContextBinding name="value">
+							<UIElementContextBinding.BoundContextElement>
+								<Core.Reference package="com.quilmes.baja" name="Popup" type="Controller" path="Context/Attribute:observac"/>
+							</UIElementContextBinding.BoundContextElement>
+							<UIElementContextBinding.UIElementProperty>
+								<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextEdit" type="UIElementDefinition" path="Property:value"/>
+							</UIElementContextBinding.UIElementProperty>
+						</UIElementContextBinding>
+					</ViewElement.ContextBindings>
+					<ViewElement.Definition>
+						<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextEdit" type="UIElementDefinition"/>
+					</ViewElement.Definition>
+					<UIElement.LayoutData>
+						<GridData name="LayoutData">
+						</GridData>
+					</UIElement.LayoutData>
+				</TextEdit>
+				<TransparentContainer name="RootUIElementContainer1" width="100px">
+					<UIElement.LayoutData>
+						<GridData name="RootUIElementContainer1_layoutdata">
+						</GridData>
+					</UIElement.LayoutData>
+					<UIElementContainer.Children>
+						<Button name="Button" text_isDependent="false">
+							<ViewElement.EventBindings>
+								<UIElementEventBinding name="onAction">
+									<UIElementEventBinding.BoundAction>
+										<Core.Reference package="com.quilmes.baja" name="Popup" type="Controller" path="Action:aceptar"/>
+									</UIElementEventBinding.BoundAction>
+									<UIElementEventBinding.UIElementEvent>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="AbstractButton" type="UIElementDefinition" path="Event:onAction"/>
+									</UIElementEventBinding.UIElementEvent>
+								</UIElementEventBinding>
+							</ViewElement.EventBindings>
+							<ViewElement.Definition>
+								<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="Button" type="UIElementDefinition"/>
+							</ViewElement.Definition>
+							<UIElement.LayoutData>
+								<LayoutData name="LayoutData">
+									<ViewElement.Definition>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="MatrixLayout" type="LayoutDefinition" path="LayoutDataDefinition:MatrixData"/>
+									</ViewElement.Definition>
+								</LayoutData>
+							</UIElement.LayoutData>
+						</Button>
+						<Button name="Button1" text_isDependent="false">
+							<ViewElement.EventBindings>
+								<UIElementEventBinding name="onAction">
+									<UIElementEventBinding.BoundAction>
+										<Core.Reference package="com.quilmes.baja" name="Popup" type="Controller" path="Action:cancelar"/>
+									</UIElementEventBinding.BoundAction>
+									<UIElementEventBinding.UIElementEvent>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="AbstractButton" type="UIElementDefinition" path="Event:onAction"/>
+									</UIElementEventBinding.UIElementEvent>
+								</UIElementEventBinding>
+							</ViewElement.EventBindings>
+							<ViewElement.Definition>
+								<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="Button" type="UIElementDefinition"/>
+							</ViewElement.Definition>
+							<UIElement.LayoutData>
+								<LayoutData name="LayoutData">
+									<ViewElement.Definition>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="MatrixLayout" type="LayoutDefinition" path="LayoutDataDefinition:MatrixData"/>
+									</ViewElement.Definition>
+								</LayoutData>
+							</UIElement.LayoutData>
+						</Button>
+					</UIElementContainer.Children>
+					<UIElementContainer.Layout>
+						<Layout name="RootUIElementContainer1_layout">
+							<ViewElement.Definition>
+								<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="MatrixLayout" type="LayoutDefinition"/>
+							</ViewElement.Definition>
+						</Layout>
+					</UIElementContainer.Layout>
+				</TransparentContainer>
+			</UIElementContainer.Children>
+			<UIElementContainer.Layout>
+				<GridLayout name="RootUIElementContainer_layout">
+				</GridLayout>
+			</UIElementContainer.Layout>
+		</TransparentContainer>
+	</View.RootUIElementContainer>
+</View>

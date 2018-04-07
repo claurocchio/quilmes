@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Friday, May 25, 2007 3:26:31 PM CEST -->
+<Application xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.Application:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1180099591892" name="BajaUS" package="com.quilmes.baja" masterLanguage="en">
+	<Application.Component>
+		<Core.Reference package="com.quilmes.baja" name="BajaUS" type="Component"/>
+	</Application.Component>
+	<Application.PropertyDefinitionSets>
+		<Core.Reference package="com.sap.ide.webdynpro.applicationpropertydefs" name="Standard" type="ApplicationPropertyDefinitionSet"/>
+	</Application.PropertyDefinitionSets>
+	<Application.StartupPlug>
+		<Core.Reference package="com.quilmes.baja" name="BajaUSInterfaceView" type="InterfaceView" path="InboundPlug:Default"/>
+	</Application.StartupPlug>
+</Application>

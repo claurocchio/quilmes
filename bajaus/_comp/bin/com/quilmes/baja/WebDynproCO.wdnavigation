@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Friday, May 25, 2007 3:26:31 PM CEST -->
+<NavigationLinks xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.NavigationLinks:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1180099591892" name="WebDynproCO" package="com.quilmes.baja" masterLanguage="en">
+	<NavigationLinks.Parent>
+		<Core.Reference package="com.quilmes.baja" name="WebDynproCO" type="Window"/>
+	</NavigationLinks.Parent>
+	<NavigationLinks.NavigationLinks>
+		<NavigationLink name="com.quilmes.baja.Adjuntos_ViewUsage2_salidaadjuntos_v">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.quilmes.baja.Adjuntos_ViewUsage2_salidaadjuntos_v_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.quilmes.baja" name="Baja_View" type="View" path="InboundPlug:entradabaja_adj"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.quilmes.baja" name="WebDynproCO" type="Window" path="ViewsetHierarchyRootNode:com.quilmes.baja.Baja_ViewUsage2"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.quilmes.baja" name="Adjuntos_View" type="View" path="OutboundPlug:salidaadjuntos_v"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.quilmes.baja" name="WebDynproCO" type="Window" path="ViewsetHierarchyRootNode:com.quilmes.baja.Adjuntos_ViewUsage2"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.quilmes.baja.Baja_ViewUsage2_salidabaja_a">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.quilmes.baja.Baja_ViewUsage2_salidabaja_a_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.quilmes.baja" name="Adjuntos_View" type="View" path="InboundPlug:entradaadjuntos"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.quilmes.baja" name="WebDynproCO" type="Window" path="ViewsetHierarchyRootNode:com.quilmes.baja.Adjuntos_ViewUsage2"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.quilmes.baja" name="Baja_View" type="View" path="OutboundPlug:salidabaja_a"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.quilmes.baja" name="WebDynproCO" type="Window" path="ViewsetHierarchyRootNode:com.quilmes.baja.Baja_ViewUsage2"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+	</NavigationLinks.NavigationLinks>
+</NavigationLinks>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet >
+	<view uin="Vz8va46g3kgjc33-h4bfsi">
+		<property name="$parentUin" value="WebDynpro:Window:://WebDynpro/Window#com.quilmes.baja.BajaUS"/>
+		<property name="$defaultDiagram" value="true"/>
+		<property name="$metaclass" value="WDWindowDiagram"/>
+		<reference referencedUin="WebDynpro:ViewUsage:://WebDynpro/Window#com.quilmes.baja.BajaUS/ViewsetHierarchyRootNode#com.quilmes.baja.Adjuntos_ViewUsage1">
+			<property name="bounds" value="440,30,151,60"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<reference referencedUin="WebDynpro:OutboundPlugUsage://WebDynpro/View#com.quilmes.baja.Adjuntos_View/OutboundPlug#salidaadjuntos_v://WebDynpro/Window#com.quilmes.baja.BajaUS/ViewsetHierarchyRootNode#com.quilmes.baja.Adjuntos_ViewUsage1">
+				<property name="bounds" value="0,0,50,50"/>
+				<reference referencedUin="WebDynpro:NavigationLink:://WebDynpro/NavigationLinks#com.quilmes.baja.BajaUS/NavigationsLink#com.quilmes.baja.Adjuntos_ViewUsage1_salidaadjuntos_v/TargetReference#com.quilmes.baja.Adjuntos_ViewUsage1_salidaadjuntos_v_1">
+					<property name="bendpoints" value=""/>
+				</reference>
+			</reference>
+			<reference referencedUin="WebDynpro:InboundPlugUsage://WebDynpro/View#com.quilmes.baja.Adjuntos_View/InboundPlug#entradaadjuntos://WebDynpro/Window#com.quilmes.baja.BajaUS/ViewsetHierarchyRootNode#com.quilmes.baja.Adjuntos_ViewUsage1">
+				<property name="Position" value="WEST"/>
+				<property name="bounds" value="0,0,50,50"/>
+			</reference>
+		</reference>
+		<reference referencedUin="WebDynpro:ViewUsage:://WebDynpro/Window#com.quilmes.baja.BajaUS/ViewsetHierarchyRootNode#com.quilmes.baja.Baja_ViewUsage1">
+			<property name="bounds" value="250,10,156,70"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<reference referencedUin="WebDynpro:OutboundPlugUsage://WebDynpro/View#com.quilmes.baja.Baja_View/OutboundPlug#salidabaja_e://WebDynpro/Window#com.quilmes.baja.BajaUS/ViewsetHierarchyRootNode#com.quilmes.baja.Baja_ViewUsage1">
+				<property name="bounds" value="120,10,50,50"/>
+				<property name="bounds_setted_by_user" value="true"/>
+				<property name="Position" value="EAST"/>
+				<property name="PositionIndex" value="3"/>
+				<reference referencedUin="WebDynpro:NavigationLink:://WebDynpro/NavigationLinks#com.quilmes.baja.BajaUS/NavigationsLink#com.quilmes.baja.Baja_ViewUsage1_salidabaja_e/TargetReference#com.quilmes.baja.Baja_ViewUsage1_salidabaja_e_1">
+					<property name="bendpoints" value=""/>
+				</reference>
+			</reference>
+			<reference referencedUin="WebDynpro:InboundPlugUsage://WebDynpro/View#com.quilmes.baja.Baja_View/InboundPlug#entradabaja_adj://WebDynpro/Window#com.quilmes.baja.BajaUS/ViewsetHierarchyRootNode#com.quilmes.baja.Baja_ViewUsage1">
+				<property name="Position" value="WEST"/>
+				<property name="bounds" value="0,0,50,50"/>
+				<property name="PositionIndex" value="3"/>
+			</reference>
+			<reference referencedUin="WebDynpro:OutboundPlugUsage://WebDynpro/View#com.quilmes.baja.Baja_View/OutboundPlug#salidabaja_a://WebDynpro/Window#com.quilmes.baja.BajaUS/ViewsetHierarchyRootNode#com.quilmes.baja.Baja_ViewUsage1">
+				<property name="bounds" value="0,0,50,50"/>
+				<reference referencedUin="WebDynpro:NavigationLink:://WebDynpro/NavigationLinks#com.quilmes.baja.BajaUS/NavigationsLink#com.quilmes.baja.Baja_ViewUsage1_salidabaja_a/TargetReference#com.quilmes.baja.Baja_ViewUsage1_salidabaja_a_1">
+					<property name="bendpoints" value=""/>
+				</reference>
+			</reference>
+			<reference referencedUin="WebDynpro:InboundPlugUsage://WebDynpro/View#com.quilmes.baja.Baja_View/InboundPlug#entradabaja://WebDynpro/Window#com.quilmes.baja.BajaUS/ViewsetHierarchyRootNode#com.quilmes.baja.Baja_ViewUsage1">
+				<property name="Position" value="WEST"/>
+				<property name="bounds" value="0,0,50,50"/>
+			</reference>
+		</reference>
+		<reference referencedUin="WebDynpro:ViewUsage:://WebDynpro/Window#com.quilmes.baja.BajaUS/ViewsetHierarchyRootNode#com.quilmes.baja.IntroUsage1">
+			<property name="bounds" value="60,10,150,50"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<reference referencedUin="WebDynpro:InboundPlugUsage://WebDynpro/View#com.quilmes.baja.Intro/InboundPlug#entradaintro://WebDynpro/Window#com.quilmes.baja.BajaUS/ViewsetHierarchyRootNode#com.quilmes.baja.IntroUsage1">
+				<property name="Position" value="WEST"/>
+				<property name="bounds" value="0,0,50,50"/>
+			</reference>
+			<reference referencedUin="WebDynpro:OutboundPlugUsage://WebDynpro/View#com.quilmes.baja.Intro/OutboundPlug#salidaintro://WebDynpro/Window#com.quilmes.baja.BajaUS/ViewsetHierarchyRootNode#com.quilmes.baja.IntroUsage1">
+				<property name="bounds" value="0,0,50,50"/>
+				<reference referencedUin="WebDynpro:NavigationLink:://WebDynpro/NavigationLinks#com.quilmes.baja.BajaUS/NavigationsLink#com.quilmes.baja.IntroUsage1_salidaintro/TargetReference#com.quilmes.baja.IntroUsage1_salidaintro_1">
+					<property name="bendpoints" value=""/>
+				</reference>
+			</reference>
+		</reference>
+		<reference referencedUin="WebDynpro:ViewUsage:://WebDynpro/Window#com.quilmes.baja.BajaUS/ViewsetHierarchyRootNode#com.quilmes.baja.Baja2Usage1">
+			<property name="bounds" value="100,100,100,50"/>
+			<reference referencedUin="WebDynpro:OutboundPlugUsage://WebDynpro/View#com.quilmes.baja.Baja2/OutboundPlug#salidab://WebDynpro/Window#com.quilmes.baja.BajaUS/ViewsetHierarchyRootNode#com.quilmes.baja.Baja2Usage1">
+				<property name="bounds" value="0,0,50,50"/>
+				<reference referencedUin="WebDynpro:NavigationLink:://WebDynpro/NavigationLinks#com.quilmes.baja.BajaUS/NavigationsLink#com.quilmes.baja.Baja2Usage1_salidab/TargetReference#com.quilmes.baja.Baja2Usage1_salidab_1">
+					<property name="bendpoints" value=""/>
+				</reference>
+			</reference>
+			<reference referencedUin="WebDynpro:InboundPlugUsage://WebDynpro/View#com.quilmes.baja.Baja2/InboundPlug#entradab://WebDynpro/Window#com.quilmes.baja.BajaUS/ViewsetHierarchyRootNode#com.quilmes.baja.Baja2Usage1">
+				<property name="Position" value="WEST"/>
+				<property name="bounds" value="0,0,50,50"/>
+			</reference>
+		</reference>
+	</view>
+</nodeSet>

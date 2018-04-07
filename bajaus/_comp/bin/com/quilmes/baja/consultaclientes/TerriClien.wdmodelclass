@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Friday, May 25, 2007 3:26:31 PM CEST -->
+<ModelClass xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.ModelClass:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1180099591892" name="TerriClien" package="com.quilmes.baja.consultaclientes" masterLanguage="en">
+	<ModelClass.Parent>
+		<Core.Reference package="com.quilmes.baja.consultaclientes" name="ConsultaClientes" type="Model"/>
+	</ModelClass.Parent>
+	<ModelClass.Properties>
+		<ModelClassProperty name="CodTerritorio">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="integer" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="CodTerritorio">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="Centrodesp">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="Centrodesp">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+		<ModelClassProperty name="CanalVenta">
+			<Property.Type>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="short" type="DtSimpleType"/>
+			</Property.Type>
+			<ModelClassProperty.Settings>
+				<ModelClassPropertySetting name="qualifiedName_Namespace" value="quilmes">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_Namespace"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+				<ModelClassPropertySetting name="qualifiedName_LocalPart" value="CanalVenta">
+					<ModelClassPropertySetting.SettingDefinition>
+						<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassPropertySettingDefinition:qualifiedName_LocalPart"/>
+					</ModelClassPropertySetting.SettingDefinition>
+				</ModelClassPropertySetting>
+			</ModelClassProperty.Settings>
+		</ModelClassProperty>
+	</ModelClass.Properties>
+	<ModelClass.Settings>
+		<ModelClassSetting name="qualifiedName_Namespace" value="quilmes">
+			<ModelClassSetting.SettingDefinition>
+				<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassSettingDefinition:qualifiedName_Namespace"/>
+			</ModelClassSetting.SettingDefinition>
+		</ModelClassSetting>
+		<ModelClassSetting name="isExecutable" value="false">
+			<ModelClassSetting.SettingDefinition>
+				<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassSettingDefinition:isExecutable"/>
+			</ModelClassSetting.SettingDefinition>
+		</ModelClassSetting>
+		<ModelClassSetting name="qualifiedName_LocalPart" value="TerriClien">
+			<ModelClassSetting.SettingDefinition>
+				<Core.Reference package="com.sap.tc.webdynpro.modeltype.webservice" name="AdaptiveWebservice" type="ModelType" path="ModelClassSettingDefinition:qualifiedName_LocalPart"/>
+			</ModelClassSetting.SettingDefinition>
+		</ModelClassSetting>
+	</ModelClass.Settings>
+</ModelClass>
