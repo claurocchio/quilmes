@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet >
+	<view uin="Vz8va46g290ag7ek9ndzd">
+		<property name="$parentUin" value="WebDynpro:Window:://WebDynpro/Window#ar.com.quilmes.consulta.Consulta_Window"/>
+		<property name="$defaultDiagram" value="true"/>
+		<property name="$metaclass" value="WDWindowDiagram"/>
+		<reference referencedUin="WebDynpro:ViewUsage:://WebDynpro/Window#ar.com.quilmes.consulta.Consulta_Window/ViewsetHierarchyRootNode#ar.com.quilmes.consulta.Baja_ViewUsage1">
+			<property name="bounds" value="470,30,130,50"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<reference referencedUin="WebDynpro:OutboundPlugUsage://WebDynpro/View#ar.com.quilmes.consulta.Baja_View/OutboundPlug#salidabaja://WebDynpro/Window#ar.com.quilmes.consulta.Consulta_Window/ViewsetHierarchyRootNode#ar.com.quilmes.consulta.Baja_ViewUsage1">
+				<property name="bounds" value="0,0,50,50"/>
+				<property name="Position" value="SOUTH"/>
+				<property name="PositionIndex" value="6"/>
+				<reference referencedUin="WebDynpro:NavigationLink:://WebDynpro/NavigationLinks#ar.com.quilmes.consulta.Consulta_Window/NavigationsLink#ar.com.quilmes.consulta.Baja_ViewUsage1_salidabaja/TargetReference#ar.com.quilmes.consulta.Baja_ViewUsage1_salidabaja_1">
+					<property name="bendpoints" value=""/>
+				</reference>
+			</reference>
+			<reference referencedUin="WebDynpro:OutboundPlugUsage://WebDynpro/View#ar.com.quilmes.consulta.Baja_View/OutboundPlug#salidabaja_e://WebDynpro/Window#ar.com.quilmes.consulta.Consulta_Window/ViewsetHierarchyRootNode#ar.com.quilmes.consulta.Baja_ViewUsage1">
+				<property name="bounds" value="0,0,50,50"/>
+				<reference referencedUin="WebDynpro:NavigationLink:://WebDynpro/NavigationLinks#ar.com.quilmes.consulta.Consulta_Window/NavigationsLink#ar.com.quilmes.consulta.Baja_ViewUsage1_salidabaja_e/TargetReference#ar.com.quilmes.consulta.Baja_ViewUsage1_salidabaja_e_1">
+					<property name="bendpoints" value=""/>
+				</reference>
+			</reference>
+			<reference referencedUin="WebDynpro:InboundPlugUsage://WebDynpro/View#ar.com.quilmes.consulta.Baja_View/InboundPlug#entradabaja://WebDynpro/Window#ar.com.quilmes.consulta.Consulta_Window/ViewsetHierarchyRootNode#ar.com.quilmes.consulta.Baja_ViewUsage1">
+				<property name="Position" value="WEST"/>
+				<property name="bounds" value="0,0,50,50"/>
+			</reference>
+		</reference>
+		<reference referencedUin="WebDynpro:ViewUsage:://WebDynpro/Window#ar.com.quilmes.consulta.Consulta_Window/ViewsetHierarchyRootNode#ar.com.quilmes.consulta.Clientes_ViewUsage1">
+			<property name="bounds" value="290,90,142,70"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<reference referencedUin="WebDynpro:OutboundPlugUsage://WebDynpro/View#ar.com.quilmes.consulta.Clientes_View/OutboundPlug#salidaclientes_b://WebDynpro/Window#ar.com.quilmes.consulta.Consulta_Window/ViewsetHierarchyRootNode#ar.com.quilmes.consulta.Clientes_ViewUsage1">
+				<property name="bounds" value="0,0,50,50"/>
+				<property name="Position" value="EAST"/>
+				<property name="PositionIndex" value="0"/>
+				<reference referencedUin="WebDynpro:NavigationLink:://WebDynpro/NavigationLinks#ar.com.quilmes.consulta.Consulta_Window/NavigationsLink#ar.com.quilmes.consulta.Clientes_ViewUsage1_salidaclientes_b/TargetReference#ar.com.quilmes.consulta.Clientes_ViewUsage1_salidaclientes_b_1">
+					<property name="bendpoints" value=""/>
+				</reference>
+			</reference>
+			<reference referencedUin="WebDynpro:OutboundPlugUsage://WebDynpro/View#ar.com.quilmes.consulta.Clientes_View/OutboundPlug#salidaclientes://WebDynpro/Window#ar.com.quilmes.consulta.Consulta_Window/ViewsetHierarchyRootNode#ar.com.quilmes.consulta.Clientes_ViewUsage1">
+				<property name="bounds" value="170,110,50,50"/>
+				<property name="bounds_setted_by_user" value="true"/>
+				<property name="Position" value="EAST"/>
+				<property name="PositionIndex" value="2"/>
+				<reference referencedUin="WebDynpro:NavigationLink:://WebDynpro/NavigationLinks#ar.com.quilmes.consulta.Consulta_Window/NavigationsLink#ar.com.quilmes.consulta.Clientes_ViewUsage1_salidaclientes/TargetReference#ar.com.quilmes.consulta.Clientes_ViewUsage1_salidaclientes_1">
+					<property name="bendpoints" value=""/>
+				</reference>
+			</reference>
+			<reference referencedUin="WebDynpro:InboundPlugUsage://WebDynpro/View#ar.com.quilmes.consulta.Clientes_View/InboundPlug#entradaclientes://WebDynpro/Window#ar.com.quilmes.consulta.Consulta_Window/ViewsetHierarchyRootNode#ar.com.quilmes.consulta.Clientes_ViewUsage1">
+				<property name="Position" value="WEST"/>
+				<property name="bounds" value="0,0,50,50"/>
+				<property name="PositionIndex" value="0"/>
+			</reference>
+			<reference referencedUin="WebDynpro:OutboundPlugUsage://WebDynpro/View#ar.com.quilmes.consulta.Clientes_View/OutboundPlug#salidaclientes_m://WebDynpro/Window#ar.com.quilmes.consulta.Consulta_Window/ViewsetHierarchyRootNode#ar.com.quilmes.consulta.Clientes_ViewUsage1">
+				<property name="bounds" value="0,0,50,50"/>
+				<property name="Position" value="EAST"/>
+				<property name="PositionIndex" value="1"/>
+				<reference referencedUin="WebDynpro:NavigationLink:://WebDynpro/NavigationLinks#ar.com.quilmes.consulta.Consulta_Window/NavigationsLink#ar.com.quilmes.consulta.Clientes_ViewUsage1_salidaclientes_m/TargetReference#ar.com.quilmes.consulta.Clientes_ViewUsage1_salidaclientes_m_1">
+					<property name="bendpoints" value=""/>
+				</reference>
+			</reference>
+		</reference>
+		<reference referencedUin="WebDynpro:ViewUsage:://WebDynpro/Window#ar.com.quilmes.consulta.Consulta_Window/ViewsetHierarchyRootNode#ar.com.quilmes.consulta.Consulta_CompViewUsage1">
+			<property name="bounds" value="90,20,180,60"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<reference referencedUin="WebDynpro:OutboundPlugUsage://WebDynpro/View#ar.com.quilmes.consulta.Consulta_CompView/OutboundPlug#salida_consulta://WebDynpro/Window#ar.com.quilmes.consulta.Consulta_Window/ViewsetHierarchyRootNode#ar.com.quilmes.consulta.Consulta_CompViewUsage1">
+				<property name="bounds" value="100,20,50,50"/>
+				<property name="Position" value="EAST"/>
+				<property name="PositionIndex" value="2"/>
+				<property name="bounds_setted_by_user" value="true"/>
+				<reference referencedUin="WebDynpro:NavigationLink:://WebDynpro/NavigationLinks#ar.com.quilmes.consulta.Consulta_Window/NavigationsLink#ar.com.quilmes.consulta.Consulta_CompViewUsage1_salida_consulta/TargetReference#ar.com.quilmes.consulta.Consulta_CompViewUsage1_salida_consulta_1">
+					<property name="bendpoints" value=""/>
+				</reference>
+			</reference>
+			<reference referencedUin="WebDynpro:InboundPlugUsage://WebDynpro/View#ar.com.quilmes.consulta.Consulta_CompView/InboundPlug#entradaconsulta://WebDynpro/Window#ar.com.quilmes.consulta.Consulta_Window/ViewsetHierarchyRootNode#ar.com.quilmes.consulta.Consulta_CompViewUsage1">
+				<property name="Position" value="WEST"/>
+				<property name="bounds" value="0,0,50,50"/>
+			</reference>
+		</reference>
+		<reference referencedUin="WebDynpro:ViewUsage:://WebDynpro/Window#ar.com.quilmes.consulta.Consulta_Window/ViewsetHierarchyRootNode#ar.com.quilmes.consulta.Modificar_ViewUsage1">
+			<property name="bounds" value="330,10,100,50"/>
+			<reference referencedUin="WebDynpro:InboundPlugUsage://WebDynpro/View#ar.com.quilmes.consulta.Modificar_View/InboundPlug#entradamodificar://WebDynpro/Window#ar.com.quilmes.consulta.Consulta_Window/ViewsetHierarchyRootNode#ar.com.quilmes.consulta.Modificar_ViewUsage1">
+				<property name="Position" value="WEST"/>
+				<property name="bounds" value="0,0,50,50"/>
+			</reference>
+		</reference>
+		<reference referencedUin="WebDynpro:ViewUsage:://WebDynpro/Window#ar.com.quilmes.consulta.Consulta_Window/ViewsetHierarchyRootNode#ar.com.quilmes.consulta.Alta_ViewUsage1">
+			<property name="bounds" value="340,80,100,50"/>
+			<reference referencedUin="WebDynpro:InboundPlugUsage://WebDynpro/View#ar.com.quilmes.consulta.Alta_View/InboundPlug#entradaalta://WebDynpro/Window#ar.com.quilmes.consulta.Consulta_Window/ViewsetHierarchyRootNode#ar.com.quilmes.consulta.Alta_ViewUsage1">
+				<property name="Position" value="WEST"/>
+				<property name="bounds" value="0,0,50,50"/>
+			</reference>
+		</reference>
+	</view>
+</nodeSet>

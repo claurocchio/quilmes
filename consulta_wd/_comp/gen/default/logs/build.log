@@ -1,0 +1,528 @@
+Development Component Build (2010-03-08 18:10:13)
+  Component name: consulta_wd
+  Component vendor: ar.com.quilmes.bue
+  SC compartment: MyComponents
+  Configuration: LocalDevelopment
+  Location: local
+  Source code location: Consulting AG@ConsultingAG-PC
+  DC root folder: C:\Users\Consulting AG\.dtc\LocalDevelopment\DCs\ar.com.quilmes.bue\consulta_wd\_comp\
+  DC type: Web Dynpro
+  Host: ConsultingAG-PC
+
+DC Model check:
+   All used DCs are available locally
+   validating dependency to build plugin "sap.com/tc/bi/bp/webDynpro"
+   validating dependency to  public part "default" of DC "sap.com/tc/cmi"
+   validating dependency to  public part "default" of DC "sap.com/tc/ddic/ddicruntime"
+   validating dependency to  public part "default" of DC "sap.com/tc/ddic/metamodel/content"
+   validating dependency to  public part "default" of DC "sap.com/tc/wd/webdynpro"
+   validating dependency to  public part "default" of DC "sap.com/tc/logging"
+   validating dependency to  public part "default" of DC "sap.com/tc/wdp/metamodel/content"
+   validating dependency to  public part "default" of DC "sap.com/com.sap.aii.proxy.framework"
+   validating dependency to  public part "default" of DC "sap.com/com.sap.aii.util.misc"
+   validating dependency to  public part "default" of DC "sap.com/com.sap.exception"
+   validating dependency to  public part "default" of DC "sap.com/com.sap.mw.jco"
+   validating dependency to used DC "sap.com/com.sap.security.api.sda"
+   validating dependency to  public part "clasesAssembly" of DC "ar.com.quilmes.bue/mdm_clientes_ejb"
+   validating dependency to  public part "clasesComplilation" of DC "ar.com.quilmes.bue/mdm_clientes_ejb"
+   validating dependency to  public part "client" of DC "ar.com.quilmes.bue/mdm_clientes_ejb"
+   validating dependency to  public part "ejbjar" of DC "ar.com.quilmes.bue/mdm_clientes_ejb"
+   validating dependency to  public part "default" of DC "sap.com/mail"
+   validating dependency to  public part "default" of DC "sap.com/IAIKSecurity"
+   validating dependency to  public part "default" of DC "sap.com/activation"
+   validating dependency to  public part "default" of DC "sap.com/webservices"
+   validating dependency to  public part "default" of DC "sap.com/webservices_lib"
+   validating dependency to  public part "default" of DC "sap.com/sapxmltoolkit"
+   validating dependency to  public part "default" of DC "sap.com/com.sap.guid"
+   validating dependency to  public part "default" of DC "sap.com/tc/wd/wslib"
+   validating dependency to  public part "generation" of DC "sap.com/tc/wd/wslib"
+   validating dependency to used DC "sap.com/ejb20"
+   validating dependency to used DC "sap.com/caf/eu/gp/api/wd"
+   validating dependency to  public part "external" of DC "sap.com/caf/eu/gp/api"
+   DC model check OK
+
+Start build plugin:
+   using build plugin: sap.com/tc/bi/bp/webDynpro
+   starting build plugin from : C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP_BUILDT\DCs\sap.com\tc\bi\bp\webDynpro\_comp\gen\default\public\webDynpro\
+
+
+
+Build Plugin 'WebdynproPlugin', Version 7.00 SP 14 (645_VAL_REL, built on 2007-11-10 18:28:29 CET, CL76041)
+   development component:  consulta_wd (ar.com.quilmes.bue)
+      software component:  MyComponents (demo.sap.com)
+                location:  local
+                    type:  Web Dynpro
+           build variant:  default
+         output location:  C:\Users\Consulting AG\.dtc\LocalDevelopment\DCs\ar.com.quilmes.bue\consulta_wd\_comp\gen\default
+       generation folder:  C:\Users\Consulting AG\.dtc\LocalDevelopment\t\0FA34DC63E9E3FB2BEE6E39EC1A1971F
+       plugin start time:  2010-03-08 18:10:17 GMT-03:00 (ARST)
+                 Java VM:  Java HotSpot(TM) Client VM, 1.4.2_19-b04 (Sun Microsystems Inc.)
+General options:
+  convert *.xlf to *.properties: yes
+  include sources for debugging: yes
+
+Used infrastructure public part does not exist: C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP_JTECHS\DCs\sap.com\tc\wd\wslib\_comp\gen\default\public\generation
+Warning: Source folder "META-INF" exists but is empty and will be ignored.
+
+Preparing data context..
+No public part descriptor found for component "tc/cmi" (vendor "sap.com"), public part "default", using legacy mode.
+No public part descriptor found for component "tc/ddic/ddicruntime" (vendor "sap.com"), public part "default", using legacy mode.
+No public part descriptor found for component "tc/ddic/metamodel/content" (vendor "sap.com"), public part "default", using legacy mode.
+No public part descriptor found for component "tc/wd/webdynpro" (vendor "sap.com"), public part "default", using legacy mode.
+No public part descriptor found for component "tc/logging" (vendor "sap.com"), public part "default", using legacy mode.
+No public part descriptor found for component "tc/wdp/metamodel/content" (vendor "sap.com"), public part "default", using legacy mode.
+No public part descriptor found for component "com.sap.aii.proxy.framework" (vendor "sap.com"), public part "default", using legacy mode.
+No public part descriptor found for component "com.sap.aii.util.misc" (vendor "sap.com"), public part "default", using legacy mode.
+No public part descriptor found for component "com.sap.exception" (vendor "sap.com"), public part "default", using legacy mode.
+No public part descriptor found for component "com.sap.mw.jco" (vendor "sap.com"), public part "default", using legacy mode.
+No public part descriptor found for component "com.sap.security.api.sda" (vendor "sap.com"), public part "default", using legacy mode.
+No public part descriptor found for component "mail" (vendor "sap.com"), public part "default", using legacy mode.
+No public part descriptor found for component "IAIKSecurity" (vendor "sap.com"), public part "default", using legacy mode.
+No public part descriptor found for component "activation" (vendor "sap.com"), public part "default", using legacy mode.
+No public part descriptor found for component "webservices" (vendor "sap.com"), public part "default", using legacy mode.
+No public part descriptor found for component "webservices_lib" (vendor "sap.com"), public part "default", using legacy mode.
+No public part descriptor found for component "sapxmltoolkit" (vendor "sap.com"), public part "default", using legacy mode.
+No public part descriptor found for component "com.sap.guid" (vendor "sap.com"), public part "default", using legacy mode.
+No public part descriptor found for component "tc/wd/wslib" (vendor "sap.com"), public part "default", using legacy mode.
+No public part descriptor found for component "ejb20" (vendor "sap.com"), public part "default", using legacy mode.
+No 'default' JDK defined, will use running VM.
+Data context preparation finished in 1.196 seconds
+
+Creating Ant build file..
+  Creating output file: C:\Users\Consulting AG\.dtc\LocalDevelopment\DCs\ar.com.quilmes.bue\consulta_wd\_comp\gen\default\logs\build.xml
+  Using macro file:     C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP_BUILDT\DCs\sap.com\tc\bi\bp\webDynpro\_comp\gen\default\public\webDynpro\macros\build.vm
+Build file creation finished in 0.656 seconds
+
+Starting Ant..
+  Using build file:     C:\Users\Consulting AG\.dtc\LocalDevelopment\DCs\ar.com.quilmes.bue\consulta_wd\_comp\gen\default\logs\build.xml
+  Using build target:   build
+  Using Ant version:    1.6.2
+
+compile:
+      [echo] Starting dictionary generator
+     [ddgen] 
+     [ddgen] [Info]    Property deployment is true: Deployment information is provided!
+     [ddgen] [Info]    Property sourcepath: C:\Users\Consulting AG\.dtc\LocalDevelopment\DCs\ar.com.quilmes.bue\consulta_wd\_comp\src\packages
+     [ddgen] [Info]    Property targetpath: C:\Users\Consulting AG\.dtc\LocalDevelopment\t\0FA34DC63E9E3FB2BEE6E39EC1A1971F\gen_ddic1
+     [ddgen] [Info]    Property archivename: ar.com.quilmes.bue~consulta_wd
+     [ddgen] [Info]    Property vendor: ar.com.quilmes.bue
+     [ddgen] [Info]    Property dcname: consulta_wd
+     [ddgen] [Info]    Property projectlanguage: en
+     [ddgen] [Info]    Property language: Available languages are automatically determined!
+     [ddgen] [Info]    Property addpaths ...
+     [ddgen] [Info]       SapMetamodelDictionaryContent.zip - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_BUILDT/DCs/sap.com/tc/bi/extddic/_comp/gen/default/public/def/lib/model
+     [ddgen] [Info]       SapMetamodelWebdynproContent.zip - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_BUILDT/DCs/sap.com/tc/bi/extwd/_comp/gen/default/public/def/lib/model
+     [ddgen] [Info]       ar.com.quilmes.bue~mdm_clientes_ejb_client.jar - C:/Users/Consulting AG/.dtc/LocalDevelopment/DCs/ar.com.quilmes.bue/mdm_clientes_ejb/_comp/gen/default/public/client/lib/java
+     [ddgen] [Info]       exception.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/com.sap.exception/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       sap.com~caf~eu~gp~api~wd~ContentComponent.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/CAF/DCs/sap.com/caf/eu/gp/api/wd/_comp/gen/default/public/ContentComponent/lib/java
+     [ddgen] [Info]       _webdynpro_admin.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       _webdynpro_basesrvc.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       _webdynpro_runtime_repository.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       _webdynpro_runtime_repository_pmr.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       _webdynpro_services.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       _webdynpro_clientserver.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       _webdynpro_model_dynamicrfc.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       _webdynpro_modelimpl.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       _webdynpro_pdfobject.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       _webdynpro_portal.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       _webdynpro_progmodel.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       _webdynpro_runtime_designtime_coupling.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       _webdynpro_runtime_designtime_coupling_api.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       SapMetamodelWebdynproContent.zip - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/tc/wdp/metamodel/content/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       jaxm-api.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/webservices/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       jaxrpc-api.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/webservices/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       saaj-api.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/webservices/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       sapxmltoolkit.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/webservices/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       webservices_api.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/webservices/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       aii_proxy_rt.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/com.sap.aii.proxy.framework/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       sap.com~caf~eu~gp~api~wd~COType.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/CAF/DCs/sap.com/caf/eu/gp/api/wd/_comp/gen/default/public/COType/lib/java
+     [ddgen] [Info]       _webdynpro_model_webservice_default.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/tc/wd/wslib/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       mail.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/mail/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       _cmi_api.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/tc/cmi/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       aii_util_misc.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/com.sap.aii.util.misc/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       logging.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/logging/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       logging.perf.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/logging/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       com.sap.security.api.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/com.sap.security.api.sda/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       com.sap.security.api.perm.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/com.sap.security.api.sda/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       SapMetamodelDictionaryContent.zip - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/tc/ddic/metamodel/content/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       sapxmltoolkit.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/sapxmltoolkit/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       sap.com~caf~eu~gp~api~wd~AttachmentSource.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/CAF/DCs/sap.com/caf/eu/gp/api/wd/_comp/gen/default/public/AttachmentSource/lib/java
+     [ddgen] [Info]       guidgenerator.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/com.sap.guid/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       ejb20.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/ejb20/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       boot.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/webservices_lib/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       iq-lib.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/webservices_lib/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       tc_sec_wssec_lib.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/webservices_lib/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       util.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/webservices_lib/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       webservices_lib.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/webservices_lib/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       SapDictionaryTypeServices.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/tc/ddic/ddicruntime/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       SapDictionaryTypesRuntime.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/tc/ddic/ddicruntime/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       sap.com~caf~eu~gp~api~wd~FormsAppSupport.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/CAF/DCs/sap.com/caf/eu/gp/api/wd/_comp/gen/default/public/FormsAppSupport/lib/java
+     [ddgen] [Info]       activation.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/activation/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       jdsr.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/com.sap.mw.jco/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       jrfc.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/com.sap.mw.jco/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       sap.com~caf~eu~gp~api~wd~CtxPanelComponent.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/CAF/DCs/sap.com/caf/eu/gp/api/wd/_comp/gen/default/public/CtxPanelComponent/lib/java
+     [ddgen] [Info]       sap.com~caf~eu~gp~api~wd~GPFinder.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/CAF/DCs/sap.com/caf/eu/gp/api/wd/_comp/gen/default/public/GPFinder/lib/java
+     [ddgen] [Info]       ar.com.quilmes.bue~mdm_clientes_ejb~clasesComplilation.jar - C:/Users/Consulting AG/.dtc/LocalDevelopment/DCs/ar.com.quilmes.bue/mdm_clientes_ejb/_comp/gen/default/public/clasesComplilation/lib/java
+     [ddgen] [Info]       sap.com~caf~eu~gp~api~wd~GPWebDynproCO.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/CAF/DCs/sap.com/caf/eu/gp/api/wd/_comp/gen/default/public/GPWebDynproCO/lib/java
+     [ddgen] [Info]       sap.com~caf~eu~gp~api~external.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/CAF/DCs/sap.com/caf/eu/gp/api/_comp/gen/default/public/external/lib/java
+     [ddgen] [Info]       iaik_jce_export.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/IAIKSecurity/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       iaik_jsse.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/IAIKSecurity/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       iaik_smime.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/IAIKSecurity/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       iaik_ssl.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/IAIKSecurity/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       w3c_http.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/IAIKSecurity/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]       sap.com~caf~eu~gp~api~wd~default.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/CAF/DCs/sap.com/caf/eu/gp/api/wd/_comp/gen/default/public/default/lib/java
+     [ddgen] [Info]    Initialize generation templates from configuration jar:file:/C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_BUILDT/DCs/sap.com/tc/bi/extddic/_comp/gen/default/public/def/lib/java/SapDictionaryGenerationCore.jar!/DictionaryGenerationConfigurationCompiled.xml
+     [ddgen] [Info]    Generating datatypes/ar/com/quilmes/bue/mdm_clientes/types/simple/Documento.gsimpletype
+     [ddgen] [Info]    Generating datatypes/ar/com/quilmes/bue/mdm_clientes/types/simple/PackagePointer.java
+     [ddgen] [Info]    Generating datatypes/ar/com/quilmes/bue/mdm_clientes/types/simple/RazonSocial.gsimpletype
+     [ddgen] [Info]    Generating datatypes/ar/com/quilmes/bue/mdm_clientes/types/simple/simpleTypesResource.properties
+     [ddgen] [Info]    Generating datatypes/ar/com/quilmes/bue/mdm_clientes/types/simple/simpleTypesResource_en.properties
+     [ddgen] [Info]    Generating dbtables/sdmDeployDd.xml
+     [ddgen] [Info]    Generation finished (2 seconds)
+     [ddgen] 
+     [timer] Dictionary generator finished in 2.526 seconds
+
+      [echo] Starting WebDynpro generator
+     [wdgen] 
+     [wdgen] [Info]    Property deployment is true: Deployment information is provided!
+     [wdgen] [Info]    Property sourcepath: C:\Users\Consulting AG\.dtc\LocalDevelopment\DCs\ar.com.quilmes.bue\consulta_wd\_comp\src\packages
+     [wdgen] [Info]    Property targetpath: C:\Users\Consulting AG\.dtc\LocalDevelopment\t\0FA34DC63E9E3FB2BEE6E39EC1A1971F\gen_wdp
+     [wdgen] [Info]    Property archivename: ar.com.quilmes.bue~consulta_wd
+     [wdgen] [Info]    Property vendor: ar.com.quilmes.bue
+     [wdgen] [Info]    Property dcname: consulta_wd
+     [wdgen] [Info]    Property projectlanguage: en
+     [wdgen] [Info]    Property language: Available languages are automatically determined!
+     [wdgen] [Info]    Property addpaths ...
+     [wdgen] [Info]       SapMetamodelDictionaryContent.zip - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_BUILDT/DCs/sap.com/tc/bi/extddic/_comp/gen/default/public/def/lib/model
+     [wdgen] [Info]       SapMetamodelWebdynproContent.zip - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_BUILDT/DCs/sap.com/tc/bi/extwd/_comp/gen/default/public/def/lib/model
+     [wdgen] [Info]       ar.com.quilmes.bue~mdm_clientes_ejb_client.jar - C:/Users/Consulting AG/.dtc/LocalDevelopment/DCs/ar.com.quilmes.bue/mdm_clientes_ejb/_comp/gen/default/public/client/lib/java
+     [wdgen] [Info]       exception.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/com.sap.exception/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       sap.com~caf~eu~gp~api~wd~ContentComponent.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/CAF/DCs/sap.com/caf/eu/gp/api/wd/_comp/gen/default/public/ContentComponent/lib/java
+     [wdgen] [Info]       _webdynpro_admin.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       _webdynpro_basesrvc.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       _webdynpro_runtime_repository.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       _webdynpro_runtime_repository_pmr.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       _webdynpro_services.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       _webdynpro_clientserver.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       _webdynpro_model_dynamicrfc.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       _webdynpro_modelimpl.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       _webdynpro_pdfobject.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       _webdynpro_portal.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       _webdynpro_progmodel.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       _webdynpro_runtime_designtime_coupling.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       _webdynpro_runtime_designtime_coupling_api.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       SapMetamodelWebdynproContent.zip - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/tc/wdp/metamodel/content/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       jaxm-api.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/webservices/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       jaxrpc-api.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/webservices/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       saaj-api.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/webservices/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       sapxmltoolkit.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/webservices/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       webservices_api.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/webservices/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       aii_proxy_rt.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/com.sap.aii.proxy.framework/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       sap.com~caf~eu~gp~api~wd~COType.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/CAF/DCs/sap.com/caf/eu/gp/api/wd/_comp/gen/default/public/COType/lib/java
+     [wdgen] [Info]       _webdynpro_model_webservice_default.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/tc/wd/wslib/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       mail.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/mail/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       _cmi_api.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/tc/cmi/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       aii_util_misc.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/com.sap.aii.util.misc/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       logging.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/logging/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       logging.perf.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/logging/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       com.sap.security.api.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/com.sap.security.api.sda/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       com.sap.security.api.perm.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/com.sap.security.api.sda/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       SapMetamodelDictionaryContent.zip - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/tc/ddic/metamodel/content/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       sapxmltoolkit.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/sapxmltoolkit/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       sap.com~caf~eu~gp~api~wd~AttachmentSource.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/CAF/DCs/sap.com/caf/eu/gp/api/wd/_comp/gen/default/public/AttachmentSource/lib/java
+     [wdgen] [Info]       guidgenerator.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/com.sap.guid/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       ejb20.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/ejb20/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       boot.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/webservices_lib/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       iq-lib.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/webservices_lib/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       tc_sec_wssec_lib.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/webservices_lib/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       util.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/webservices_lib/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       webservices_lib.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/webservices_lib/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       SapDictionaryTypeServices.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/tc/ddic/ddicruntime/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       SapDictionaryTypesRuntime.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/tc/ddic/ddicruntime/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       sap.com~caf~eu~gp~api~wd~FormsAppSupport.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/CAF/DCs/sap.com/caf/eu/gp/api/wd/_comp/gen/default/public/FormsAppSupport/lib/java
+     [wdgen] [Info]       activation.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/activation/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       jdsr.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/com.sap.mw.jco/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       jrfc.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/com.sap.mw.jco/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       sap.com~caf~eu~gp~api~wd~CtxPanelComponent.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/CAF/DCs/sap.com/caf/eu/gp/api/wd/_comp/gen/default/public/CtxPanelComponent/lib/java
+     [wdgen] [Info]       sap.com~caf~eu~gp~api~wd~GPFinder.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/CAF/DCs/sap.com/caf/eu/gp/api/wd/_comp/gen/default/public/GPFinder/lib/java
+     [wdgen] [Info]       ar.com.quilmes.bue~mdm_clientes_ejb~clasesComplilation.jar - C:/Users/Consulting AG/.dtc/LocalDevelopment/DCs/ar.com.quilmes.bue/mdm_clientes_ejb/_comp/gen/default/public/clasesComplilation/lib/java
+     [wdgen] [Info]       sap.com~caf~eu~gp~api~wd~GPWebDynproCO.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/CAF/DCs/sap.com/caf/eu/gp/api/wd/_comp/gen/default/public/GPWebDynproCO/lib/java
+     [wdgen] [Info]       sap.com~caf~eu~gp~api~external.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/CAF/DCs/sap.com/caf/eu/gp/api/_comp/gen/default/public/external/lib/java
+     [wdgen] [Info]       iaik_jce_export.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/IAIKSecurity/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       iaik_jsse.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/IAIKSecurity/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       iaik_smime.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/IAIKSecurity/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       iaik_ssl.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/IAIKSecurity/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       w3c_http.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/IAIKSecurity/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]       sap.com~caf~eu~gp~api~wd~default.jar - C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/CAF/DCs/sap.com/caf/eu/gp/api/wd/_comp/gen/default/public/default/lib/java
+     [wdgen] [Info]    Initialize generation templates from configuration jar:file:/C:/Program Files/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_BUILDT/DCs/sap.com/tc/bi/extwd/_comp/gen/default/public/def/lib/java/SapWebDynproGenerationCore.jar!/WebDynproGenerationConfigurationCompiled.xml
+     [wdgen] [Info]    Model ConsultaExterna of type JavaBean does not require code generation
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/models_eliminar_cc/CuentaCorriente.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/models_eliminar_cc/GetCtaCteCliente_Execute.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/models_eliminar_cc/Response_Execute.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/models_eliminar_cc/Mensajes.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/models_eliminar_cc/MensajesMensajesItem.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/models_eliminar_cc/GetCtaCteCliente_ExecuteResponse.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/models_eliminar_cc/Request_Execute.java
+     [wdgen] [Info]    Model ConsultaInterna of type JavaBean does not require code generation
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/wdp/IPrivateClientes_View.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/Clientes_View.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/wdp/InternalClientes_View.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/wdp/IPrivateConsulta_CompView.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/Consulta_CompView.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/wdp/InternalConsulta_CompView.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/wdp/IPublicConsulta_Comp.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/wdp/IPrivateConsulta_Comp.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/Consulta_Comp.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/wdp/InternalConsulta_Comp.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/wdp/IPublicWebDynproCOInterfaceView.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/wdp/IPrivateWebDynproCOInterfaceView.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/WebDynproCOInterfaceView.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/wdp/InternalWebDynproCOInterfaceView.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/wdp/IPublicConsulta_WindowInterfaceView.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/wdp/IPrivateConsulta_WindowInterfaceView.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/Consulta_WindowInterfaceView.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/wdp/InternalConsulta_WindowInterfaceView.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/wdp/IPublicConsulta_CompInterface.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/wdp/IExternalConsulta_CompInterface.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/wdp/IPrivateConsulta_CompInterface.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/Consulta_CompInterface.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/wdp/InternalConsulta_CompInterface.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/Consulta_CompInterface.wdcontroller
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/wdp/IPublicConsulta_CompInterfaceCfg.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/wdp/IExternalConsulta_CompInterfaceCfg.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/wdp/IPrivateConsulta_CompInterfaceCfg.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/Consulta_CompInterfaceCfg.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/wdp/InternalConsulta_CompInterfaceCfg.java
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/Consulta_CompInterfaceCfg.wdcontroller
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/wdp/IMessageConsulta_Comp.java
+     [wdgen] [Info]    Generating configuration/Components/ar.com.quilmes.consulta.Consulta_Comp/Consulta_Comp.xml
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/wdp/ResourceConsulta_Comp.properties
+     [wdgen] [Info]    Generating packages/ar/com/quilmes/consulta/wdp/ResourceConsulta_Comp_en.properties
+     [wdgen] [Info]    Generating configuration/Applications/ar.com.quilmes.consulta.Consulta/Consulta.xml
+     [wdgen] [Info]    Generating portalapp.xml
+     [wdgen] [Info]    Generating wd.xml
+     [wdgen] [Info]    Generating application.xml
+     [wdgen] [Info]    Generating application-j2ee-engine.xml
+     [wdgen] [Info]    Generating PublicPartFileList.properties
+     [wdgen] [Info]    Generating PublicPartFileList.xml
+     [wdgen] [Info]    Generation finished (5 seconds)
+     [wdgen] 
+     [timer] WebDynpro generator finished in 5.786 seconds
+
+      [echo] Starting Java compiler
+      [echo] Settings:
+      [echo]         debug: on
+      [echo]      optimize: off
+      [echo]   deprecation: default
+      [echo]       verbose: default
+      [echo]      encoding: UTF8
+      [echo]        source: default
+      [echo]        target: default
+      [echo]  source paths: 
+      [echo]       C:\Users\Consulting AG\.dtc\LocalDevelopment\DCs\ar.com.quilmes.bue\consulta_wd\_comp\src\packages
+      [echo]       C:\Users\Consulting AG\.dtc\LocalDevelopment\t\0FA34DC63E9E3FB2BEE6E39EC1A1971F\gen_ddic1\datatypes
+      [echo]       C:\Users\Consulting AG\.dtc\LocalDevelopment\t\0FA34DC63E9E3FB2BEE6E39EC1A1971F\gen_wdp\packages
+      [echo]    class path:
+      [echo]       C:\Users\Consulting AG\.dtc\LocalDevelopment\DCs\ar.com.quilmes.bue\mdm_clientes_ejb\_comp\gen\default\public\client\lib\java\ar.com.quilmes.bue~mdm_clientes_ejb_client.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\com.sap.exception\_comp\gen\default\public\default\lib\java\exception.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\CAF\DCs\sap.com\caf\eu\gp\api\wd\_comp\gen\default\public\ContentComponent\lib\java\sap.com~caf~eu~gp~api~wd~ContentComponent.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_admin.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_basesrvc.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_runtime_repository.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_runtime_repository_pmr.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_services.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_clientserver.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_model_dynamicrfc.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_modelimpl.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_pdfobject.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_portal.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_progmodel.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_runtime_designtime_coupling.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_runtime_designtime_coupling_api.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP_JTECHS\DCs\sap.com\tc\wdp\metamodel\content\_comp\gen\default\public\default\lib\java\SapMetamodelWebdynproContent.zip
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\webservices\_comp\gen\default\public\default\lib\java\jaxm-api.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\webservices\_comp\gen\default\public\default\lib\java\jaxrpc-api.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\webservices\_comp\gen\default\public\default\lib\java\saaj-api.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\webservices\_comp\gen\default\public\default\lib\java\sapxmltoolkit.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\webservices\_comp\gen\default\public\default\lib\java\webservices_api.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP_JTECHS\DCs\sap.com\com.sap.aii.proxy.framework\_comp\gen\default\public\default\lib\java\aii_proxy_rt.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\CAF\DCs\sap.com\caf\eu\gp\api\wd\_comp\gen\default\public\COType\lib\java\sap.com~caf~eu~gp~api~wd~COType.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP_JTECHS\DCs\sap.com\tc\wd\wslib\_comp\gen\default\public\default\lib\java\_webdynpro_model_webservice_default.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\mail\_comp\gen\default\public\default\lib\java\mail.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP_JTECHS\DCs\sap.com\tc\cmi\_comp\gen\default\public\default\lib\java\_cmi_api.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP_JTECHS\DCs\sap.com\com.sap.aii.util.misc\_comp\gen\default\public\default\lib\java\aii_util_misc.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\logging\_comp\gen\default\public\default\lib\java\logging.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\logging\_comp\gen\default\public\default\lib\java\logging.perf.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\com.sap.security.api.sda\_comp\gen\default\public\default\lib\java\com.sap.security.api.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\com.sap.security.api.sda\_comp\gen\default\public\default\lib\java\com.sap.security.api.perm.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP_JTECHS\DCs\sap.com\tc\ddic\metamodel\content\_comp\gen\default\public\default\lib\java\SapMetamodelDictionaryContent.zip
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\sapxmltoolkit\_comp\gen\default\public\default\lib\java\sapxmltoolkit.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\CAF\DCs\sap.com\caf\eu\gp\api\wd\_comp\gen\default\public\AttachmentSource\lib\java\sap.com~caf~eu~gp~api~wd~AttachmentSource.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\com.sap.guid\_comp\gen\default\public\default\lib\java\guidgenerator.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\ejb20\_comp\gen\default\public\default\lib\java\ejb20.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\webservices_lib\_comp\gen\default\public\default\lib\java\boot.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\webservices_lib\_comp\gen\default\public\default\lib\java\iq-lib.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\webservices_lib\_comp\gen\default\public\default\lib\java\tc_sec_wssec_lib.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\webservices_lib\_comp\gen\default\public\default\lib\java\util.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\webservices_lib\_comp\gen\default\public\default\lib\java\webservices_lib.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP_JTECHS\DCs\sap.com\tc\ddic\ddicruntime\_comp\gen\default\public\default\lib\java\SapDictionaryTypeServices.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP_JTECHS\DCs\sap.com\tc\ddic\ddicruntime\_comp\gen\default\public\default\lib\java\SapDictionaryTypesRuntime.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\CAF\DCs\sap.com\caf\eu\gp\api\wd\_comp\gen\default\public\FormsAppSupport\lib\java\sap.com~caf~eu~gp~api~wd~FormsAppSupport.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\activation\_comp\gen\default\public\default\lib\java\activation.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\com.sap.mw.jco\_comp\gen\default\public\default\lib\java\jdsr.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\com.sap.mw.jco\_comp\gen\default\public\default\lib\java\jrfc.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\CAF\DCs\sap.com\caf\eu\gp\api\wd\_comp\gen\default\public\CtxPanelComponent\lib\java\sap.com~caf~eu~gp~api~wd~CtxPanelComponent.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\CAF\DCs\sap.com\caf\eu\gp\api\wd\_comp\gen\default\public\GPFinder\lib\java\sap.com~caf~eu~gp~api~wd~GPFinder.jar
+      [echo]       C:\Users\Consulting AG\.dtc\LocalDevelopment\DCs\ar.com.quilmes.bue\mdm_clientes_ejb\_comp\gen\default\public\clasesComplilation\lib\java\ar.com.quilmes.bue~mdm_clientes_ejb~clasesComplilation.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\CAF\DCs\sap.com\caf\eu\gp\api\wd\_comp\gen\default\public\GPWebDynproCO\lib\java\sap.com~caf~eu~gp~api~wd~GPWebDynproCO.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\CAF\DCs\sap.com\caf\eu\gp\api\_comp\gen\default\public\external\lib\java\sap.com~caf~eu~gp~api~external.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\IAIKSecurity\_comp\gen\default\public\default\lib\java\iaik_jce_export.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\IAIKSecurity\_comp\gen\default\public\default\lib\java\iaik_jsse.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\IAIKSecurity\_comp\gen\default\public\default\lib\java\iaik_smime.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\IAIKSecurity\_comp\gen\default\public\default\lib\java\iaik_ssl.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\IAIKSecurity\_comp\gen\default\public\default\lib\java\w3c_http.jar
+      [echo]       C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\CAF\DCs\sap.com\caf\eu\gp\api\wd\_comp\gen\default\public\default\lib\java\sap.com~caf~eu~gp~api~wd~default.jar
+      [echo]    output dir: C:\Users\Consulting AG\.dtc\LocalDevelopment\t\0FA34DC63E9E3FB2BEE6E39EC1A1971F\classes
+     [javac] Compiling 37 source files to C:\Users\Consulting AG\.dtc\LocalDevelopment\t\0FA34DC63E9E3FB2BEE6E39EC1A1971F\classes
+     [javac] WARNING: Note: Some input files use or override a deprecated API.
+     [javac] WARNING: Note: Recompile with -deprecation for details.
+     [timer] Java compilation finished in 3.58 seconds
+
+      [echo] Start XLF conversion
+     [timer] XLF conversion finished in 0.041 seconds
+
+      [echo] Starting WebDynpro class minimizer (mode 'auto')
+     [wdmin] Start minimizer for project classpath:
+     [wdmin]   C:\Users\Consulting AG\.dtc\LocalDevelopment\t\0FA34DC63E9E3FB2BEE6E39EC1A1971F\classes
+     [wdmin] external classpath:
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP_JTECHS\DCs\sap.com\tc\cmi\_comp\gen\default\public\default\lib\java\_cmi_api.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP_JTECHS\DCs\sap.com\tc\ddic\ddicruntime\_comp\gen\default\public\default\lib\java\SapDictionaryTypeServices.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP_JTECHS\DCs\sap.com\tc\ddic\ddicruntime\_comp\gen\default\public\default\lib\java\SapDictionaryTypesRuntime.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_admin.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_basesrvc.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_clientserver.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_model_dynamicrfc.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_modelimpl.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_pdfobject.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_portal.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_progmodel.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_runtime_designtime_coupling.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_runtime_designtime_coupling_api.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_runtime_repository.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_runtime_repository_pmr.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\wd\webdynpro\_comp\gen\default\public\default\lib\java\_webdynpro_services.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\logging\_comp\gen\default\public\default\lib\java\logging.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\tc\logging\_comp\gen\default\public\default\lib\java\logging.perf.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP_JTECHS\DCs\sap.com\com.sap.aii.proxy.framework\_comp\gen\default\public\default\lib\java\aii_proxy_rt.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP_JTECHS\DCs\sap.com\com.sap.aii.util.misc\_comp\gen\default\public\default\lib\java\aii_util_misc.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\com.sap.exception\_comp\gen\default\public\default\lib\java\exception.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\com.sap.mw.jco\_comp\gen\default\public\default\lib\java\jdsr.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\com.sap.mw.jco\_comp\gen\default\public\default\lib\java\jrfc.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\com.sap.security.api.sda\_comp\gen\default\public\default\lib\java\com.sap.security.api.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\com.sap.security.api.sda\_comp\gen\default\public\default\lib\java\com.sap.security.api.perm.jar
+     [wdmin]   C:\Users\Consulting AG\.dtc\LocalDevelopment\DCs\ar.com.quilmes.bue\mdm_clientes_ejb\_comp\gen\default\public\clasesComplilation\lib\java\ar.com.quilmes.bue~mdm_clientes_ejb~clasesComplilation.jar
+     [wdmin]   C:\Users\Consulting AG\.dtc\LocalDevelopment\DCs\ar.com.quilmes.bue\mdm_clientes_ejb\_comp\gen\default\public\client\lib\java\ar.com.quilmes.bue~mdm_clientes_ejb_client.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\mail\_comp\gen\default\public\default\lib\java\mail.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\IAIKSecurity\_comp\gen\default\public\default\lib\java\iaik_jce_export.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\IAIKSecurity\_comp\gen\default\public\default\lib\java\iaik_jsse.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\IAIKSecurity\_comp\gen\default\public\default\lib\java\iaik_smime.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\IAIKSecurity\_comp\gen\default\public\default\lib\java\iaik_ssl.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\IAIKSecurity\_comp\gen\default\public\default\lib\java\w3c_http.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\activation\_comp\gen\default\public\default\lib\java\activation.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\webservices\_comp\gen\default\public\default\lib\java\jaxm-api.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\webservices\_comp\gen\default\public\default\lib\java\jaxrpc-api.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\webservices\_comp\gen\default\public\default\lib\java\saaj-api.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\webservices\_comp\gen\default\public\default\lib\java\sapxmltoolkit.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\webservices\_comp\gen\default\public\default\lib\java\webservices_api.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\webservices_lib\_comp\gen\default\public\default\lib\java\boot.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\webservices_lib\_comp\gen\default\public\default\lib\java\iq-lib.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\webservices_lib\_comp\gen\default\public\default\lib\java\tc_sec_wssec_lib.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\webservices_lib\_comp\gen\default\public\default\lib\java\util.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\webservices_lib\_comp\gen\default\public\default\lib\java\webservices_lib.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\sapxmltoolkit\_comp\gen\default\public\default\lib\java\sapxmltoolkit.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\com.sap.guid\_comp\gen\default\public\default\lib\java\guidgenerator.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP_JTECHS\DCs\sap.com\tc\wd\wslib\_comp\gen\default\public\default\lib\java\_webdynpro_model_webservice_default.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\SAP-JEE\DCs\sap.com\ejb20\_comp\gen\default\public\default\lib\java\ejb20.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\CAF\DCs\sap.com\caf\eu\gp\api\wd\_comp\gen\default\public\GPWebDynproCO\lib\java\sap.com~caf~eu~gp~api~wd~GPWebDynproCO.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\CAF\DCs\sap.com\caf\eu\gp\api\wd\_comp\gen\default\public\ContentComponent\lib\java\sap.com~caf~eu~gp~api~wd~ContentComponent.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\CAF\DCs\sap.com\caf\eu\gp\api\wd\_comp\gen\default\public\CtxPanelComponent\lib\java\sap.com~caf~eu~gp~api~wd~CtxPanelComponent.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\CAF\DCs\sap.com\caf\eu\gp\api\wd\_comp\gen\default\public\FormsAppSupport\lib\java\sap.com~caf~eu~gp~api~wd~FormsAppSupport.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\CAF\DCs\sap.com\caf\eu\gp\api\wd\_comp\gen\default\public\COType\lib\java\sap.com~caf~eu~gp~api~wd~COType.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\CAF\DCs\sap.com\caf\eu\gp\api\wd\_comp\gen\default\public\default\lib\java\sap.com~caf~eu~gp~api~wd~default.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\CAF\DCs\sap.com\caf\eu\gp\api\wd\_comp\gen\default\public\AttachmentSource\lib\java\sap.com~caf~eu~gp~api~wd~AttachmentSource.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\CAF\DCs\sap.com\caf\eu\gp\api\wd\_comp\gen\default\public\GPFinder\lib\java\sap.com~caf~eu~gp~api~wd~GPFinder.jar
+     [wdmin]   C:\Program Files\SAP\IDE\IDE70\eclipse\plugins\com.sap.tc.ap_2.0.0\comp\CAF\DCs\sap.com\caf\eu\gp\api\_comp\gen\default\public\external\lib\java\sap.com~caf~eu~gp~api~external.jar
+     [wdmin] Analyzing 90 classes from URLClassFileLoader@1f58949[C:\Users\Consulting AG\.dtc\LocalDevelopment\t\0FA34DC63E9E3FB2BEE6E39EC1A1971F\classes]
+     [wdmin]   Classes loaded in 422 ms.
+     [wdmin]   Completed pass 0 in 2 ms (using a priori knowledge).
+     [wdmin]   Completed pass 1 in 301 ms (using a priori knowledge).
+     [wdmin]   Completed pass 2 in 7 ms (propagating to specialized classes).
+     [wdmin] Finished Analysis (732 ms)
+     [wdmin] 
+     [wdmin] Shrinking class files
+     [wdmin]   checked 355 Fields, 
+     [wdmin]     active:  228
+     [wdmin]     removed: 127
+     [wdmin]     zombie:  0
+     [wdmin]   checked 839 Methods, 
+     [wdmin]     active:  434
+     [wdmin]     removed: 405
+     [wdmin]     zombie:  0
+     [wdmin] Modified 50 classes (122 ms)
+     [wdmin] 
+     [wdmin] Reduced total class file size by 21% (1014 ms)
+     [timer] WebDynpro class minimizer finished in 1.024 seconds
+
+
+createWDA:
+  [pppacker] Packed 175 files for entity  (Java Package Tree/Class)
+     [timer] WebDynpro Application Jar packaging finished in 0.7 seconds
+
+     [mkdir] Created dir: C:\Users\Consulting AG\.dtc\LocalDevelopment\t\0FA34DC63E9E3FB2BEE6E39EC1A1971F\wda-pp
+  [pppacker] Including "ar.com.quilmes.bue~consulta_wd.jar" from component "consulta_wd" (vendor "ar.com.quilmes.bue"), public part "WebDynpro Application Jar".
+  [pppacker] Including "ar.com.quilmes.bue~mdm_clientes_ejb~clasesAssembly.jar" from component "mdm_clientes_ejb" (vendor "ar.com.quilmes.bue"), public part "clasesAssembly".
+  [pppacker] Packed  88 files for entity WebDynpro Archive (WebDynpro Archive/Archive)
+     [timer] WebDynpro Application packaging finished in 0.481 seconds
+
+
+createDeployArchive:
+      [echo] Create deploy file ar.com.quilmes.bue~consulta_wd
+       [cda] Preparing archive for deploy unit "default"
+       [cda]   deployment type: "J2EE"
+       [cda]   assembly roots: 
+       [cda]     C:\Users\Consulting AG\.dtc\LocalDevelopment\t\0FA34DC63E9E3FB2BEE6E39EC1A1971F\wda-pp
+       [cda] 
+       [cda] Creating Ant build file: C:\Users\Consulting AG\.dtc\LocalDevelopment\DCs\ar.com.quilmes.bue\consulta_wd\_comp\gen\default\logs\buildDeployArchive.xml
+       [cda] 
+       [cda]  
+       [cda] Validating descriptor C:\Users\Consulting AG\.dtc\LocalDevelopment\t\0FA34DC63E9E3FB2BEE6E39EC1A1971F\gen_wdp\application.xml
+       [cda]  
+       [cda] Validating descriptor C:\Users\Consulting AG\.dtc\LocalDevelopment\t\0FA34DC63E9E3FB2BEE6E39EC1A1971F\gen_wdp\application-j2ee-engine.xml
+       [cda] WARNING: No reference entry for runtime dependency on component "caf/eu/gp/api" (vendor "sap.com")
+       [cda] WARNING: No reference entry for runtime dependency on component "caf/eu/gp/api/wd" (vendor "sap.com")
+       [cda]  
+       [cda] Collecting modules...
+       [cda] Adding module 'ar.com.quilmes.bue~consulta_wd.wda' from current development component
+       [cda] Ant build file creation finished in 0.185 seconds
+
+packDeployArchive:
+ [srcpacker] Creating source archive
+ [srcpacker] Adding source archive from ar.com.quilmes.bue~consulta_wd
+     [timer] Source archive creation finished in 0.2 seconds
+
+    [dcinfo] Creating deploy archive info
+    [jarsap] Info: JarSAP version 20060908.1630
+    [jarsap] Info: JarSAPProcessing version 20070423.1630 / JarSL version 20070906.1830
+    [jarsap] Building: C:\Users\Consulting AG\.dtc\LocalDevelopment\DCs\ar.com.quilmes.bue\consulta_wd\_comp\gen\default\deploy\ar.com.quilmes.bue~consulta_wd.ear with compression
+     [timer] JarSAP finished in 0.225 seconds
+
+
+Ant runtime 15.184 seconds
+
+Ant build finished with WARNINGS
+
+
+Build plugin finished at 2010-03-08 18:10:36 GMT-03:00 (ARST)
+Total build plugin runtime: 19.258 seconds
+
+Build finished with WARNING

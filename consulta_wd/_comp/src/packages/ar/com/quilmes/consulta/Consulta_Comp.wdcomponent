@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Friday, May 25, 2007 3:26:31 PM CEST -->
+<Component xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.Component:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1180099591892" name="Consulta_Comp" package="ar.com.quilmes.consulta" masterLanguage="en">
+	<Component.ComponentInterface>
+		<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_CompInterface" type="ComponentInterfaceImplementation"/>
+	</Component.ComponentInterface>
+	<Component.Controllers>
+		<Core.Reference package="ar.com.quilmes.consulta" name="Clientes_View" type="Controller"/>
+		<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_CompView" type="Controller"/>
+		<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_Comp" type="Controller"/>
+	</Component.Controllers>
+	<Component.EmptyView>
+		<EmptyView name="EmptyView">
+			<AbstractView.InboundPlugs>
+				<InboundPlug name="ShowEmptyView">
+				</InboundPlug>
+			</AbstractView.InboundPlugs>
+		</EmptyView>
+	</Component.EmptyView>
+	<Component.MessagePool>
+		<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_CompMessagePool" type="MessagePool"/>
+	</Component.MessagePool>
+	<Component.Views>
+		<Core.Reference package="ar.com.quilmes.consulta" name="Clientes_View" type="View"/>
+		<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View"/>
+	</Component.Views>
+	<Component.Windows>
+		<Core.Reference package="ar.com.quilmes.consulta" name="WebDynproCO" type="Window"/>
+		<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_Window" type="Window"/>
+	</Component.Windows>
+	<Component.ComponentController>
+		<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_Comp" type="Controller"/>
+	</Component.ComponentController>
+	<Component.UsedModels>
+		<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="ConsultaInterna" type="Model"/>
+		<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.externas" name="ConsultaExterna" type="Model"/>
+		<Core.Reference package="ar.com.quilmes.consulta.models_eliminar_cc" name="CuentaCorriente" type="Model"/>
+	</Component.UsedModels>
+	<Component.UsedUIELibraries>
+		<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="Standard" type="UIElementLibrary"/>
+		<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="BusinessGraphics" type="UIElementLibrary"/>
+		<Core.Reference package="com.sap.ide.webdynpro.uielementlibraries.pattern" name="Pattern" type="UIElementLibrary"/>
+	</Component.UsedUIELibraries>
+</Component>

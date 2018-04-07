@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+    <classpathentry kind="src" path="gen_ddic/datatypes"/>
+    <classpathentry kind="src" path="gen_wdp/packages"/>
+    <classpathentry kind="var" path="JRE_LIB" rootpath="JRE_SRCROOT" sourcepath="JRE_SRC"/>
+    <classpathentry kind="lib" path="C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/com.sap.exception/_comp/gen/default/public/default/lib/java/exception.jar"/>
+    <classpathentry kind="lib" path="C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/tc/ddic/metamodel/content/_comp/gen/default/public/default/lib/java/SapMetamodelDictionaryContent.zip"/>
+    <classpathentry kind="lib" path="C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/logging/_comp/gen/default/public/default/lib/java/logging.jar"/>
+    <classpathentry kind="lib" path="C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/logging/_comp/gen/default/public/default/lib/java/logging.perf.jar"/>
+    <classpathentry kind="lib" path="C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/com.sap.mw.jco/_comp/gen/default/public/default/lib/java/jdsr.jar"/>
+    <classpathentry kind="lib" path="C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/com.sap.mw.jco/_comp/gen/default/public/default/lib/java/jrfc.jar"/>
+    <classpathentry kind="lib" path="C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/tc/ddic/ddicruntime/_comp/gen/default/public/default/lib/java/SapDictionaryTypeServices.jar"/>
+    <classpathentry kind="lib" path="C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/tc/ddic/ddicruntime/_comp/gen/default/public/default/lib/java/SapDictionaryTypesRuntime.jar"/>
+    <classpathentry kind="lib" path="C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/tc/cmi/_comp/gen/default/public/default/lib/java/_cmi_api.jar"/>
+    <classpathentry kind="lib" path="C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/tc/wdp/metamodel/content/_comp/gen/default/public/default/lib/java/SapMetamodelWebdynproContent.zip"/>
+    <classpathentry kind="lib" path="C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java/_webdynpro_admin.jar"/>
+    <classpathentry kind="lib" path="C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java/_webdynpro_basesrvc.jar"/>
+    <classpathentry kind="lib" path="C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java/_webdynpro_clientserver.jar"/>
+    <classpathentry kind="lib" path="C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java/_webdynpro_modelimpl.jar"/>
+    <classpathentry kind="lib" path="C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java/_webdynpro_model_dynamicrfc.jar"/>
+    <classpathentry kind="lib" path="C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java/_webdynpro_pdfobject.jar"/>
+    <classpathentry kind="lib" path="C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java/_webdynpro_portal.jar"/>
+    <classpathentry kind="lib" path="C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java/_webdynpro_progmodel.jar"/>
+    <classpathentry kind="lib" path="C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java/_webdynpro_runtime_designtime_coupling.jar"/>
+    <classpathentry kind="lib" path="C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java/_webdynpro_runtime_designtime_coupling_api.jar"/>
+    <classpathentry kind="lib" path="C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java/_webdynpro_runtime_repository.jar"/>
+    <classpathentry kind="lib" path="C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java/_webdynpro_runtime_repository_pmr.jar"/>
+    <classpathentry kind="lib" path="C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP-JEE/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java/_webdynpro_services.jar"/>
+    <classpathentry kind="lib" path="C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/com.sap.aii.util.misc/_comp/gen/default/public/default/lib/java/aii_util_misc.jar"/>
+    <classpathentry kind="lib" path="C:/Program Files (x86)/SAP/IDE/IDE70/eclipse/plugins/com.sap.tc.ap_2.0.0/comp/SAP_JTECHS/DCs/sap.com/com.sap.aii.proxy.framework/_comp/gen/default/public/default/lib/java/aii_proxy_rt.jar"/>
+    <classpathentry kind="src" path="/LocalDevelopment~mdm_clientes_ejb~ar.com.quilmes.bue"/>
+    <classpathentry kind="var" path="TC_AP_2_0_SAP_JEE/DCs/sap.com/com.sap.security.api.sda/_comp/gen/default/public/default/lib/java/com.sap.security.api.jar"/>
+    <classpathentry kind="var" path="TC_AP_2_0_SAP_JEE/DCs/sap.com/ejb20/_comp/gen/default/public/default/lib/java/ejb20.jar"/>
+    <classpathentry kind="var" path="TC_AP_2_0_SAP_JTECHS/DCs/sap.com/tc/wd/wslib/_comp/gen/default/public/default/lib/java/_webdynpro_model_webservice_default.jar"/>
+    <classpathentry kind="var" path="TC_AP_2_0_SAP_JTECHS/DCs/sap.com/com.sap.engine.services.webservices.tool/_comp/gen/default/public/default/lib/java/webservices_lib.jar"/>
+    <classpathentry kind="var" path="SAP_WEBSERVICES_EXT_LIBS_HOME/lib/jaxrpc-api.jar"/>
+    <classpathentry kind="var" path="SAP_SYSTEM_ADD_LIBS/comp/SAP-EU/DCs/sap.com/caf/eu/gp/api/_comp/gen/default/public/default/lib/java/sap.com~caf~eu~gp~api~default.jar"/>
+    <classpathentry kind="src" path="src/packages"/>
+    <classpathentry kind="output" path="bin"/>
+</classpath>

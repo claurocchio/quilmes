@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet >
+	<view uin="V-qm6t9g2909b4lfrp17j">
+		<property name="$parentUin" value="WebDynpro:Component:://WebDynpro/Component#ar.com.quilmes.consulta.Consulta_Comp"/>
+		<property name="$defaultDiagram" value="true"/>
+		<property name="$metaclass" value="WDComponentDiagram"/>
+		<reference referencedUin="WebDynpro:Component:://WebDynpro/Component#ar.com.quilmes.consulta.Consulta_Comp">
+			<property name="bounds" value="10,10,834,570"/>
+			<reference referencedUin="WebDynpro:CustomControllers:://WebDynpro/Component#ar.com.quilmes.consulta.Consulta_Comp">
+				<property name="bounds" value="0,0,133,50"/>
+				<reference referencedUin="WebDynpro:ComponentController:://WebDynpro/Controller#ar.com.quilmes.consulta.Consulta_Comp">
+					<property name="bounds" value="0,0,154,50"/>
+					<reference referencedUin="WebDynpro:DataLink:://WebDynpro/Controller#ar.com.quilmes.consulta.Consulta_Comp#//WebDynpro/Model#ar.com.quilmes.consulta.models_eliminar.ConsultaClientes">
+						<property name="bendpoints" value=""/>
+					</reference>
+					<reference referencedUin="WebDynpro:DataLink:://WebDynpro/Controller#ar.com.quilmes.consulta.Consulta_Comp#//WebDynpro/Model#ar.com.quilmes.consulta.models.ConsultaExterna">
+						<property name="bendpoints" value=""/>
+					</reference>
+					<reference referencedUin="WebDynpro:DataLink:://WebDynpro/Controller#ar.com.quilmes.consulta.Consulta_Comp#//WebDynpro/Model#ar.com.quilmes.consulta.models.ConsultasExternas">
+						<property name="bendpoints" value=""/>
+					</reference>
+					<reference referencedUin="WebDynpro:DataLink:://WebDynpro/Controller#ar.com.quilmes.consulta.Consulta_Comp#//WebDynpro/Model#ar.com.quilmes.bue.mdm_clientes.clases.ConsultaExterna">
+						<property name="bendpoints" value=""/>
+					</reference>
+				</reference>
+			</reference>
+			<reference referencedUin="WebDynpro:ComponentInterface:://WebDynpro/ComponentInterfaceImplementation#ar.com.quilmes.consulta.Consulta_CompInterface">
+				<property name="bounds" value="0,0,138,50"/>
+				<reference referencedUin="WebDynpro:InterfaceController:://WebDynpro/Controller#ar.com.quilmes.consulta.Consulta_CompInterface">
+					<property name="bounds" value="0,0,136,50"/>
+				</reference>
+			</reference>
+			<reference referencedUin="WebDynpro:Views:://WebDynpro/Component#ar.com.quilmes.consulta.Consulta_Comp">
+				<property name="bounds" value="0,0,60,50"/>
+				<reference referencedUin="WebDynpro:View:://WebDynpro/View#ar.com.quilmes.consulta.Modificar_View">
+					<property name="bounds" value="0,0,115,50"/>
+				</reference>
+				<reference referencedUin="WebDynpro:View:://WebDynpro/View#ar.com.quilmes.consulta.Alta_View">
+					<property name="bounds" value="0,0,85,50"/>
+				</reference>
+				<reference referencedUin="WebDynpro:View:://WebDynpro/View#ar.com.quilmes.consulta.Alta">
+					<property name="bounds" value="0,0,55,50"/>
+				</reference>
+				<reference referencedUin="WebDynpro:View:://WebDynpro/View#ar.com.quilmes.consulta.Clientes_View">
+					<property name="bounds" value="118,0,106,50"/>
+					<property name="bounds_setted_by_user" value="true"/>
+					<reference referencedUin="WebDynpro:DataLink:://WebDynpro/View#ar.com.quilmes.consulta.Clientes_View#//WebDynpro/Model#ar.com.quilmes.consulta.models_eliminar_cc.CuentaCorriente">
+						<property name="bendpoints" value=""/>
+					</reference>
+					<reference referencedUin="WebDynpro:DataLink:://WebDynpro/View#ar.com.quilmes.consulta.Clientes_View#//WebDynpro/Model#ar.com.quilmes.consulta.models_eliminar.ConsultaInterna">
+						<property name="bendpoints" value=""/>
+					</reference>
+					<reference referencedUin="WebDynpro:DataLink:://WebDynpro/View#ar.com.quilmes.consulta.Clientes_View#//WebDynpro/Controller#ar.com.quilmes.consulta.Consulta_Comp">
+						<property name="bendpoints" value=""/>
+					</reference>
+					<reference referencedUin="WebDynpro:DataLink:://WebDynpro/View#ar.com.quilmes.consulta.Clientes_View#//WebDynpro/Model#ar.com.quilmes.consulta.models.ConsultaExterna">
+						<property name="bendpoints" value=""/>
+					</reference>
+					<reference referencedUin="WebDynpro:DataLink:://WebDynpro/View#ar.com.quilmes.consulta.Clientes_View#//WebDynpro/Model#ar.com.quilmes.consulta.models_eliminar.ConsultaClientes">
+						<property name="bendpoints" value=""/>
+					</reference>
+					<reference referencedUin="WebDynpro:DataLink:://WebDynpro/View#ar.com.quilmes.consulta.Clientes_View#//WebDynpro/Model#ar.com.quilmes.consulta.models.ConsultasExternas">
+						<property name="bendpoints" value=""/>
+					</reference>
+				</reference>
+				<reference referencedUin="WebDynpro:View:://WebDynpro/View#ar.com.quilmes.consulta.Baja_View">
+					<property name="bounds" value="5,62,86,50"/>
+					<property name="bounds_setted_by_user" value="true"/>
+					<reference referencedUin="WebDynpro:DataLink:://WebDynpro/View#ar.com.quilmes.consulta.Baja_View#//WebDynpro/Model#ar.com.quilmes.consulta.models.ConsultasExternas">
+						<property name="bendpoints" value=""/>
+					</reference>
+					<reference referencedUin="WebDynpro:DataLink:://WebDynpro/View#ar.com.quilmes.consulta.Baja_View#//WebDynpro/Controller#ar.com.quilmes.consulta.Consulta_Comp">
+						<property name="bendpoints" value=""/>
+					</reference>
+					<reference referencedUin="WebDynpro:DataLink:://WebDynpro/View#ar.com.quilmes.consulta.Baja_View#//WebDynpro/Model#ar.com.quilmes.consulta.models.ConsultaExterna">
+						<property name="bendpoints" value=""/>
+					</reference>
+					<reference referencedUin="WebDynpro:DataLink:://WebDynpro/View#ar.com.quilmes.consulta.Baja_View#//WebDynpro/Model#ar.com.quilmes.consulta.models_eliminar.ConsultaClientes">
+						<property name="bendpoints" value=""/>
+					</reference>
+					<reference referencedUin="WebDynpro:DataLink:://WebDynpro/View#ar.com.quilmes.consulta.Baja_View#//WebDynpro/Model#ar.com.quilmes.consulta.models_eliminar_env.DeudaEnvases">
+						<property name="bendpoints" value=""/>
+					</reference>
+				</reference>
+				<reference referencedUin="WebDynpro:View:://WebDynpro/View#ar.com.quilmes.consulta.Consulta_CompView">
+					<property name="bounds" value="221,22,144,50"/>
+					<property name="bounds_setted_by_user" value="true"/>
+					<reference referencedUin="WebDynpro:DataLink:://WebDynpro/View#ar.com.quilmes.consulta.Consulta_CompView#//WebDynpro/Model#ar.com.quilmes.consulta.models.ConsultasExternas">
+						<property name="bendpoints" value=""/>
+					</reference>
+					<reference referencedUin="WebDynpro:DataLink:://WebDynpro/View#ar.com.quilmes.consulta.Consulta_CompView#//WebDynpro/Controller#ar.com.quilmes.consulta.Consulta_Comp">
+						<property name="bendpoints" value=""/>
+					</reference>
+					<reference referencedUin="WebDynpro:DataLink:://WebDynpro/View#ar.com.quilmes.consulta.Consulta_CompView#//WebDynpro/Model#ar.com.quilmes.consulta.models.ConsultaExterna">
+						<property name="bendpoints" value=""/>
+					</reference>
+				</reference>
+			</reference>
+			<reference referencedUin="WebDynpro:ModelUsages:://WebDynpro/Component#ar.com.quilmes.consulta.Consulta_Comp">
+				<property name="bounds" value="0,0,98,50"/>
+				<reference referencedUin="WebDynpro:ModelUsage://WebDynpro/Model#ar.com.quilmes.consulta.models_eliminar.ConsultaClientes://WebDynpro/Component#ar.com.quilmes.consulta.Consulta_Comp">
+					<property name="bounds" value="0,0,123,50"/>
+				</reference>
+				<reference referencedUin="WebDynpro:ModelUsage://WebDynpro/Model#ar.com.quilmes.bue.mdm_clientes.clases.ConsultaExterna://WebDynpro/Component#ar.com.quilmes.consulta.Consulta_Comp">
+					<property name="bounds" value="0,0,119,50"/>
+				</reference>
+				<reference referencedUin="WebDynpro:ModelUsage://WebDynpro/Model#ar.com.quilmes.consulta.models_eliminar_cc.CuentaCorriente://WebDynpro/Component#ar.com.quilmes.consulta.Consulta_Comp">
+					<property name="bounds" value="0,0,121,50"/>
+				</reference>
+				<reference referencedUin="WebDynpro:ModelUsage://WebDynpro/Model#ar.com.quilmes.consulta.models_eliminar_env.DeudaEnvases://WebDynpro/Component#ar.com.quilmes.consulta.Consulta_Comp">
+					<property name="bounds" value="0,0,109,50"/>
+				</reference>
+				<reference referencedUin="WebDynpro:ModelUsage://WebDynpro/Model#ar.com.quilmes.consulta.models_eliminar.ConsultaInterna://WebDynpro/Component#ar.com.quilmes.consulta.Consulta_Comp">
+					<property name="bounds" value="0,0,118,50"/>
+				</reference>
+			</reference>
+			<reference referencedUin="WebDynpro:ComponentUsages:://WebDynpro/Component#ar.com.quilmes.consulta.Consulta_Comp">
+				<property name="bounds" value="0,0,197,50"/>
+			</reference>
+		</reference>
+	</view>
+</nodeSet>

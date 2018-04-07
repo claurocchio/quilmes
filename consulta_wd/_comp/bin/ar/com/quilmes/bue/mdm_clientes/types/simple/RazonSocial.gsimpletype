@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SimpleType>
+    <typeKind>SimpleType</typeKind>
+    <prefix>ar.com.quilmes.bue.mdm_clientes.types.simple</prefix>
+    <name>RazonSocial</name>
+    <backendName></backendName>
+    <baseTypeName></baseTypeName>
+    <baseTypeName></baseTypeName>    
+    <builtInType>string</builtInType>
+        <SchemaType>
+        <length>0</length>
+        <minLength>0</minLength>
+        <maxLength>45</maxLength>
+        <minInclusive></minInclusive>
+        <maxInclusive></maxInclusive>
+        <minExclusive></minExclusive>
+        <maxExclusive></maxExclusive>
+        <totalDigits>0</totalDigits>
+        <fractionDigits>0</fractionDigits>
+    </SchemaType>
+            <classRepresentation>false</classRepresentation>
+        <ExternalRepresentation>
+        <format></format>
+        <uppercase>false</uppercase>
+        <readOnly>false</readOnly>
+        <translateFlag>false</translateFlag>
+        <maxExternalLength>0</maxExternalLength> 
+        <defaultValue></defaultValue>
+    </ExternalRepresentation>
+            <TextObject>
+        <description></description>
+        <fieldLabel></fieldLabel>
+        <columnLabel></columnLabel>
+        <quickInfo></quickInfo>
+        <docuUrl></docuUrl>
+        <locale></locale>
+    </TextObject>
+      </SimpleType>
+    

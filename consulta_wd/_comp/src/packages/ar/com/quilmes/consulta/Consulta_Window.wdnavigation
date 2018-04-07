@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Friday, May 25, 2007 3:26:31 PM CEST -->
+<NavigationLinks xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.NavigationLinks:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1180099591892" name="Consulta_Window" package="ar.com.quilmes.consulta" masterLanguage="en">
+	<NavigationLinks.Parent>
+		<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_Window" type="Window"/>
+	</NavigationLinks.Parent>
+	<NavigationLinks.NavigationLinks>
+		<NavigationLink name="ar.com.quilmes.consulta.Clientes_ViewUsage1_salidaclientes">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="ar.com.quilmes.consulta.Clientes_ViewUsage1_salidaclientes_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="InboundPlug:entradaconsulta"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_Window" type="Window" path="ViewsetHierarchyRootNode:ar.com.quilmes.consulta.Consulta_CompViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="ar.com.quilmes.consulta" name="Clientes_View" type="View" path="OutboundPlug:salidaclientes"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_Window" type="Window" path="ViewsetHierarchyRootNode:ar.com.quilmes.consulta.Clientes_ViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="ar.com.quilmes.consulta.Consulta_CompViewUsage1_salida_consulta">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="ar.com.quilmes.consulta.Consulta_CompViewUsage1_salida_consulta_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="ar.com.quilmes.consulta" name="Clientes_View" type="View" path="InboundPlug:entradaclientes"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_Window" type="Window" path="ViewsetHierarchyRootNode:ar.com.quilmes.consulta.Clientes_ViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="OutboundPlug:salida_consulta"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_Window" type="Window" path="ViewsetHierarchyRootNode:ar.com.quilmes.consulta.Consulta_CompViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+	</NavigationLinks.NavigationLinks>
+</NavigationLinks>

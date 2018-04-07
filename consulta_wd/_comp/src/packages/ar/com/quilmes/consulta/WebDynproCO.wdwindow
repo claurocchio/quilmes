@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Friday, May 25, 2007 3:26:31 PM CEST -->
+<Window xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.Window:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1180099591892" name="WebDynproCO" package="ar.com.quilmes.consulta" masterLanguage="en">
+	<Window.Parent>
+		<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_Comp" type="Component"/>
+	</Window.Parent>
+	<Window.NavigationLinks>
+		<Core.Reference package="ar.com.quilmes.consulta" name="WebDynproCO" type="NavigationLinks"/>
+	</Window.NavigationLinks>
+	<Window.InterfaceView>
+		<Core.Reference package="ar.com.quilmes.consulta" name="WebDynproCOInterfaceView" type="InterfaceView"/>
+	</Window.InterfaceView>
+</Window>

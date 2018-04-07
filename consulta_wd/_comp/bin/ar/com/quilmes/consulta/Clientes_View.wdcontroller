@@ -1,0 +1,1032 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Friday, May 25, 2007 3:26:31 PM CEST -->
+<Controller xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.Controller:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1180099591892" name="Clientes_View" type="view" package="ar.com.quilmes.consulta" masterLanguage="en">
+	<AppClass.CodeBody>
+		<Core.Text><![CDATA[// ---------------------------------------------------------------------------
+// This file has been generated partially by the Web Dynpro Code Generator.
+// MODIFY CODE ONLY IN SECTIONS ENCLOSED BY @@begin AND @@end.
+// ALL OTHER CHANGES WILL BE LOST IF THE FILE IS REGENERATED.
+// ---------------------------------------------------------------------------
+package ar.com.quilmes.consulta;
+
+// 
+// IMPORTANT NOTE: 
+// _ALL_ IMPORT STATEMENTS MUST BE PLACED IN THE FOLLOWING SECTION ENCLOSED
+// BY @@begin imports AND @@end. FURTHERMORE, THIS SECTION MUST ALWAYS CONTAIN
+// AT LEAST ONE IMPORT STATEMENT (E.G. THAT FOR IPrivateClientes_View).
+// OTHERWISE, USING THE ECLIPSE FUNCTION "Organize Imports" FOLLOWED BY
+// A WEB DYNPRO CODE GENERATION (E.G. PROJECT BUILD) WILL RESULT IN THE LOSS
+// OF IMPORT STATEMENTS.
+//
+//@@begin imports
+import java.math.BigDecimal;
+import java.rmi.RemoteException;
+import java.util.Calendar;
+
+import ar.com.quilmes.consulta.models_eliminar_cc.CuentaCorriente;
+import ar.com.quilmes.consulta.models_eliminar_cc.GetCtaCteCliente_Execute;
+import ar.com.quilmes.consulta.models_eliminar_cc.Request_Execute;
+import ar.com.quilmes.consulta.wdp.IPrivateClientes_View;
+
+import com.sap.caf.eu.gp.context.api.GPContextFactory;
+import com.sap.caf.eu.gp.context.api.IGPUserContext;
+import com.sap.caf.eu.gp.exception.api.GPEngineException;
+import com.sap.caf.eu.gp.exception.api.GPInvocationException;
+import com.sap.caf.eu.gp.process.api.GPProcessFactory;
+import com.sap.caf.eu.gp.process.api.IGPProcess;
+import com.sap.caf.eu.gp.process.api.IGPProcessInstance;
+import com.sap.caf.eu.gp.process.rt.api.IGPProcessRoleInstanceList;
+import com.sap.caf.eu.gp.process.rt.api.IGPRuntimeManager;
+import com.sap.caf.eu.gp.structure.api.GPStructureFactory;
+import com.sap.caf.eu.gp.structure.api.IGPStructure;
+import com.sap.security.api.IUser;
+import com.sap.security.api.IUserAccount;
+import com.sap.security.api.UMException;
+import com.sap.tc.webdynpro.clientserver.navigation.api.WDPortalNavigation;
+import com.sap.tc.webdynpro.clientserver.navigation.api.WDPortalNavigationHistoryMode;
+import com.sap.tc.webdynpro.clientserver.navigation.api.WDPortalNavigationMode;
+import com.sap.tc.webdynpro.model.webservice.api.WDWSModelExecuteException;
+import com.sap.tc.webdynpro.services.sal.um.api.IWDClientUser;
+import com.sap.tc.webdynpro.services.sal.um.api.WDClientUser;
+import com.sap.tc.webdynpro.services.sal.um.api.WDUMException;
+//@@end
+
+//@@begin documentation
+//@@end
+
+public class Clientes_View
+{
+  /**
+   * Logging location.
+   */
+  private static final com.sap.tc.logging.Location logger = 
+    com.sap.tc.logging.Location.getLocation(Clientes_View.class);
+
+  static 
+  {
+    //@@begin id
+    String id = "$Id$";
+    //@@end
+    com.sap.tc.logging.Location.getLocation("ID.com.sap.tc.webdynpro").infoT(id);
+  }
+
+  /**
+   * Private access to the generated Web Dynpro counterpart 
+   * for this controller class.  </p>
+   *
+   * Use <code>wdThis</code> to gain typed access to the context,
+   * to trigger navigation via outbound plugs, to get and enable/disable
+   * actions, fire declared events, and access used controllers and/or 
+   * component usages.
+   *
+   * @see ar.com.quilmes.consulta.wdp.IPrivateClientes_View for more details
+   */
+  private final IPrivateClientes_View wdThis;
+
+  /**
+   * Root node of this controller's context. </p>
+   *
+   * Provides typed access not only to the elements of the root node 
+   * but also to all nodes in the context (methods node<i>XYZ</i>()) 
+   * and their currently selected element (methods current<i>XYZ</i>Element()). 
+   * It also facilitates the creation of new elements for all nodes 
+   * (methods create<i>XYZ</i>Element()). </p>
+   *
+   * @see ar.com.quilmes.consulta.wdp.IPrivateClientes_View.IContextNode for more details.
+   */
+  private final IPrivateClientes_View.IContextNode wdContext;
+
+  /**
+   * A shortcut for <code>wdThis.wdGetAPI()</code>. </p>
+   * 
+   * Represents the generic API of the generic Web Dynpro counterpart 
+   * for this controller. </p>
+   */
+  private final com.sap.tc.webdynpro.progmodel.api.IWDViewController wdControllerAPI;
+  
+  /**
+   * A shortcut for <code>wdThis.wdGetAPI().getComponent()</code>. </p>
+   * 
+   * Represents the generic API of the Web Dynpro component this controller 
+   * belongs to. Can be used to access the message manager, the window manager,
+   * to add/remove event handlers and so on. </p>
+   */
+  private final com.sap.tc.webdynpro.progmodel.api.IWDComponent wdComponentAPI;
+  
+  public Clientes_View(IPrivateClientes_View wdThis)
+  {
+    this.wdThis = wdThis;
+    this.wdContext = wdThis.wdGetContext();
+    this.wdControllerAPI = wdThis.wdGetAPI();
+    this.wdComponentAPI = wdThis.wdGetAPI().getComponent();
+  }
+
+  //@@begin javadoc:wdDoInit()
+  /** Hook method called to initialize controller. */
+  //@@end
+  public void wdDoInit()
+  {
+    //@@begin wdDoInit()
+	String usuario = null;
+	String pais = null;
+	String rol = "AR_CL_SOL_MINORISTAS";
+	short empresa = 0;
+
+	//Fecha del dia
+	Calendar cal = Calendar.getInstance();
+	java.sql.Date fecha = new java.sql.Date(cal.getTime().getTime());
+	
+	//Obtengo el usuario
+	try {
+		IWDClientUser wdClientUser = WDClientUser.getCurrentUser();
+		IUser sapUser = wdClientUser.getSAPUser();
+		if (sapUser != null) {
+			IUserAccount[] acct = sapUser.getUserAccounts();
+			if (acct[0] != null) {
+				usuario = acct[0].getDisplayName(); }
+		} 	
+	} 
+	catch (WDUMException e) {
+		e.printStackTrace();
+	} catch (UMException e) {
+		e.printStackTrace();
+	}
+	   
+	//Obtengo el pais (lo obtengo del Parametro Rol)
+	try {
+		wdContext.nodeRol().bind(wdThis.wdGetConsulta_CompController().getConsultasInternasBean().getParametrosXRol(rol));
+	} catch (RemoteException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+		wdComponentAPI.getMessageManager().reportWarning("Error BI: " + e.getMessage());
+	}	   
+	if (wdContext.nodeRol()!=null)
+	{	pais = wdContext.currentRolElement().getSociedad().substring(2,4);
+		empresa = new BigDecimal(wdContext.currentRolElement().getSociedad().substring(0,2)).shortValue();
+	}
+	else
+	{ 	wdComponentAPI.getMessageManager().reportWarning("El rol: "+rol+", no tiene los parametros cargados!");
+		return;
+	}
+	
+  	//Paso los datos a las variables de contexto
+  	wdContext.currentContextElement().setPais(pais);
+  	wdContext.currentContextElement().setUsuario(usuario);
+  	wdContext.currentContextElement().setEmpresa(empresa);
+
+    //@@end
+  }
+
+  //@@begin javadoc:wdDoExit()
+  /** Hook method called to clean up controller. */
+  //@@end
+  public void wdDoExit()
+  {
+    //@@begin wdDoExit()
+    //@@end
+  }
+
+  //@@begin javadoc:wdDoModifyView
+  /**
+   * Hook method called to modify a view just before rendering.
+   * This method conceptually belongs to the view itself, not to the
+   * controller (cf. MVC pattern).
+   * It is made static to discourage a way of programming that
+   * routinely stores references to UI elements in instance fields
+   * for access by the view controller's event handlers, and so on.
+   * The Web Dynpro programming model recommends that UI elements can
+   * only be accessed by code executed within the call to this hook method.
+   *
+   * @param wdThis Generated private interface of the view's controller, as
+   *        provided by Web Dynpro. Provides access to the view controller's
+   *        outgoing controller usages, etc.
+   * @param wdContext Generated interface of the view's context, as provided
+   *        by Web Dynpro. Provides access to the view's data.
+   * @param view The view's generic API, as provided by Web Dynpro.
+   *        Provides access to UI elements.
+   * @param firstTime Indicates whether the hook is called for the first time
+   *        during the lifetime of the view.
+   */
+  //@@end
+  public static void wdDoModifyView(IPrivateClientes_View wdThis, IPrivateClientes_View.IContextNode wdContext, com.sap.tc.webdynpro.progmodel.api.IWDView view, boolean firstTime)
+  {
+    //@@begin wdDoModifyView
+   
+    //@@end
+  }
+
+  //@@begin javadoc:onPlugentradaclientes(ServerEvent)
+  /** Declared validating event handler. */
+  //@@end
+  public void onPlugentradaclientes(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onPlugentradaclientes(ServerEvent)
+	int nro_c = wdContext.currentContextElement().getNro_cli();
+	String raz_soc = wdContext.currentContextElement().getRazon_soc();
+	String nro_doc = wdContext.currentContextElement().getNro_doc();
+	int tip_doc = -1;
+	
+	if (wdContext.currentTipoDocumentoElement()!=null)
+	{ tip_doc = wdContext.currentTipoDocumentoElement().getId(); }
+
+//  Busco por numero de Cliente
+	if (nro_c > 0) {
+		try { wdContext.nodeClientes().bind(wdThis.wdGetConsulta_CompController().getConsultasExternasBean().getClienteXNumero("01AR","01AR",800,nro_c)); } 
+		catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace(); 	}
+			//Linea para imprimir el error de catch
+			//wdComponentAPI.getMessageManager().reportWarning("Error BI: " + e.getMessage());}
+		}
+	else { //	Busco por documento y por Razon Social	
+		if (nro_doc != null ) {
+			try {
+				wdContext.nodeClientes().bind(wdThis.wdGetConsulta_CompController().getConsultasExternasBean().getClienteXDocumento("01AR","01AR",800,nro_doc,tip_doc)); } 
+			catch (RemoteException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();  }			
+		}
+		else {
+			int ok = 0;
+			int ok2;
+			String aux;
+			String aux2;
+			//Reemplazo los "*" por "%"
+			while (ok >= 0)
+			{	ok = raz_soc.indexOf("*");
+				if ( ok >= 0 )
+				{ ok2 = ok + 1;
+			  	aux = raz_soc.substring(0,ok);
+			  	aux2 = raz_soc.substring(ok2);
+			  	raz_soc = aux + "%" + aux2;  }
+			}
+			
+			try { wdContext.nodeClientes().bind(wdThis.wdGetConsulta_CompController().getConsultasExternasBean().getClienteXRazonSocial("01AR","01AR",800,raz_soc)); } 
+			catch (RemoteException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace(); }
+		}
+	}
+	
+	// Menaje de resultado
+	if (wdContext.currentClientesElement()==null)
+	{ 	wdContext.currentContextElement().setHabilitar(false);
+		wdComponentAPI.getMessageManager().reportWarning("No se encontraron clientes con los conceptos ingresados"); } 
+	else
+	{	 wdContext.currentContextElement().setHabilitar(true);
+		wdComponentAPI.getMessageManager().reportSuccess("Clientes encontrados: " + wdContext.nodeClientes().size()); }   
+	
+    //@@end
+  }
+
+  //@@begin javadoc:onActionvolver(ServerEvent)
+  /** Declared validating event handler. */
+  //@@end
+  public void onActionvolver(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionvolver(ServerEvent)
+    wdThis.wdFirePlugSalidaclientes();
+    //@@end
+  }
+
+  //@@begin javadoc:onActionmodificar(ServerEvent)
+  /** Declared validating event handler. */
+  //@@end
+  public void onActionmodificar(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionmodificar(ServerEvent)
+    int nro_cli = wdContext.currentClientesElement().getId();
+    
+    if ( nro_cli <= 0 ) 
+    { wdComponentAPI.getMessageManager().reportWarning("No seleccionó cliente"); }
+    else 
+    { 
+		//Disparo GP
+		String pcd = "pcd:portal_content/com.quilmes.fdl_contenido_para_quilmes/AltadeClientes/Iviews/java_sap_com_caf~eu~gp~ui~rt_com_sap_caf_eu_gp_ui_rt_Runtime";	
+		IWDClientUser thisUser;
+		IGPProcess process;
+
+		try {
+			thisUser = WDClientUser.getCurrentUser();
+			IUser user = thisUser.getSAPUser();
+			IGPUserContext userContext = GPContextFactory.getContextManager().createUserContext(user);
+
+			//process = GPProcessFactory.getDesigntimeManager().getActiveTemplate("79E1D990230411DF9BC5001321209630", userContext);
+			process = GPProcessFactory.getDesigntimeManager().getActiveTemplate("91E8FBD0286411DF9D30001321209630", userContext);
+
+			IGPRuntimeManager rtm = GPProcessFactory.getRuntimeManager();
+
+			IGPProcessRoleInstanceList roles = rtm.createProcessRoleInstanceList();
+			int rolenum = process.getRoleInfoCount();
+			for (int i = 0; i < rolenum; i++) {
+				String roleName = null;
+				roleName = process.getRoleInfo(i).getRoleName();
+				roles.createProcessRoleInstance(roleName).addUser(user);
+			}
+
+			IGPStructure input= GPStructureFactory.getStructure(process.getInputParameters());
+			input.setAttributeValue("tipoUsuario.3.1", "Final");
+			input.setAttributeValue("codCliente.2", nro_cli);
+			input.setAttributeValue("tipoAplicacion.5", "M");
+			input.setAttributeValue("Input_parameter.1","M");
+			input.setAttributeValue("rol", "AR_CL_SOL_MINORISTAS");		
+			
+			IGPProcessInstance prInstance = rtm.startProcess(
+				process, //process
+				"Portal de Clientes", //user defined process title
+				"Modificacion de Clientes", //user defined process description
+				user, //initiator
+				roles, //process roles
+				input, //process input structure
+				user );
+
+			WDPortalNavigation.navigateAbsolute(
+				pcd,
+				WDPortalNavigationMode.SHOW_INPLACE,
+				WDPortalNavigationHistoryMode.NO_DUPLICATIONS,
+				"processId="+prInstance.getID() );
+
+			} catch (WDUMException e) {
+				 e.printStackTrace();
+			} catch (GPInvocationException e) {
+				e.printStackTrace();
+			} catch (GPEngineException e) {
+				e.printStackTrace();
+			}
+	
+    }
+		
+//"http://dbabwd00.bue.quilmes.com.ar:50000/irj/portal/IniciarProceso?DynamicParameter=process.template.id%3D34CDE820F96B11DE9E07001321209630%26crear%3Dtrue%26LIFNR%3D0000000001%26BYPASS%3D1%26A_NAME_1%3DRJGIL%26A_DATE_SOL%3D01012009"); }
+    
+    //@@end
+  }
+
+  //@@begin javadoc:onActioneliminar(ServerEvent)
+  /** Declared validating event handler. */
+  //@@end
+  public void onActioneliminar(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActioneliminar(ServerEvent)
+	int nro_cli = wdContext.currentClientesElement().getId();
+	int retorno = -1;
+	String pais = wdContext.currentContextElement().getPais();
+	String usuario = wdContext.currentContextElement().getUsuario();
+	short empresa = wdContext.currentContextElement().getEmpresa();
+	double saldocta = 0;
+	double saldodoc = 0;
+	double saldopen = 0;
+	double saldotre = 0;
+	double saldotve = 0;
+	
+	
+	if (pais == null)
+	{ wdComponentAPI.getMessageManager().reportWarning("Faltan cargar pais en los datos del usuario");
+	  return; }
+
+	
+	if ( nro_cli <= 0 ) 
+		{ wdComponentAPI.getMessageManager().reportWarning("No seleccionó cliente"); }
+	else {
+		// Verifico si esta ok para eliminar
+		try { retorno = wdThis.wdGetConsulta_CompController().getConsultasExternasBean().validarEsCuentaMadre("01AR", "01AR", nro_cli); } 
+		catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace(); 	}	
+		
+		//wdComponentAPI.getMessageManager().reportWarning("cuenta madre: " + retorno);
+		
+		// Verifico si es cuenta Madre
+		if (retorno > 1) 
+			 { wdComponentAPI.getMessageManager().reportWarning("No puede continuar con la solicitud de baja. El cliente posee sucursales activas"); }
+	 	else { 	//Verifico si posee deudas de cuenta corriente
+			try { //Llamo al web services
+				CuentaCorriente model = new CuentaCorriente();
+				Request_Execute requestE = new Request_Execute(model);
+				GetCtaCteCliente_Execute getDatos = new GetCtaCteCliente_Execute(model);
+
+				getDatos.setCliid(nro_cli);
+				getDatos.setEmpid(empresa);
+				getDatos.setPais(pais);
+
+				requestE.setGetCtaCteClienteExecute(getDatos);
+
+				wdContext.nodeCuentaCorriente().bind(requestE);
+				wdContext.currentCuentaCorrienteElement().modelObject().execute();
+				wdContext.nodeGetCtaCteClienteExecuteResponse().invalidate();
+
+				} catch (WDWSModelExecuteException e) {
+				//	   TODO Auto-generated catch block
+					e.printStackTrace();
+					wdComponentAPI.getMessageManager().reportWarning("Error BI: " + e.getStackTraceString());
+				}
+				
+				//Obtengo los saldos del ws
+				saldocta = wdContext.currentGetCtaCteClienteExecuteResponseElement().getClisdoctc();
+				saldodoc = wdContext.currentGetCtaCteClienteExecuteResponseElement().getClisdodoct();
+				saldopen = wdContext.currentGetCtaCteClienteExecuteResponseElement().getSdoped();
+				saldotre = wdContext.currentGetCtaCteClienteExecuteResponseElement().getTotrech();
+				saldotve = wdContext.currentGetCtaCteClienteExecuteResponseElement().getTotvenc();
+				
+				if ((saldocta > 0 || saldodoc > 0 || saldopen > 0 || saldotre > 0 || saldotve > 0) && (retorno == 1)) //cuenta unica
+				{ wdComponentAPI.getMessageManager().reportWarning("No puede continuar con la solicitud de baja. El Cliente tiene deuda en Cuenta Corriente."); }
+				else
+				{	
+					if (saldocta > 0 || saldodoc > 0 || saldopen > 0 || saldotre > 0 || saldotve > 0)
+					{ wdComponentAPI.getMessageManager().reportWarning("El Cliente tiene deuda en Cuenta Corriente. Debe transferir deuda a Cuenta Madre"); }
+									
+					wdComponentAPI.getMessageManager().reportSuccess("Cliente OK para borrado.");
+					
+					//Disparo GP
+					String pcd = "pcd:portal_content/com.quilmes.fdl_contenido_para_quilmes/AltadeClientes/Iviews/java_sap_com_caf~eu~gp~ui~rt_com_sap_caf_eu_gp_ui_rt_Runtime";	
+					IWDClientUser thisUser;
+					IGPProcess process;
+
+					try {
+						thisUser = WDClientUser.getCurrentUser();
+						IUser user = thisUser.getSAPUser();
+						IGPUserContext userContext = GPContextFactory.getContextManager().createUserContext(user);
+
+						//process = GPProcessFactory.getDesigntimeManager().getActiveTemplate("252811501B0A11DFA109001321209630", userContext);
+						process = GPProcessFactory.getDesigntimeManager().getActiveTemplate("91E8FBD0286411DF9D30001321209630", userContext);
+
+						IGPRuntimeManager rtm = GPProcessFactory.getRuntimeManager();
+
+						IGPProcessRoleInstanceList roles = rtm.createProcessRoleInstanceList();
+						int rolenum = process.getRoleInfoCount();
+						for (int i = 0; i < rolenum; i++) {
+							String roleName = null;
+							roleName = process.getRoleInfo(i).getRoleName();
+							roles.createProcessRoleInstance(roleName).addUser(user);
+						}
+
+						IGPStructure input= GPStructureFactory.getStructure(process.getInputParameters());
+						input.setAttributeValue("tipoUsuario.3.1", "Final");
+						input.setAttributeValue("codCliente.2", nro_cli);
+						input.setAttributeValue("tipoAplicacion.5", "B");
+						input.setAttributeValue("Input_parameter.1","B");
+						input.setAttributeValue("rol", "AR_CL_SOL_MINORISTAS");						
+						
+						IGPProcessInstance prInstance = rtm.startProcess(
+							process, //process
+							"Portal de Clientes", //user defined process title
+							"Baja de Clientes", //user defined process description
+							user, //initiator
+							roles, //process roles
+							input, //process input structure
+							user );
+
+						WDPortalNavigation.navigateAbsolute(
+							pcd,
+							WDPortalNavigationMode.SHOW_INPLACE,
+							WDPortalNavigationHistoryMode.NO_DUPLICATIONS,
+							"processId="+prInstance.getID() );
+
+						} catch (WDUMException e) {
+							 e.printStackTrace();
+						} catch (GPInvocationException e) {
+							e.printStackTrace();
+						} catch (GPEngineException e) {
+							e.printStackTrace();
+						}
+
+				} 
+	 	}
+	}
+    //@@end
+  }
+
+  /*
+   * The following code section can be used for any Java code that is 
+   * not to be visible to other controllers/views or that contains constructs
+   * currently not supported directly by Web Dynpro (such as inner classes or
+   * member variables etc.). </p>
+   *
+   * Note: The content of this section is in no way managed/controlled
+   * by the Web Dynpro Designtime or the Web Dynpro Runtime. 
+   */
+  //@@begin others
+  //@@end
+}
+]]></Core.Text>
+	</AppClass.CodeBody>
+	<Controller.Parent>
+		<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_Comp" type="Component"/>
+	</Controller.Parent>
+	<Controller.Actions>
+		<Action name="volver">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionvolver"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+		<Action name="modificar">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionmodificar"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+		<Action name="eliminar">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActioneliminar"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+	</Controller.Actions>
+	<Controller.Context>
+		<ContextValueNode cardinality="_1_1" name="Context" selection="_1_1">
+			<ContextNode.Attributes>
+				<ContextValueAttribute name="nro_cli">
+				</ContextValueAttribute>
+				<ContextValueAttribute name="nro_doc">
+				</ContextValueAttribute>
+				<ContextValueAttribute name="razon_soc">
+				</ContextValueAttribute>
+				<ContextValueAttribute name="habilitar">
+					<ContextValueAttribute.Type>
+						<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="boolean" type="DtSimpleType"/>
+					</ContextValueAttribute.Type>
+				</ContextValueAttribute>
+				<ContextValueAttribute name="usuario">
+					<ContextValueAttribute.Type>
+						<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+					</ContextValueAttribute.Type>
+				</ContextValueAttribute>
+				<ContextValueAttribute name="pais">
+					<ContextValueAttribute.Type>
+						<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+					</ContextValueAttribute.Type>
+				</ContextValueAttribute>
+				<ContextValueAttribute name="empresa">
+					<ContextValueAttribute.Type>
+						<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="short" type="DtSimpleType"/>
+					</ContextValueAttribute.Type>
+				</ContextValueAttribute>
+			</ContextNode.Attributes>
+			<ContextNode.ChildNodes>
+				<ContextModelNode name="Clientes">
+					<ContextNode.Attributes>
+						<ContextModelAttribute name="localidad_Id">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="razonSocial">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="documento">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="territorio_Id">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="id">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="domicilio">
+						</ContextModelAttribute>
+					</ContextNode.Attributes>
+				</ContextModelNode>
+				<ContextModelNode name="TipoDocumento">
+					<ContextNode.Attributes>
+						<ContextModelAttribute name="id">
+						</ContextModelAttribute>
+						<ContextModelAttribute name="desc">
+						</ContextModelAttribute>
+					</ContextNode.Attributes>
+				</ContextModelNode>
+				<ContextModelNode name="CuentaCorriente">
+					<ContextNode.ChildNodes>
+						<ContextModelNode cardinality="_0_1" name="GetCtaCteClienteExecute">
+							<ContextNode.Attributes>
+								<ContextModelAttribute name="Cliid">
+									<ContextModelAttribute.ReferencedProperty>
+										<Core.Reference package="ar.com.quilmes.consulta.models_eliminar_cc" name="GetCtaCteCliente_Execute" type="ModelClass" path="Property:Cliid"/>
+									</ContextModelAttribute.ReferencedProperty>
+								</ContextModelAttribute>
+								<ContextModelAttribute name="Pais">
+									<ContextModelAttribute.ReferencedProperty>
+										<Core.Reference package="ar.com.quilmes.consulta.models_eliminar_cc" name="GetCtaCteCliente_Execute" type="ModelClass" path="Property:Pais"/>
+									</ContextModelAttribute.ReferencedProperty>
+								</ContextModelAttribute>
+								<ContextModelAttribute name="Empid">
+									<ContextModelAttribute.ReferencedProperty>
+										<Core.Reference package="ar.com.quilmes.consulta.models_eliminar_cc" name="GetCtaCteCliente_Execute" type="ModelClass" path="Property:Empid"/>
+									</ContextModelAttribute.ReferencedProperty>
+								</ContextModelAttribute>
+							</ContextNode.Attributes>
+							<ContextModelNode.ModelClass>
+								<Core.Reference package="ar.com.quilmes.consulta.models_eliminar_cc" name="GetCtaCteCliente_Execute" type="ModelClass"/>
+							</ContextModelNode.ModelClass>
+							<ContextModelNode.SupplyingRelationRole>
+								<Core.Reference package="ar.com.quilmes.consulta.models_eliminar_cc" name="CuentaCorriente" type="Model" path="ModelRelation:Request_Execute:GetCtaCteClienteExecute/ModelRelationRole:GetCtaCteClienteExecute"/>
+							</ContextModelNode.SupplyingRelationRole>
+						</ContextModelNode>
+						<ContextModelNode cardinality="_0_1" name="Response">
+							<ContextNode.ChildNodes>
+								<ContextModelNode cardinality="_0_1" name="GetCtaCteClienteExecuteResponse">
+									<ContextNode.Attributes>
+										<ContextModelAttribute name="Clisdodoct">
+											<ContextModelAttribute.ReferencedProperty>
+												<Core.Reference package="ar.com.quilmes.consulta.models_eliminar_cc" name="GetCtaCteCliente_ExecuteResponse" type="ModelClass" path="Property:Clisdodoct"/>
+											</ContextModelAttribute.ReferencedProperty>
+										</ContextModelAttribute>
+										<ContextModelAttribute name="Totrech">
+											<ContextModelAttribute.ReferencedProperty>
+												<Core.Reference package="ar.com.quilmes.consulta.models_eliminar_cc" name="GetCtaCteCliente_ExecuteResponse" type="ModelClass" path="Property:Totrech"/>
+											</ContextModelAttribute.ReferencedProperty>
+										</ContextModelAttribute>
+										<ContextModelAttribute name="Sdoped">
+											<ContextModelAttribute.ReferencedProperty>
+												<Core.Reference package="ar.com.quilmes.consulta.models_eliminar_cc" name="GetCtaCteCliente_ExecuteResponse" type="ModelClass" path="Property:Sdoped"/>
+											</ContextModelAttribute.ReferencedProperty>
+										</ContextModelAttribute>
+										<ContextModelAttribute name="Fmapgoabv">
+											<ContextModelAttribute.ReferencedProperty>
+												<Core.Reference package="ar.com.quilmes.consulta.models_eliminar_cc" name="GetCtaCteCliente_ExecuteResponse" type="ModelClass" path="Property:Fmapgoabv"/>
+											</ContextModelAttribute.ReferencedProperty>
+										</ContextModelAttribute>
+										<ContextModelAttribute name="Clisdoctc">
+											<ContextModelAttribute.ReferencedProperty>
+												<Core.Reference package="ar.com.quilmes.consulta.models_eliminar_cc" name="GetCtaCteCliente_ExecuteResponse" type="ModelClass" path="Property:Clisdoctc"/>
+											</ContextModelAttribute.ReferencedProperty>
+										</ContextModelAttribute>
+										<ContextModelAttribute name="Totvenc">
+											<ContextModelAttribute.ReferencedProperty>
+												<Core.Reference package="ar.com.quilmes.consulta.models_eliminar_cc" name="GetCtaCteCliente_ExecuteResponse" type="ModelClass" path="Property:Totvenc"/>
+											</ContextModelAttribute.ReferencedProperty>
+										</ContextModelAttribute>
+									</ContextNode.Attributes>
+									<ContextNode.ChildNodes>
+										<ContextModelNode cardinality="_1_1" name="Mensajes">
+											<ContextNode.ChildNodes>
+												<ContextModelNode name="MensajesMensajesItem">
+													<ContextNode.Attributes>
+														<ContextModelAttribute name="MsgErrDesc">
+															<ContextModelAttribute.ReferencedProperty>
+																<Core.Reference package="ar.com.quilmes.consulta.models_eliminar_cc" name="MensajesMensajesItem" type="ModelClass" path="Property:MsgErrDesc"/>
+															</ContextModelAttribute.ReferencedProperty>
+														</ContextModelAttribute>
+														<ContextModelAttribute name="MsgErrCode">
+															<ContextModelAttribute.ReferencedProperty>
+																<Core.Reference package="ar.com.quilmes.consulta.models_eliminar_cc" name="MensajesMensajesItem" type="ModelClass" path="Property:MsgErrCode"/>
+															</ContextModelAttribute.ReferencedProperty>
+														</ContextModelAttribute>
+													</ContextNode.Attributes>
+													<ContextModelNode.ModelClass>
+														<Core.Reference package="ar.com.quilmes.consulta.models_eliminar_cc" name="MensajesMensajesItem" type="ModelClass"/>
+													</ContextModelNode.ModelClass>
+													<ContextModelNode.SupplyingRelationRole>
+														<Core.Reference package="ar.com.quilmes.consulta.models_eliminar_cc" name="CuentaCorriente" type="Model" path="ModelRelation:Mensajes:MensajesMensajesItem/ModelRelationRole:MensajesMensajesItem"/>
+													</ContextModelNode.SupplyingRelationRole>
+												</ContextModelNode>
+											</ContextNode.ChildNodes>
+											<ContextModelNode.ModelClass>
+												<Core.Reference package="ar.com.quilmes.consulta.models_eliminar_cc" name="Mensajes" type="ModelClass"/>
+											</ContextModelNode.ModelClass>
+											<ContextModelNode.SupplyingRelationRole>
+												<Core.Reference package="ar.com.quilmes.consulta.models_eliminar_cc" name="CuentaCorriente" type="Model" path="ModelRelation:GetCtaCteCliente_ExecuteResponse:Mensajes/ModelRelationRole:Mensajes"/>
+											</ContextModelNode.SupplyingRelationRole>
+										</ContextModelNode>
+									</ContextNode.ChildNodes>
+									<ContextModelNode.ModelClass>
+										<Core.Reference package="ar.com.quilmes.consulta.models_eliminar_cc" name="GetCtaCteCliente_ExecuteResponse" type="ModelClass"/>
+									</ContextModelNode.ModelClass>
+									<ContextModelNode.SupplyingRelationRole>
+										<Core.Reference package="ar.com.quilmes.consulta.models_eliminar_cc" name="CuentaCorriente" type="Model" path="ModelRelation:Response_Execute:GetCtaCteClienteExecuteResponse/ModelRelationRole:GetCtaCteClienteExecuteResponse"/>
+									</ContextModelNode.SupplyingRelationRole>
+								</ContextModelNode>
+							</ContextNode.ChildNodes>
+							<ContextModelNode.ModelClass>
+								<Core.Reference package="ar.com.quilmes.consulta.models_eliminar_cc" name="Response_Execute" type="ModelClass"/>
+							</ContextModelNode.ModelClass>
+							<ContextModelNode.SupplyingRelationRole>
+								<Core.Reference package="ar.com.quilmes.consulta.models_eliminar_cc" name="CuentaCorriente" type="Model" path="ModelRelation:Request_Execute:Response/ModelRelationRole:Response"/>
+							</ContextModelNode.SupplyingRelationRole>
+						</ContextModelNode>
+					</ContextNode.ChildNodes>
+					<ContextModelNode.ModelClass>
+						<Core.Reference package="ar.com.quilmes.consulta.models_eliminar_cc" name="Request_Execute" type="ModelClass"/>
+					</ContextModelNode.ModelClass>
+				</ContextModelNode>
+				<ContextModelNode name="Rol">
+					<ContextNode.Attributes>
+						<ContextModelAttribute name="tipoCobranza">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:tipoCobranza"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="formaPago">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:formaPago"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="perfilCliente">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:perfilCliente"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="segmentoVta">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:segmentoVta"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="pagaSeguro">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:pagaSeguro"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoVtaFalSobMerc">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:tipoVtaFalSobMerc"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoClienteContable">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:tipoClienteContable"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tienePromocion">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:tienePromocion"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="listaPrecioMaximo">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:listaPrecioMaximo"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="imprimeRemito">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:imprimeRemito"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="listaPrecioBasico">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:listaPrecioBasico"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoEmpresa">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:tipoEmpresa"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoVtaFalSobEnv">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:tipoVtaFalSobEnv"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="esExclusivo">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:esExclusivo"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="sociedad">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:sociedad"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="aceptaDesdUnifPedidos">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:aceptaDesdUnifPedidos"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="formaEntregaCtaCte">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:formaEntregaCtaCte"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="canalVenta">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:canalVenta"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="esquema">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:esquema"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="formaAtencion">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:formaAtencion"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="agrupacionComercial">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:agrupacionComercial"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="polVentaCal1">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:polVentaCal1"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="ramo">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:ramo"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="banco">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:banco"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="ctaCteExterna">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:ctaCteExterna"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="cobrador">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:cobrador"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="personeriaJuridica">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:personeriaJuridica"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoClienteCondVta">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:tipoClienteCondVta"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoMaqVend">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:tipoMaqVend"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="polVentaCal3">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:polVentaCal3"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="identificacionJuridica">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:identificacionJuridica"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="moneda">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:moneda"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="tipoCliCom">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:tipoCliCom"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="nroImpuestoInterno">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:nroImpuestoInterno"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="asigStock">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:asigStock"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="comprador">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:comprador"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="fueCensado">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:fueCensado"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+						<ContextModelAttribute name="polVentaCal2">
+							<ContextModelAttribute.ReferencedProperty>
+								<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass" path="Property:polVentaCal2"/>
+							</ContextModelAttribute.ReferencedProperty>
+						</ContextModelAttribute>
+					</ContextNode.Attributes>
+					<ContextModelNode.ModelClass>
+						<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass"/>
+					</ContextModelNode.ModelClass>
+				</ContextModelNode>
+			</ContextNode.ChildNodes>
+		</ContextValueNode>
+	</Controller.Context>
+	<Controller.EventHandlers>
+		<ControllerEventHandler name="onPlugentradaclientes">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onActionvolver">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onActionmodificar">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onActioneliminar">
+		</ControllerEventHandler>
+	</Controller.EventHandlers>
+	<Controller.OutgoingControllerUsages>
+		<ControllerUsage name="ar.com.quilmes.consulta.Consulta_WindowInterfaceViewUsage">
+			<ControllerUsage.UsedController>
+				<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_WindowInterfaceView" type="Controller"/>
+			</ControllerUsage.UsedController>
+		</ControllerUsage>
+		<ControllerUsage name="ar.com.quilmes.consulta.Consulta_CompUsage">
+			<ControllerUsage.ContextMappings>
+				<ContextElementMapping mappingType="collection_and_selection" name="7">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_Comp" type="Controller" path="Context/ChildNode:Clientes"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Clientes"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="8">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_Comp" type="Controller" path="Context/ChildNode:Clientes/Attribute:localidad_Id"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Clientes/Attribute:localidad_Id"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="9">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_Comp" type="Controller" path="Context/ChildNode:Clientes/Attribute:razonSocial"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Clientes/Attribute:razonSocial"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="10">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_Comp" type="Controller" path="Context/ChildNode:Clientes/Attribute:documento"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Clientes/Attribute:documento"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="11">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_Comp" type="Controller" path="Context/ChildNode:Clientes/Attribute:territorio_Id"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Clientes/Attribute:territorio_Id"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="12">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_Comp" type="Controller" path="Context/ChildNode:Clientes/Attribute:id"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Clientes/Attribute:id"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="13">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_Comp" type="Controller" path="Context/ChildNode:Clientes/Attribute:domicilio"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:Clientes/Attribute:domicilio"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="14">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_Comp" type="Controller" path="Context/ChildNode:TipoDocumento"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:TipoDocumento"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="15">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_Comp" type="Controller" path="Context/ChildNode:TipoDocumento/Attribute:id"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:TipoDocumento/Attribute:id"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="16">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_Comp" type="Controller" path="Context/ChildNode:TipoDocumento/Attribute:desc"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:TipoDocumento/Attribute:desc"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="17">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_Comp" type="Controller" path="Context/Attribute:nro_cliente"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/Attribute:nro_cli"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="18">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_Comp" type="Controller" path="Context/Attribute:razon_social"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/Attribute:razon_soc"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="19">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_Comp" type="Controller" path="Context/Attribute:nro_documento"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/Attribute:nro_doc"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+			</ControllerUsage.ContextMappings>
+			<ControllerUsage.UsedController>
+				<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_Comp" type="Controller"/>
+			</ControllerUsage.UsedController>
+		</ControllerUsage>
+	</Controller.OutgoingControllerUsages>
+	<Controller.View>
+		<Core.Reference package="ar.com.quilmes.consulta" name="Clientes_View" type="View"/>
+	</Controller.View>
+</Controller>

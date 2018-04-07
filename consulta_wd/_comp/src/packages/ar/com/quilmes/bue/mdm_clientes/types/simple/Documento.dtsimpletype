@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Tuesday, May 4, 2004 10:35:31 AM CEST -->
+<DtSimpleType xmlns="http://xml.sap.com/2002/10/metamodel/dictionary" xmlns:IDX="urn:sap.com:DtDictionary.DtSimpleType:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1083659731299" builtInType="string" name="Documento" typeName="Documento" package="ar.com.quilmes.bue.mdm_clientes.types.simple" masterLanguage="en">
+	<DtSimpleType.DbProperty>
+		<DtDbProperty dbDefault="" jdbcTypeName="VARCHAR" name="DbProperty" notNull="false">
+		</DtDbProperty>
+	</DtSimpleType.DbProperty>
+	<DtSimpleType.ExternalRepresentation>
+		<DtExternalRepresentation format="" maxExternalLength="-1" name="ExternalRepresentation" readOnly="false" translateFlag="false" uppercase="false">
+		</DtExternalRepresentation>
+	</DtSimpleType.ExternalRepresentation>
+	<DtSimpleType.SchemaType>
+		<DtSchemaType length="-1" maxLength="20" minLength="-1" name="SchemaType" pattern="">
+		</DtSchemaType>
+	</DtSimpleType.SchemaType>
+	<DtSimpleType.TechnicalInfo>
+		<DtTechnicalInfo name="TechnicalInfo">
+		</DtTechnicalInfo>
+	</DtSimpleType.TechnicalInfo>
+	<DtSimpleType.Texts>
+		<DtTextObject name="Texts">
+		</DtTextObject>
+	</DtSimpleType.Texts>
+</DtSimpleType>

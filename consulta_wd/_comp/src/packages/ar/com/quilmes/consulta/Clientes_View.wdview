@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Friday, May 25, 2007 3:26:31 PM CEST -->
+<View xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.View:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1180099591892" name="Clientes_View" package="ar.com.quilmes.consulta" masterLanguage="en">
+	<AbstractView.InboundPlugs>
+		<InboundPlug name="entradaclientes">
+			<IncomingEvent.EventHandler>
+				<Core.Reference package="ar.com.quilmes.consulta" name="Clientes_View" type="Controller" path="EventHandler:onPlugentradaclientes"/>
+			</IncomingEvent.EventHandler>
+		</InboundPlug>
+	</AbstractView.InboundPlugs>
+	<AbstractView.OutboundPlugs>
+		<OutboundPlug name="salidaclientes_b">
+		</OutboundPlug>
+		<OutboundPlug name="salidaclientes">
+		</OutboundPlug>
+		<OutboundPlug name="salidaclientes_m">
+		</OutboundPlug>
+	</AbstractView.OutboundPlugs>
+	<AbstractView.ViewController>
+		<Core.Reference package="ar.com.quilmes.consulta" name="Clientes_View" type="Controller"/>
+	</AbstractView.ViewController>
+	<View.Parent>
+		<Core.Reference package="ar.com.quilmes.consulta" name="Consulta_Comp" type="Component"/>
+	</View.Parent>
+	<View.RootUIElementContainer>
+		<TransparentContainer name="RootUIElementContainer">
+			<UIElementContainer.Children>
+				<TransparentContainer name="RootUIElementContainer1" width="">
+					<CommonDevelopmentObject.TemplateInstances>
+						<EmbeddedTemplateInstance name="Form">
+							<TemplateInstance.TemplateMarkers>
+								<TemplateMarker name="nro_cliente_0_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:nro_cliente_0"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="nro_cliente_0_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:nro_cliente_0/ContextBinding:value"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="nro_cliente_0_LABEL_LABEL" role="label">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:nro_cliente_0_label"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="razon_social_0_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:razon_social_0"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="razon_social_0_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:razon_social_0/ContextBinding:value"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="razon_social_0_LABEL_LABEL" role="label">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:razon_social_0_label"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="tipo_documento_0_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:tipo_documento_0"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="tipo_documento_0_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:tipo_documento_0/ContextBinding:value"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="tipo_documento_0_LABEL_LABEL" role="label">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:tipo_documento_0_label"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="nro_documento_0_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:nro_documento_0"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="nro_documento_0_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:nro_documento_0/ContextBinding:value"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="nro_documento_0_LABEL_LABEL" role="label">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:nro_documento_0_label"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+							</TemplateInstance.TemplateMarkers>
+						</EmbeddedTemplateInstance>
+					</CommonDevelopmentObject.TemplateInstances>
+					<UIElement.LayoutData>
+						<GridData name="RootUIElementContainer1_layoutdata">
+						</GridData>
+					</UIElement.LayoutData>
+					<UIElementContainer.Children>
+						<UIElement name="PageHeader">
+							<ViewElement.Properties>
+								<TranslatableViewElementProperty name="title">
+									<TranslatableViewElementProperty.Definition>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementlibraries.pattern" name="PageHeader" type="UIElementDefinition" path="Property:title"/>
+									</TranslatableViewElementProperty.Definition>
+								</TranslatableViewElementProperty>
+							</ViewElement.Properties>
+							<ViewElement.Definition>
+								<Core.Reference package="com.sap.ide.webdynpro.uielementlibraries.pattern" name="PageHeader" type="UIElementDefinition"/>
+							</ViewElement.Definition>
+							<UIElement.LayoutData>
+								<FlowData name="PageHeader_layoutdata">
+								</FlowData>
+							</UIElement.LayoutData>
+						</UIElement>
+						<UIElement name="HorizontalGutter1">
+							<ViewElement.Definition>
+								<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="HorizontalGutter" type="UIElementDefinition"/>
+							</ViewElement.Definition>
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData">
+								</FlowData>
+							</UIElement.LayoutData>
+						</UIElement>
+					</UIElementContainer.Children>
+					<UIElementContainer.Layout>
+						<FlowLayout name="RootUIElementContainer1_layout">
+						</FlowLayout>
+					</UIElementContainer.Layout>
+				</TransparentContainer>
+				<TransparentContainer name="RootUIElementContainer2" width="">
+					<CommonDevelopmentObject.TemplateInstances>
+						<EmbeddedTemplateInstance name="Form1">
+							<TemplateInstance.TemplateMarkers>
+								<TemplateMarker name="nro_cliente_0_ELEMENT1" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:nro_cliente_0"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="nro_cliente_0_BINDING1" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:nro_cliente_0/ContextBinding:value"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="nro_cliente_0_LABEL_LABEL1" role="label">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:nro_cliente_0_label"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="razon_social_0_ELEMENT1" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:razon_social_0"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="razon_social_0_BINDING1" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:razon_social_0/ContextBinding:value"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="razon_social_0_LABEL_LABEL1" role="label">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:razon_social_0_label"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="tipo_documento_0_ELEMENT1" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:tipo_documento_0"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="tipo_documento_0_BINDING1" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:tipo_documento_0/ContextBinding:value"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="tipo_documento_0_LABEL_LABEL1" role="label">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:tipo_documento_0_label"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="nro_documento_0_ELEMENT1" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:nro_documento_0"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="nro_documento_0_BINDING1" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:nro_documento_0/ContextBinding:value"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="nro_documento_0_LABEL_LABEL1" role="label">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:nro_documento_0_label"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+							</TemplateInstance.TemplateMarkers>
+						</EmbeddedTemplateInstance>
+					</CommonDevelopmentObject.TemplateInstances>
+					<UIElement.LayoutData>
+						<GridData name="RootUIElementContainer2_layoutdata">
+						</GridData>
+					</UIElement.LayoutData>
+					<UIElementContainer.Children>
+						<Table name="Table" visibleRowCount="10">
+							<CommonDevelopmentObject.TemplateInstances>
+								<EmbeddedTemplateInstance name="Table">
+									<TemplateInstance.TemplateMarkers>
+										<TemplateMarker name="domicilio_editor_ELEMENT" role="binding">
+											<TemplateMarker.Participant>
+												<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Clientes_View" type="View" path="RootUIElementContainer/Child:RootUIElementContainer2/Child:Table/OutgoingAggregation:GroupedColumns/AggregatedObject:razonSocial_0_0/TableCellEditor/ContextBinding:text"/>
+											</TemplateMarker.Participant>
+										</TemplateMarker>
+										<TemplateMarker name="id_editor_BINDING" role="binding">
+											<TemplateMarker.Participant>
+												<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Clientes_View" type="View" path="RootUIElementContainer/Child:RootUIElementContainer2/Child:Table/OutgoingAggregation:GroupedColumns/AggregatedObject:domicilio_0_0/TableCellEditor/ContextBinding:text"/>
+											</TemplateMarker.Participant>
+										</TemplateMarker>
+										<TemplateMarker name="id_editor_ELEMENT" role="inputelement">
+											<TemplateMarker.Participant>
+												<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Clientes_View" type="View" path="RootUIElementContainer/Child:RootUIElementContainer2/Child:Table/OutgoingAggregation:GroupedColumns/AggregatedObject:documento_0_0/TableCellEditor"/>
+											</TemplateMarker.Participant>
+										</TemplateMarker>
+										<TemplateMarker name="territorio_Id_editor_BINDING" role="inputelement">
+											<TemplateMarker.Participant>
+												<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Clientes_View" type="View" path="RootUIElementContainer/Child:RootUIElementContainer2/Child:Table/OutgoingAggregation:GroupedColumns/AggregatedObject:razonSocial_0_0/TableCellEditor"/>
+											</TemplateMarker.Participant>
+										</TemplateMarker>
+										<TemplateMarker name="razonSocial_editor_BINDING" role="binding">
+											<TemplateMarker.Participant>
+												<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Clientes_View" type="View" path="RootUIElementContainer/Child:RootUIElementContainer2/Child:Table/OutgoingAggregation:GroupedColumns/AggregatedObject:id_0_0/TableCellEditor/ContextBinding:text"/>
+											</TemplateMarker.Participant>
+										</TemplateMarker>
+										<TemplateMarker name="localidad_Id_editor_ELEMENT" role="binding">
+											<TemplateMarker.Participant>
+												<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Clientes_View" type="View" path="RootUIElementContainer/Child:RootUIElementContainer2/Child:Table/OutgoingAggregation:GroupedColumns/AggregatedObject:localidad_Id_0_0/TableCellEditor/ContextBinding:text"/>
+											</TemplateMarker.Participant>
+										</TemplateMarker>
+										<TemplateMarker name="domicilio_editor_BINDING" role="inputelement">
+											<TemplateMarker.Participant>
+												<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Clientes_View" type="View" path="RootUIElementContainer/Child:RootUIElementContainer2/Child:Table/OutgoingAggregation:GroupedColumns/AggregatedObject:localidad_Id_0_0/TableCellEditor"/>
+											</TemplateMarker.Participant>
+										</TemplateMarker>
+										<TemplateMarker name="documento_editor_ELEMENT" role="binding">
+											<TemplateMarker.Participant>
+												<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Clientes_View" type="View" path="RootUIElementContainer/Child:RootUIElementContainer2/Child:Table/OutgoingAggregation:GroupedColumns/AggregatedObject:documento_0_0/TableCellEditor/ContextBinding:text"/>
+											</TemplateMarker.Participant>
+										</TemplateMarker>
+										<TemplateMarker name="territorio_Id_editor_ELEMENT" role="inputelement">
+											<TemplateMarker.Participant>
+												<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Clientes_View" type="View" path="RootUIElementContainer/Child:RootUIElementContainer2/Child:Table/OutgoingAggregation:GroupedColumns/AggregatedObject:id_0_0/TableCellEditor"/>
+											</TemplateMarker.Participant>
+										</TemplateMarker>
+										<TemplateMarker name="documento_editor_BINDING" role="inputelement">
+											<TemplateMarker.Participant>
+												<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Clientes_View" type="View" path="RootUIElementContainer/Child:RootUIElementContainer2/Child:Table/OutgoingAggregation:GroupedColumns/AggregatedObject:domicilio_0_0/TableCellEditor"/>
+											</TemplateMarker.Participant>
+										</TemplateMarker>
+										<TemplateMarker name="razonSocial_editor_ELEMENT" role="inputelement">
+										</TemplateMarker>
+										<TemplateMarker name="localidad_Id_editor_BINDING" role="inputelement">
+										</TemplateMarker>
+										<TemplateMarker name="razonSocial_1_editor_ELEMENT" role="inputelement">
+										</TemplateMarker>
+										<TemplateMarker name="razonSocial_1_editor_BINDING" role="binding">
+										</TemplateMarker>
+										<TemplateMarker name="id_1_editor_ELEMENT" role="inputelement">
+										</TemplateMarker>
+										<TemplateMarker name="domicilio_1_editor_ELEMENT" role="inputelement">
+										</TemplateMarker>
+										<TemplateMarker name="territorio_Id_0_editor_BINDING" role="binding">
+										</TemplateMarker>
+										<TemplateMarker name="documento_1_editor_BINDING" role="binding">
+										</TemplateMarker>
+										<TemplateMarker name="domicilio_0_editor_ELEMENT" role="inputelement">
+										</TemplateMarker>
+										<TemplateMarker name="territorio_Id_1_editor_BINDING" role="binding">
+										</TemplateMarker>
+										<TemplateMarker name="id_1_editor_BINDING" role="binding">
+										</TemplateMarker>
+										<TemplateMarker name="localidad_Id_0_editor_ELEMENT" role="inputelement">
+										</TemplateMarker>
+										<TemplateMarker name="localidad_Id_0_editor_BINDING" role="binding">
+										</TemplateMarker>
+										<TemplateMarker name="documento_0_editor_BINDING" role="binding">
+										</TemplateMarker>
+									</TemplateInstance.TemplateMarkers>
+								</EmbeddedTemplateInstance>
+							</CommonDevelopmentObject.TemplateInstances>
+							<ViewElement.ContextBindings>
+								<UIElementContextBinding name="dataSource">
+									<UIElementContextBinding.BoundContextElement>
+										<Core.Reference package="ar.com.quilmes.consulta" name="Clientes_View" type="Controller" path="Context/ChildNode:Clientes"/>
+									</UIElementContextBinding.BoundContextElement>
+									<UIElementContextBinding.UIElementProperty>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="Table" type="UIElementDefinition" path="Property:dataSource"/>
+									</UIElementContextBinding.UIElementProperty>
+								</UIElementContextBinding>
+							</ViewElement.ContextBindings>
+							<ViewElement.OutgoingAggregations>
+								<ViewElementAggregation name="GroupedColumns">
+									<ViewElementAggregation.AggregatedObjects>
+										<TableColumn name="id_0_0">
+											<ViewElement.Definition>
+												<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TableColumn" type="UIElementDefinition"/>
+											</ViewElement.Definition>
+											<TableColumn.Header>
+												<Caption name="id_0_0_header" text_isDependent="false">
+												</Caption>
+											</TableColumn.Header>
+											<TableColumn.TableCellEditor>
+												<TextView name="id_0_0_editor">
+													<ViewElement.ContextBindings>
+														<UIElementContextBinding name="text">
+															<UIElementContextBinding.BoundContextElement>
+																<Core.Reference package="ar.com.quilmes.consulta" name="Clientes_View" type="Controller" path="Context/ChildNode:Clientes/Attribute:id"/>
+															</UIElementContextBinding.BoundContextElement>
+															<UIElementContextBinding.UIElementProperty>
+																<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition" path="Property:text"/>
+															</UIElementContextBinding.UIElementProperty>
+														</UIElementContextBinding>
+													</ViewElement.ContextBindings>
+												</TextView>
+											</TableColumn.TableCellEditor>
+										</TableColumn>
+										<TableColumn name="razonSocial_0_0">
+											<ViewElement.Definition>
+												<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TableColumn" type="UIElementDefinition"/>
+											</ViewElement.Definition>
+											<TableColumn.Header>
+												<Caption name="razonSocial_0_0_header" text_isDependent="false">
+												</Caption>
+											</TableColumn.Header>
+											<TableColumn.TableCellEditor>
+												<TextView name="razonSocial_0_0_editor">
+													<ViewElement.ContextBindings>
+														<UIElementContextBinding name="text">
+															<UIElementContextBinding.BoundContextElement>
+																<Core.Reference package="ar.com.quilmes.consulta" name="Clientes_View" type="Controller" path="Context/ChildNode:Clientes/Attribute:razonSocial"/>
+															</UIElementContextBinding.BoundContextElement>
+															<UIElementContextBinding.UIElementProperty>
+																<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition" path="Property:text"/>
+															</UIElementContextBinding.UIElementProperty>
+														</UIElementContextBinding>
+													</ViewElement.ContextBindings>
+												</TextView>
+											</TableColumn.TableCellEditor>
+										</TableColumn>
+										<TableColumn name="documento_0_0">
+											<ViewElement.Definition>
+												<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TableColumn" type="UIElementDefinition"/>
+											</ViewElement.Definition>
+											<TableColumn.Header>
+												<Caption name="documento_0_0_header" text_isDependent="false">
+												</Caption>
+											</TableColumn.Header>
+											<TableColumn.TableCellEditor>
+												<TextView name="documento_0_0_editor">
+													<ViewElement.ContextBindings>
+														<UIElementContextBinding name="text">
+															<UIElementContextBinding.BoundContextElement>
+																<Core.Reference package="ar.com.quilmes.consulta" name="Clientes_View" type="Controller" path="Context/ChildNode:Clientes/Attribute:documento"/>
+															</UIElementContextBinding.BoundContextElement>
+															<UIElementContextBinding.UIElementProperty>
+																<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition" path="Property:text"/>
+															</UIElementContextBinding.UIElementProperty>
+														</UIElementContextBinding>
+													</ViewElement.ContextBindings>
+												</TextView>
+											</TableColumn.TableCellEditor>
+										</TableColumn>
+										<TableColumn name="localidad_Id_0_0">
+											<ViewElement.Definition>
+												<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TableColumn" type="UIElementDefinition"/>
+											</ViewElement.Definition>
+											<TableColumn.Header>
+												<Caption name="localidad_Id_0_0_header" text_isDependent="false">
+												</Caption>
+											</TableColumn.Header>
+											<TableColumn.TableCellEditor>
+												<TextView name="localidad_Id_0_0_editor">
+													<ViewElement.ContextBindings>
+														<UIElementContextBinding name="text">
+															<UIElementContextBinding.BoundContextElement>
+																<Core.Reference package="ar.com.quilmes.consulta" name="Clientes_View" type="Controller" path="Context/ChildNode:Clientes/Attribute:localidad_Id"/>
+															</UIElementContextBinding.BoundContextElement>
+															<UIElementContextBinding.UIElementProperty>
+																<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition" path="Property:text"/>
+															</UIElementContextBinding.UIElementProperty>
+														</UIElementContextBinding>
+													</ViewElement.ContextBindings>
+												</TextView>
+											</TableColumn.TableCellEditor>
+										</TableColumn>
+										<TableColumn name="domicilio_0_0">
+											<ViewElement.Definition>
+												<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TableColumn" type="UIElementDefinition"/>
+											</ViewElement.Definition>
+											<TableColumn.Header>
+												<Caption name="domicilio_0_0_header" text_isDependent="false">
+												</Caption>
+											</TableColumn.Header>
+											<TableColumn.TableCellEditor>
+												<TextView name="domicilio_0_0_editor">
+													<ViewElement.ContextBindings>
+														<UIElementContextBinding name="text">
+															<UIElementContextBinding.BoundContextElement>
+																<Core.Reference package="ar.com.quilmes.consulta" name="Clientes_View" type="Controller" path="Context/ChildNode:Clientes/Attribute:domicilio"/>
+															</UIElementContextBinding.BoundContextElement>
+															<UIElementContextBinding.UIElementProperty>
+																<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition" path="Property:text"/>
+															</UIElementContextBinding.UIElementProperty>
+														</UIElementContextBinding>
+													</ViewElement.ContextBindings>
+												</TextView>
+											</TableColumn.TableCellEditor>
+										</TableColumn>
+									</ViewElementAggregation.AggregatedObjects>
+									<ViewElementAggregation.Definition>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="Table" type="UIElementDefinition" path="OutgoingAggregation:GroupedColumns"/>
+									</ViewElementAggregation.Definition>
+								</ViewElementAggregation>
+							</ViewElement.OutgoingAggregations>
+							<ViewElement.Definition>
+								<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="Table" type="UIElementDefinition"/>
+							</ViewElement.Definition>
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData">
+								</FlowData>
+							</UIElement.LayoutData>
+						</Table>
+					</UIElementContainer.Children>
+					<UIElementContainer.Layout>
+						<FlowLayout name="RootUIElementContainer1_layout1">
+						</FlowLayout>
+					</UIElementContainer.Layout>
+				</TransparentContainer>
+				<TransparentContainer name="RootUIElementContainer3" width="">
+					<CommonDevelopmentObject.TemplateInstances>
+						<EmbeddedTemplateInstance name="Form2">
+							<TemplateInstance.TemplateMarkers>
+								<TemplateMarker name="nro_cliente_0_ELEMENT2" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:nro_cliente_0"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="nro_cliente_0_BINDING2" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:nro_cliente_0/ContextBinding:value"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="nro_cliente_0_LABEL_LABEL2" role="label">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:nro_cliente_0_label"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="razon_social_0_ELEMENT2" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:razon_social_0"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="razon_social_0_BINDING2" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:razon_social_0/ContextBinding:value"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="razon_social_0_LABEL_LABEL2" role="label">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:razon_social_0_label"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="tipo_documento_0_ELEMENT2" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:tipo_documento_0"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="tipo_documento_0_BINDING2" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:tipo_documento_0/ContextBinding:value"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="tipo_documento_0_LABEL_LABEL2" role="label">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:tipo_documento_0_label"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="nro_documento_0_ELEMENT2" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:nro_documento_0"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="nro_documento_0_BINDING2" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:nro_documento_0/ContextBinding:value"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="nro_documento_0_LABEL_LABEL2" role="label">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="ar.com.quilmes.consulta" name="Consulta_CompView" type="View" path="RootUIElementContainer/Child:nro_documento_0_label"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+							</TemplateInstance.TemplateMarkers>
+						</EmbeddedTemplateInstance>
+					</CommonDevelopmentObject.TemplateInstances>
+					<UIElement.LayoutData>
+						<GridData name="RootUIElementContainer3_layoutdata">
+						</GridData>
+					</UIElement.LayoutData>
+					<UIElementContainer.Children>
+						<UIElement name="HorizontalGutter">
+							<ViewElement.Definition>
+								<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="HorizontalGutter" type="UIElementDefinition"/>
+							</ViewElement.Definition>
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData">
+								</FlowData>
+							</UIElement.LayoutData>
+						</UIElement>
+						<Button name="modificar" text_isDependent="false" width="50px">
+							<ViewElement.ContextBindings>
+								<UIElementContextBinding name="enabled">
+									<UIElementContextBinding.BoundContextElement>
+										<Core.Reference package="ar.com.quilmes.consulta" name="Clientes_View" type="Controller" path="Context/Attribute:habilitar"/>
+									</UIElementContextBinding.BoundContextElement>
+									<UIElementContextBinding.UIElementProperty>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="UIElement" type="UIElementDefinition" path="Property:enabled"/>
+									</UIElementContextBinding.UIElementProperty>
+								</UIElementContextBinding>
+							</ViewElement.ContextBindings>
+							<ViewElement.EventBindings>
+								<UIElementEventBinding name="onAction">
+									<UIElementEventBinding.BoundAction>
+										<Core.Reference package="ar.com.quilmes.consulta" name="Clientes_View" type="Controller" path="Action:modificar"/>
+									</UIElementEventBinding.BoundAction>
+									<UIElementEventBinding.UIElementEvent>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="AbstractButton" type="UIElementDefinition" path="Event:onAction"/>
+									</UIElementEventBinding.UIElementEvent>
+								</UIElementEventBinding>
+							</ViewElement.EventBindings>
+							<ViewElement.Definition>
+								<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="Button" type="UIElementDefinition"/>
+							</ViewElement.Definition>
+							<UIElement.LayoutData>
+								<FlowData name="modificar_layoutdata" paddingRight="7px">
+								</FlowData>
+							</UIElement.LayoutData>
+						</Button>
+						<Button name="eliminar" text_isDependent="false" width="50px">
+							<ViewElement.ContextBindings>
+								<UIElementContextBinding name="enabled">
+									<UIElementContextBinding.BoundContextElement>
+										<Core.Reference package="ar.com.quilmes.consulta" name="Clientes_View" type="Controller" path="Context/Attribute:habilitar"/>
+									</UIElementContextBinding.BoundContextElement>
+									<UIElementContextBinding.UIElementProperty>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="UIElement" type="UIElementDefinition" path="Property:enabled"/>
+									</UIElementContextBinding.UIElementProperty>
+								</UIElementContextBinding>
+							</ViewElement.ContextBindings>
+							<ViewElement.EventBindings>
+								<UIElementEventBinding name="onAction">
+									<UIElementEventBinding.BoundAction>
+										<Core.Reference package="ar.com.quilmes.consulta" name="Clientes_View" type="Controller" path="Action:eliminar"/>
+									</UIElementEventBinding.BoundAction>
+									<UIElementEventBinding.UIElementEvent>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="AbstractButton" type="UIElementDefinition" path="Event:onAction"/>
+									</UIElementEventBinding.UIElementEvent>
+								</UIElementEventBinding>
+							</ViewElement.EventBindings>
+							<ViewElement.Definition>
+								<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="Button" type="UIElementDefinition"/>
+							</ViewElement.Definition>
+							<UIElement.LayoutData>
+								<FlowData name="eliminar_layoutdata" paddingRight="7px">
+								</FlowData>
+							</UIElement.LayoutData>
+						</Button>
+						<Button name="volver" text_isDependent="false" width="50px">
+							<ViewElement.EventBindings>
+								<UIElementEventBinding name="onAction">
+									<UIElementEventBinding.BoundAction>
+										<Core.Reference package="ar.com.quilmes.consulta" name="Clientes_View" type="Controller" path="Action:volver"/>
+									</UIElementEventBinding.BoundAction>
+									<UIElementEventBinding.UIElementEvent>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="AbstractButton" type="UIElementDefinition" path="Event:onAction"/>
+									</UIElementEventBinding.UIElementEvent>
+								</UIElementEventBinding>
+							</ViewElement.EventBindings>
+							<ViewElement.Definition>
+								<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="Button" type="UIElementDefinition"/>
+							</ViewElement.Definition>
+							<UIElement.LayoutData>
+								<FlowData name="crear_layoutdata" paddingRight="7px">
+								</FlowData>
+							</UIElement.LayoutData>
+						</Button>
+					</UIElementContainer.Children>
+					<UIElementContainer.Layout>
+						<FlowLayout name="RootUIElementContainer1_layout2">
+						</FlowLayout>
+					</UIElementContainer.Layout>
+				</TransparentContainer>
+			</UIElementContainer.Children>
+			<UIElementContainer.Layout>
+				<GridLayout name="RootUIElementContainer_layout">
+				</GridLayout>
+			</UIElementContainer.Layout>
+		</TransparentContainer>
+	</View.RootUIElementContainer>
+</View>

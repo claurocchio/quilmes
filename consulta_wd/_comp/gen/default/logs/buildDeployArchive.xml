@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    development component
+                     name: consulta_wd
+                   vendor: ar.com.quilmes.bue
+                     type: Web Dynpro
+                 sub-type: 
+              type-vendor: sap.com
+
+       software component
+                     name: MyComponents
+                   vendor: demo.sap.com
+
+                 location: local
+          source location: Consulting AG@ConsultingAG-PC
+            build variant: default
+
+    building on ConsultingAG-PC, 'Windows XP'/x86, version 6.0
+    using Java VM 'Java HotSpot(TM) Client VM', version 1.4.2_19-b04 (Sun Microsystems Inc.)
+    build started at 2010-03-08 18:10:19 GMT-03:00 (ARST)
+
+    Build Plugin 'WebdynproPlugin', Version 7.00 SP 14 (645_VAL_REL, built on 2007-11-10 18:28:29 CET, CL76041)
+    detailed versions:
+    sap.com:tc/bi/ant#ant                7.00 SP 14 (645_VAL_REL, built on 2007-11-10 18:30:01 CET, CL76041)
+    sap.com:tc/bi/anttasks#def           7.00 SP 14 (645_VAL_REL, built on 2007-11-10 18:30:03 CET, CL76041)
+    sap.com:tc/bi/bp/webDynpro#webDynpro 7.00 SP 14 (645_VAL_REL, built on 2007-11-10 18:28:29 CET, CL76041)
+    sap.com:tc/bi/core#def               7.00 SP 14 (645_VAL_REL, built on 2007-11-10 18:29:22 CET, CL76041)
+    sap.com:tc/bi/ddictech#def           7.00 SP 14 (645_VAL_REL, built on 2007-11-10 18:28:56 CET, CL76041)
+    sap.com:tc/bi/exception#def          7.00 SP 14 (645_VAL_REL, built on 2007-11-10 18:30:07 CET, CL76041)
+    sap.com:tc/bi/extcm#def              7.00 SP 14 (645_VAL_REL, built on 2007-11-10 18:30:13 CET, CL76041)
+    sap.com:tc/bi/extddic#def            7.00 SP 14 (645_VAL_REL, built on 2007-11-10 18:30:10 CET, CL76041)
+    sap.com:tc/bi/extddicdb#def          7.00 SP 14 (645_VAL_REL, built on 2007-11-10 18:30:08 CET, CL76041)
+    sap.com:tc/bi/extgf#def              7.00 SP 14 (645_VAL_REL, built on 2007-11-10 18:30:11 CET, CL76041)
+    sap.com:tc/bi/extmm#def              7.00 SP 14 (645_VAL_REL, built on 2007-11-10 18:30:11 CET, CL76041)
+    sap.com:tc/bi/extsql#def             7.00 SP 14 (645_VAL_REL, built on 2007-11-10 18:30:08 CET, CL76041)
+    sap.com:tc/bi/extwd#def              7.00 SP 14 (645_VAL_REL, built on 2007-11-10 18:30:12 CET, CL76041)
+    sap.com:tc/bi/framework#def          7.00 SP 14 (645_VAL_REL, built on 2007-11-10 18:28:02 CET, CL76041)
+    sap.com:tc/bi/i18n#def               7.00 SP 14 (645_VAL_REL, built on 2007-11-10 18:30:06 CET, CL76041)
+    sap.com:tc/bi/javatech#def           7.00 SP 14 (645_VAL_REL, built on 2007-11-10 18:28:23 CET, CL76041)
+    sap.com:tc/bi/jlincbs#def            7.00 SP 14 (645_VAL_REL, built on 2007-11-10 18:30:15 CET, CL76041)
+    sap.com:tc/bi/jtools#def             7.00 SP 14 (645_VAL_REL, built on 2007-11-10 18:30:16 CET, CL76041)
+    sap.com:tc/bi/settings#version       7.00 SP 14 (645_VAL_REL, built on 2007-11-10 18:29:03 CET, CL76041)
+    sap.com:tc/bi/tssap#def              7.00 SP 14 (645_VAL_REL, built on 2007-11-10 18:30:04 CET, CL76041)
+    sap.com:tc/bi/util#util              7.00 SP 14 (645_VAL_REL, built on 2007-11-10 18:28:13 CET, CL76041)
+    sap.com:tc/bi/velocity#def           7.00 SP 14 (645_VAL_REL, built on 2007-11-10 18:30:02 CET, CL76041)
+    sap.com:tc/bi/wdtech#def             7.00 SP 14 (645_VAL_REL, built on 2007-11-10 18:30:47 CET, CL76041)
+    sap.com:tc/bi/xml#def                7.00 SP 14 (645_VAL_REL, built on 2007-11-10 18:30:05 CET, CL76041)
+-->
+<project name="DC Deploy build"
+         default="packDeployArchive"
+         basedir=".">
+<taskdef name="dcinfo" classname="com.sap.tc.buildplugin.pp.ant.DeployArchiveInfoTask"/>
+<taskdef name="ddgen" classname="com.sap.dictionary.generation.ant.DDGenAntTask"/>
+<taskdef name="jarsap" classname="com.sap.sdm.ant.JarSAP"/>
+<taskdef name="propertybag" classname="com.sap.tools.ant.taskdefs.PropertyBag"/>
+<taskdef name="publicpartlist" classname="com.sap.tc.buildplugin.ddic.CreatePPEntitiesInfo"/>
+<taskdef name="srcpacker" classname="com.sap.tc.buildplugin.pp.ant.SourceArchiveCreatorTask"/>
+<taskdef name="timer" classname="com.sap.tools.ant.taskdefs.Timer"/>
+<taskdef name="wdgen" classname="com.sap.webdynpro.generation.ant.WDGenAntTask"/>
+<taskdef name="wdmin" classname="com.sap.tools.webdynpro.smart.ClassFileMinimizerTask"/>
+<property name="dtr-workspace" value="Consulting AG@ConsultingAG-PC"/>
+
+
+<target name="packDeployArchive">
+<timer/>
+<srcpacker destination="C:\Users\Consulting AG\.dtc\LocalDevelopment\t\0FA34DC63E9E3FB2BEE6E39EC1A1971F\sda\src.zip" archiveLocation="srcarchive">
+<UsedPublicPart dcname="consulta_wd"
+                dcvendor="ar.com.quilmes.bue"
+                ppname="Internal:WebDynpro Application"/>
+</srcpacker>
+<timer message="Source archive creation finished in "/>
+<dcinfo destination="C:\Users\Consulting AG\.dtc\LocalDevelopment\t\0FA34DC63E9E3FB2BEE6E39EC1A1971F\sda\META-INF\dcbuildinfo.xml"/>
+<timer/>
+<jarsap jarfile="C:\Users\Consulting AG\.dtc\LocalDevelopment\DCs\ar.com.quilmes.bue\consulta_wd\_comp\gen\default\deploy\ar.com.quilmes.bue~consulta_wd.ear" deployfile="C:\Users\Consulting AG\.dtc\LocalDevelopment\t\0FA34DC63E9E3FB2BEE6E39EC1A1971F\sda\META-INF\wd.xml">
+<component vendor="ar.com.quilmes.bue"
+           name="consulta_wd"
+           location="local"
+           counter="20100308181036"
+           scvendor="demo.sap.com"
+           scname="MyComponents"/>
+<fileset dir="C:\Users\Consulting AG\.dtc\LocalDevelopment\t\0FA34DC63E9E3FB2BEE6E39EC1A1971F\sda"/>
+<fileset dir="C:\Users\Consulting AG\.dtc\LocalDevelopment\t\0FA34DC63E9E3FB2BEE6E39EC1A1971F\wda-pp\deploy\webdynpro">
+<include name="ar.com.quilmes.bue~consulta_wd.wda"/>
+</fileset>
+</jarsap>
+<timer message="JarSAP finished in "/>
+</target>
+</project>

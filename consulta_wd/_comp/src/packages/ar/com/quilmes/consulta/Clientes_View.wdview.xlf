@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xliff version="1.1">
+<file source-language="en" product-name="@@b53de2c0d91a41cb140bf27efc3a85b2View:Clientes_View[ar.com.quilmes.consulta] of Component:Consulta_Comp[ar.com.quilmes.consulta]" datatype="s2x">
+<header>
+<skl>
+</skl>
+<phase-group>
+</phase-group>
+<s2x xmlns="http://www.sap.com">
+<dtr>
+<sc></sc>
+</dtr>
+<giltDirectives>
+<develContact>Consulting AG</develContact><domain></domain>
+<originalLocale xml:lang="en"/>
+<maxLength>255</maxLength>
+</giltDirectives>
+</s2x>
+</header>
+<body>
+<group restype="caption">
+<trans-unit id="f51c07992ce7420e0e7fe812adddaecb" resname="RootUIElementContainer/Child:RootUIElementContainer2/Child:Table/OutgoingAggregation:GroupedColumns/AggregatedObject:localidad_Id_0_0/Header@text" maxwidth="255" translate="yes"><source>Localidad</source></trans-unit>
+<trans-unit id="8ca5ad92665c42740a97a1a37bef253a" resname="RootUIElementContainer/Child:RootUIElementContainer1/Child:PageHeader/Property:title@value" maxwidth="255" translate="yes"><source>Resultado Búsqueda</source></trans-unit>
+<trans-unit id="a4d73b4db81140ff3bb0e8a3b021582b" resname="RootUIElementContainer/Child:RootUIElementContainer2/Child:Table/OutgoingAggregation:GroupedColumns/AggregatedObject:domicilio_0_0/Header@text" maxwidth="255" translate="yes"><source>Domicilio</source></trans-unit>
+<trans-unit id="08c5eece412840751ef7d3f5bf29984b" resname="RootUIElementContainer/Child:RootUIElementContainer2/Child:Table/OutgoingAggregation:GroupedColumns/AggregatedObject:id_0_0/Header@text" maxwidth="255" translate="yes"><source>Cliente</source></trans-unit>
+<trans-unit id="3368a6322ee5440c1edcc2140c453a40" resname="RootUIElementContainer/Child:RootUIElementContainer2/Child:Table/OutgoingAggregation:GroupedColumns/AggregatedObject:documento_0_0/Header@text" maxwidth="255" translate="yes"><source>Documento</source></trans-unit>
+<trans-unit id="39ac20d52fee499230788a4acb828efc" resname="RootUIElementContainer/Child:RootUIElementContainer2/Child:Table/OutgoingAggregation:GroupedColumns/AggregatedObject:razonSocial_0_0/Header@text" maxwidth="255" translate="yes"><source>Razon Social</source></trans-unit>
+</group>
+<group restype="button">
+<trans-unit id="6ddbd443e4c5455d172694f2cd1a6b27" resname="RootUIElementContainer/Child:RootUIElementContainer3/Child:eliminar@text" maxwidth="255" translate="yes"><source>Dar de Baja</source></trans-unit>
+<trans-unit id="5346781b61c742351fe1fc5031eac860" resname="RootUIElementContainer/Child:RootUIElementContainer3/Child:volver@text" maxwidth="255" translate="yes"><source>Volver</source></trans-unit>
+<trans-unit id="8dcbfcd0205d444b34f5ff4a74fcc9ef" resname="RootUIElementContainer/Child:RootUIElementContainer3/Child:modificar@text" maxwidth="255" translate="yes"><source>Modificar</source></trans-unit>
+</group>
+</body>
+</file>
+</xliff>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Friday, May 25, 2007 3:26:31 PM CEST -->
+<Model xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.Model:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1180099591892" name="ConsultaInterna" package="ar.com.quilmes.bue.mdm_clientes.model.internas" masterLanguage="en">
+	<Model.ModelClasses>
+		<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Parametro" type="ModelClass"/>
+		<Core.Reference package="ar.com.quilmes.bue.mdm_clientes.model.internas" name="Rol" type="ModelClass"/>
+	</Model.ModelClasses>
+	<Model.Settings>
+		<ModelSetting name="requiresCodeGeneration" value="false">
+			<ModelSetting.SettingDefinition>
+				<Core.Reference package="com.sap.ide.webdynpro.modeltypes" name="JavaBean" type="ModelType" path="ModelSettingDefinition:requiresCodeGeneration"/>
+			</ModelSetting.SettingDefinition>
+		</ModelSetting>
+	</Model.Settings>
+	<Model.ModelType>
+		<Core.Reference package="com.sap.ide.webdynpro.modeltypes" name="JavaBean" type="ModelType"/>
+	</Model.ModelType>
+</Model>

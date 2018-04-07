@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xliff version="1.1">
+<file source-language="en" product-name="@@a094a39b9f534995013e9176ecfa137aView:Consulta_CompView[ar.com.quilmes.consulta] of Component:Consulta_Comp[ar.com.quilmes.consulta]" datatype="s2x">
+<header>
+<skl>
+</skl>
+<phase-group>
+</phase-group>
+<s2x xmlns="http://www.sap.com">
+<dtr>
+<sc></sc>
+</dtr>
+<giltDirectives>
+<develContact>Consulting AG</develContact><domain></domain>
+<originalLocale xml:lang="en"/>
+<maxLength>255</maxLength>
+</giltDirectives>
+</s2x>
+</header>
+<body>
+<group restype="button">
+<trans-unit id="cd00e1c9bb2f4ce32b9fe9d4a68840cb" resname="RootUIElementContainer/Child:RootUIElementContainer4/Child:crear@text" maxwidth="255" translate="yes"><source>Nuevo</source></trans-unit>
+<trans-unit id="203b0dffca6947da1738ae5a1ec51e12" resname="RootUIElementContainer/Child:RootUIElementContainer4/Child:buscar@text" maxwidth="255" translate="yes"><source>Buscar</source></trans-unit>
+</group>
+<group restype="label">
+<trans-unit id="11e44aaff9da40cb317aae5d48393978" resname="RootUIElementContainer/Child:RootUIElementContainer2/Child:Label1@text" maxwidth="255" translate="yes"><source>Razón Social</source></trans-unit>
+<trans-unit id="98d79729399541a61e1b8722ab1c3f8d" resname="RootUIElementContainer/Child:RootUIElementContainer2/Child:Label2@text" maxwidth="255" translate="yes"><source>Tipo Documento</source></trans-unit>
+<trans-unit id="a8735f8834864f753a94e15bb22164b3" resname="RootUIElementContainer/Child:RootUIElementContainer2/Child:Label3@text" maxwidth="255" translate="yes"><source>Nro. Documento</source></trans-unit>
+<trans-unit id="0a81a6b22cbc4c3c25af9ebbae3bc4d9" resname="RootUIElementContainer/Child:RootUIElementContainer2/Child:Label@text" maxwidth="255" translate="yes"><source>Nro. Cliente</source></trans-unit>
+</group>
+<group restype="caption">
+<trans-unit id="38f2c50c6ae84c991873ac95ae797395" resname="RootUIElementContainer/Child:RootUIElementContainer1/Child:PageHeader/Property:title@value" maxwidth="255" translate="yes"><source>Búsqueda de Clientes</source></trans-unit>
+</group>
+<group restype="quickInfo">
+<trans-unit id="da1bfae4fa71411631a7da62e84f8a0f" resname="RootUIElementContainer/Child:RootUIElementContainer3/Child:razon_social@tooltip" maxwidth="255" translate="yes"><source>Utilice &quot;*&quot; para busquedas parciales</source></trans-unit>
+</group>
+</body>
+</file>
+</xliff>

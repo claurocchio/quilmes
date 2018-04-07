@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xliff version="1.1">
+<file source-language="en" product-name="@@69074fdbde3d49b404e9a2a64e8a0e8eController:Clientes_View[ar.com.quilmes.consulta] of Component:Consulta_Comp[ar.com.quilmes.consulta]" datatype="s2x">
+<header>
+<skl>
+</skl>
+<phase-group>
+</phase-group>
+<s2x xmlns="http://www.sap.com">
+<dtr>
+<sc></sc>
+</dtr>
+<giltDirectives>
+<develContact>Consulting AG</develContact><domain></domain>
+<originalLocale xml:lang="en"/>
+<maxLength>255</maxLength>
+</giltDirectives>
+</s2x>
+</header>
+<body>
+<group restype="label">
+<trans-unit id="6e798eda50d7418d3951bdd826755038" resname="Action:volver@text" maxwidth="255" translate="yes"><source>Volver</source></trans-unit>
+<trans-unit id="954cf9910e4846f9303bf7aebd5090e2" resname="Action:eliminar@text" maxwidth="255" translate="yes"><source>Eliminar cliente</source></trans-unit>
+<trans-unit id="20eafbe7f7aa4097360ff35ff3d3797c" resname="Action:modificar@text" maxwidth="255" translate="yes"><source>Modificar Cliente</source></trans-unit>
+</group>
+</body>
+</file>
+</xliff>

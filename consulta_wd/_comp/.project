@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>LocalDevelopment~consulta_wd~ar.com.quilmes.bue</name>
+	<comment>SAP Development Component Project</comment>
+	<projects>
+		<project>LocalDevelopment~mdm_clientes_ejb~ar.com.quilmes.bue</project>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.sap.dictionary.tools.generation.GenerationBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>com.sap.ide.webdynpro.generation.GenerationBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>com.tssap.selena.cmf.PatternBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.sap.ide.webdynpro.archivebuilder.WebDynproNature</nature>
+		<nature>com.sap.dictionary.tools.archivebuilder.DictionaryNature</nature>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>com.sap.ide.eclipse.component.provider.dcnature</nature>
+		<nature>com.tssap.selena.cmf.PatternNature</nature>
+		<nature>com.tssap.selena.cmf.TemplateNature</nature>
+	</natures>
+</projectDescription>
